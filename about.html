@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us, Novo Web Build</title>
+<meta name="description" content="About Novo Web Build, A remote web design studio that builds professional websites for small businesses worldwide.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3HXLY3GNPP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3HXLY3GNPP');
+</script>
+<!-- Replace G-3HXLY3GNPP with your real Google Analytics ID -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:#0D1117;color:#E8EDF5;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+:root{
+  --bg:#0D1117;--bg2:#131920;--bg3:#1A2332;--bg4:#0a0e14;
+  --white:#FFFFFF;--text:#E8EDF5;--muted:rgba(232,237,245,.5);--muted2:rgba(232,237,245,.25);
+  --line:rgba(232,237,245,.07);--line2:rgba(232,237,245,.12);
+  --blue:#4F8EF7;--blue2:rgba(79,142,247,.1);--blue3:rgba(79,142,247,.05);
+  --green:#22c55e;
+}
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-thumb{background:var(--blue)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:26px 64px;transition:background .4s,padding .35s,border-color .4s;border-bottom:1px solid transparent}
+nav.on{background:rgba(13,17,23,.97);backdrop-filter:blur(20px);padding:16px 64px;border-color:var(--line)}
+.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.025em;color:var(--white);display:flex;align-items:center;gap:9px}
+.nav-logo-icon{width:30px;height:30px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:#fff;letter-spacing:-.01em;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--blue);color:#fff!important;padding:9px 22px;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:opacity .2s;display:inline-block;flex-shrink:0}
+.nav-cta:hover{opacity:.85}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;transition:all .22s;cursor:pointer;border:none;white-space:nowrap}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{opacity:.87}
+.btn-white{background:var(--white);color:var(--bg)}.btn-white:hover{background:var(--blue);color:#fff}
+.btn-outline{background:transparent;color:var(--muted);border:1px solid var(--line2)}.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.btn-dark{background:var(--bg3);color:var(--text);border:1px solid var(--line)}.btn-dark:hover{border-color:var(--blue);color:var(--blue)}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{opacity:.87}
+
+/* ── SHARED ELEMENTS ── */
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+.tag::before{content:'';display:block;width:18px;height:1px;background:var(--blue)}
+.section-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.93;color:var(--white)}
+.section-title span{color:var(--blue)}
+
+/* ── FOOTER ── */
+footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 36px}
+.footer-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.footer-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;color:var(--white);letter-spacing:-.025em;display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.footer-logo-icon{width:26px;height:26px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:800;color:#fff}
+.footer-brand p{font-size:.83rem;color:var(--muted);line-height:1.75;max-width:230px}
+.footer-brand .footer-contact{margin-top:20px;display:flex;flex-direction:column;gap:8px}
+.footer-brand .footer-contact a{font-size:.8rem;color:var(--muted);transition:color .2s;display:flex;align-items:center;gap:8px}
+.footer-brand .footer-contact a:hover{color:var(--blue)}
+.footer-col h4{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2);margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:.83rem;color:var(--muted);transition:color .2s}
+.footer-col ul a:hover{color:var(--blue)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.63rem;color:var(--muted2);letter-spacing:.04em}
+.footer-socials{display:flex;gap:14px}
+.footer-socials a{font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);transition:color .2s}
+.footer-socials a:hover{color:var(--blue)}
+
+/* ── REVEAL ── */
+.r{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.r.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav{padding:18px 22px}nav.on{padding:13px 22px}.nav-links{display:none}
+  footer{padding:48px 22px 28px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:600px){.footer-top{grid-template-columns:1fr}}
+
+.ph{padding:160px 64px 100px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;overflow:hidden}
+.ph-glow{position:absolute;top:20%;right:5%;width:500px;height:500px;background:radial-gradient(circle,rgba(79,142,247,.08),transparent 65%);pointer-events:none}
+.ph h1{font-size:clamp(3rem,7vw,7.5rem)}
+.ph p{font-size:1rem;color:var(--muted);line-height:1.82}
+.story{padding:100px 64px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;border-bottom:1px solid var(--line)}
+.story-vis{background:var(--bg2);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid var(--line)}
+.story-vis-big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:13rem;color:var(--blue2);letter-spacing:-.06em;user-select:none;line-height:1}
+.story-vis-logo{max-width:75%;max-height:75%;position:relative;z-index:2}
+.story-vis-tag{position:absolute;bottom:20px;left:20px;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2);background:var(--bg3);padding:6px 12px;border:1px solid var(--line)}
+.story-glow{position:absolute;top:30%;left:30%;width:200px;height:200px;background:radial-gradient(circle,rgba(79,142,247,.08),transparent 70%)}
+.story-t h2{font-size:clamp(2rem,3.8vw,3.2rem);margin-bottom:22px}
+.story-t p{font-size:.94rem;line-height:1.85;color:var(--muted);margin-bottom:14px}
+.mission{background:var(--blue);padding:80px 64px;text-align:center}
+.mission h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,5rem);color:#fff;margin-bottom:14px;letter-spacing:-.03em}
+.mission p{font-size:1rem;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto;line-height:1.8}
+.values{padding:100px 64px;border-bottom:1px solid var(--line)}
+.values h2{font-size:clamp(2rem,3.8vw,3.2rem);margin-bottom:56px}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.value{background:var(--bg);padding:44px 32px;transition:background .3s}
+.value:hover{background:var(--bg2)}
+.value-icon{font-size:1.8rem;margin-bottom:16px}
+.value-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.98rem;color:var(--white);margin-bottom:10px}
+.value-desc{font-size:.84rem;line-height:1.8;color:var(--muted)}
+.stats-row{background:var(--bg2);border-top:1px solid var(--line);padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-i{padding:52px 36px;text-align:center;border-right:1px solid var(--line)}
+.stat-i:last-child{border-right:none}
+.stat-n{font-family:'Fraunces',serif;font-size:4rem;color:var(--blue);line-height:1;margin-bottom:8px}
+.stat-l{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.about-cta{padding:100px 64px;text-align:center}
+.about-cta h2{font-size:clamp(2.4rem,5vw,5.5rem);margin-bottom:16px}
+.about-cta p{font-size:1rem;color:var(--muted);line-height:1.75;max-width:400px;margin:0 auto 40px}
+@media(max-width:960px){
+  .ph,.story{grid-template-columns:1fr;padding:120px 22px 72px}
+  .story{padding:72px 22px}.mission,.values,.about-cta{padding:72px 22px}
+  .values-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .stat-i{border-right:none;border-bottom:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon">NW</div>
+    Novo Web Build
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <a href="https://wa.me/306940144755" target="_blank" class="nav-cta">Get Started →</a>
+</nav>
+
+<div class="ph">
+  <div class="ph-glow"></div>
+  <div class="r">
+    <div class="tag">About Us</div>
+    <h1 class="section-title">Meet<br><span>Novo Web Build</span></h1>
+  </div>
+  <div class="r d1">
+    <p>We're a remote web design studio that believes every small business deserves a beautiful, professional online presence, without needing a big budget or technical knowledge.</p>
+  </div>
+</div>
+
+<div class="story">
+  <div class="story-vis r">
+    <div class="story-glow"></div>
+    <img src="novo-logo-blue.svg" alt="Novo Web Build logo" class="story-vis-logo">
+    <div class="story-vis-tag">Est. 2025 · Remote Studio</div>
+  </div>
+  <div class="story-t r d1">
+    <div class="tag">Our Story</div>
+    <h2 class="section-title">Built from a <span>simple idea</span></h2>
+    <p>We saw how many small businesses had incredible products and services but no online presence, either because of the cost or the complexity of getting one built.</p>
+    <p>Novo Web Build was created to fix exactly that. Fast, clean, affordable, and the client doesn't need to know anything technical. We handle everything.</p>
+    <p>Every website we build is designed specifically for that client, from scratch. No templates, no shortcuts, no compromise on quality.</p>
+    <a href="services.html" class="btn btn-blue" style="margin-top:8px">See Our Services →</a>
+  </div>
+</div>
+
+<div class="mission r">
+  <h2>Our Mission</h2>
+  <p>To make professional web design accessible to every small business, not just those with big budgets.</p>
+</div>
+
+<div class="values">
+  <div class="r">
+    <div class="tag">What we stand for</div>
+    <h2 class="section-title">Our <span>values</span></h2>
+  </div>
+  <div class="values-grid">
+    <div class="value r"><div class="value-icon">⚡</div><div class="value-name">Speed</div><p class="value-desc">We deliver fast without cutting corners. Your site is live in days, not weeks or months.</p></div>
+    <div class="value r d1"><div class="value-icon">🎨</div><div class="value-name">Quality</div><p class="value-desc">Every pixel matters. We obsess over details because your website is your first impression.</p></div>
+    <div class="value r d2"><div class="value-icon">🤝</div><div class="value-name">Simplicity</div><p class="value-desc">No jargon, no complexity. We make the whole process as easy as possible for you.</p></div>
+  </div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-i r"><div class="stat-n">48h to 1wk</div><div class="stat-l">Days to delivery</div></div>
+  <div class="stat-i r d1"><div class="stat-n">100%</div><div class="stat-l">Client satisfaction</div></div>
+  <div class="stat-i r d3"><div class="stat-n">∞</div><div class="stat-l">Growth potential</div></div>
+</div>
+
+<div class="about-cta r">
+  <div class="tag" style="justify-content:center">Start today</div>
+  <h2 class="section-title">Let's build something <span>together</span></h2>
+  <p>Free first consultation. Message us and we'll reply within a few hours.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="https://wa.me/306940144755" target="_blank" class="btn btn-blue">WhatsApp Us →</a>
+    <a href="https://instagram.com/novowebbuild" target="_blank" class="btn btn-outline">Instagram DM</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo"><div class="footer-logo-icon">NW</div>Novo Web Build</div>
+      <p>Professional websites for small businesses, fast, clean, and built to grow your business online.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/306940144755" target="_blank">📱 WhatsApp: +30 694 014 4755</a>
+        <a href="mailto:novowebbuild@gmail.com">✉️ novowebbuild@gmail.com</a>
+        <a href="https://instagram.com/novowebbuild" target="_blank">📸 @novowebbuild</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Pages</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="services.html">Website Design</a></li>
+      <li><a href="services.html">Landing Pages</a></li>
+      <li><a href="services.html">QR Menus</a></li>
+      <li><a href="services.html">Link in Bio</a></li>
+      <li><a href="services.html">Pricing Pages</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="https://wa.me/306940144755" target="_blank">WhatsApp</a></li>
+      <li><a href="https://instagram.com/novowebbuild" target="_blank">Instagram</a></li>
+      <li><a href="mailto:novowebbuild@gmail.com">Email</a></li>
+      <li><a href="index.html#inquiry">Contact</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Novo Web Build</span>
+    <div class="footer-socials">
+      <a href="https://instagram.com/novowebbuild" target="_blank">Instagram</a>
+      <a href="https://wa.me/306940144755" target="_blank">WhatsApp</a>
+      <a href="mailto:novowebbuild@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>50),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.07});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+// Active nav link
+document.querySelectorAll('.nav-links a').forEach(a=>{if(location.pathname.includes(a.getAttribute('href')))a.classList.add('active')});
+</script>
+
+</body>
+</html>
