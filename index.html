@@ -256,8 +256,8 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
 .cta-note{font-size:.73rem;color:var(--muted)}
 
 @media(max-width:960px){
-  #hero{padding:0 22px 80px}.hero-bottom{flex-direction:column;align-items:flex-start}.hero-scroll-ind{left:22px}
-  .trust-bar{padding:22px}.trust-items{gap:20px}
+  #hero{padding:0 22px 80px}.hero-bottom{flex-direction:column;align-items:flex-start;gap:20px}.hero-scroll-ind{left:22px}.hero-actions{flex-direction:column;width:100%}.hero-actions .btn{width:100%;justify-content:center;text-align:center}
+  .trust-bar{padding:22px}.trust-items{flex-wrap:wrap;gap:12px;justify-content:center}.trust-label{width:100%;text-align:center;margin-bottom:4px}
   #services{padding:72px 22px}.sec-head{flex-direction:column;gap:14px;align-items:flex-start}.sec-head p{text-align:left}.svc-grid{grid-template-columns:1fr 1fr}
   #why{grid-template-columns:1fr}.why-l{padding:72px 22px;border-right:none;border-bottom:1px solid var(--line)}.why-r{padding:60px 22px}
   #process{padding:72px 22px}.process-grid{grid-template-columns:1fr 1fr}
@@ -352,7 +352,7 @@ textarea.form-input{resize:vertical;min-height:120px}
     <h1 class="hero-h1">Websites<br>that <span>sell.</span></h1>
     <p style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.5rem);color:var(--blue);letter-spacing:.02em;margin-bottom:20px;opacity:0;animation:fadeUp .9s .44s forwards">Turn clicks into clients.</p>
   </div>
-  <div class="r d2" style="flex-shrink:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;position:relative">
+  <div class="r d2" style="flex-shrink:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;position:relative;display:none" id="hero-logo-ring"><style>@media(min-width:961px){#hero-logo-ring{display:flex!important}}</style>
     <div style="position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(79,142,247,0.1) 0%,transparent 70%);pointer-events:none"></div>
     <div style="width:260px;height:260px;border-radius:50%;border:1.5px solid rgba(79,142,247,0.3);display:flex;align-items:center;justify-content:center;position:relative">
       <div style="position:absolute;inset:-12px;border-radius:50%;border:1px solid rgba(79,142,247,0.1)"></div>
@@ -557,14 +557,30 @@ textarea.form-input{resize:vertical;min-height:120px}
         </div>
         <div class="form-group">
           <label class="form-label">Services interested in (select multiple)</label>
-          <div class="svc-checks">
-            <label class="svc-check"><input type="checkbox" name="service" value="Website Design"><span class="svc-check-box"></span>Website Design</label>
-            <label class="svc-check"><input type="checkbox" name="service" value="QR Code Menu"><span class="svc-check-box"></span>QR Code Menu</label>
-            <label class="svc-check"><input type="checkbox" name="service" value="Landing Page"><span class="svc-check-box"></span>Landing Page</label>
-            <label class="svc-check"><input type="checkbox" name="service" value="Link in Bio"><span class="svc-check-box"></span>Custom Link in Bio</label>
-            <label class="svc-check"><input type="checkbox" name="service" value="Pricing Page"><span class="svc-check-box"></span>Pricing Page</label>
-            <label class="svc-check"><input type="checkbox" name="service" value="Not sure"><span class="svc-check-box"></span>Not sure yet, need advice</label>
+          <div style="position:relative">
+            <div id="svc-dropdown" onclick="toggleSvcDropdown()" class="form-input" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;user-select:none;min-height:48px">
+              <span id="svc-display" style="color:var(--muted)">Select services...</span>
+              <span id="svc-arrow" style="font-size:.7rem;transition:transform .2s;flex-shrink:0;margin-left:8px">▼</span>
+            </div>
+            <div id="svc-options" style="display:none;position:absolute;top:100%;left:0;right:0;z-index:50;background:var(--bg3);border:1px solid var(--line2);border-top:none;margin-top:-1px">
+              <label class="svc-opt"><input type="checkbox" name="service" value="Website Design" onchange="updateSvcDisplay()"><span class="svc-opt-box"></span>Website Design</label>
+              <label class="svc-opt"><input type="checkbox" name="service" value="Landing Page" onchange="updateSvcDisplay()"><span class="svc-opt-box"></span>Landing Page</label>
+              <label class="svc-opt"><input type="checkbox" name="service" value="QR Code Menu" onchange="updateSvcDisplay()"><span class="svc-opt-box"></span>QR Code Menu</label>
+              <label class="svc-opt"><input type="checkbox" name="service" value="Link in Bio" onchange="updateSvcDisplay()"><span class="svc-opt-box"></span>Custom Link in Bio</label>
+              <label class="svc-opt"><input type="checkbox" name="service" value="Not sure" onchange="updateSvcDisplay()"><span class="svc-opt-box"></span>Not sure yet, need advice</label>
+            </div>
           </div>
+          <style>
+            .svc-opt{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;font-size:.85rem;color:var(--text);font-weight:300;border-bottom:1px solid var(--line);transition:background .15s}
+            .svc-opt:last-child{border-bottom:none}
+            .svc-opt:hover{background:var(--bg2)}
+            .svc-opt input{position:absolute;opacity:0;pointer-events:none}
+            .svc-opt-box{width:16px;height:16px;border:1px solid var(--line2);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s}
+            .svc-opt-box::after{content:"";width:8px;height:8px;background:var(--blue);opacity:0;transition:opacity .15s}
+            .svc-opt input:checked ~ .svc-opt-box{border-color:var(--blue)}
+            .svc-opt input:checked ~ .svc-opt-box::after{opacity:1}
+            .svc-opt:has(input:checked){background:var(--blue3)}
+          </style>
         </div>
         <div class="form-group">
           <label class="form-label">Your Message *</label>
@@ -716,5 +732,28 @@ burger.addEventListener('click',()=>{burger.classList.toggle('open');mm.classLis
 function closeMM(){burger.classList.remove('open');mm.classList.remove('open');document.body.style.overflow=''}
 </script>
 
+<script>
+function toggleSvcDropdown(){
+  var opts=document.getElementById('svc-options');
+  var arrow=document.getElementById('svc-arrow');
+  var open=opts.style.display==='block';
+  opts.style.display=open?'none':'block';
+  arrow.style.transform=open?'rotate(0deg)':'rotate(180deg)';
+}
+function updateSvcDisplay(){
+  var checked=[...document.querySelectorAll('input[name="service"]:checked')].map(i=>i.value);
+  var display=document.getElementById('svc-display');
+  if(checked.length===0){display.textContent='Select services...';display.style.color='var(--muted)'}
+  else{display.textContent=checked.join(', ');display.style.color='var(--text)'}
+}
+document.addEventListener('click',function(e){
+  var dd=document.getElementById('svc-dropdown');
+  var opts=document.getElementById('svc-options');
+  var arrow=document.getElementById('svc-arrow');
+  if(dd&&opts&&!dd.contains(e.target)&&!opts.contains(e.target)){
+    opts.style.display='none';arrow.style.transform='rotate(0deg)';
+  }
+});
+</script>
 </body>
 </html>
