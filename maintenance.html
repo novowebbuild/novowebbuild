@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Πλάνα Συντήρησης | Novo Web Build</title>
+<meta name="description" content="Μηνιαία πλάνα συντήρησης ιστοσελίδας για πελάτες της Novo Web Build. Από €30/μήνα.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="manifest" href="site.webmanifest">
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-3HXLY3GNPP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3HXLY3GNPP');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=BAAFN4pE-H9QjoYo5j061z2Og2LTvR8LFSSbE_OQxybJnhMuJdJ4N3H14cR94ojSe_mVjzMNWm4ADv5PXo&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:#0D1117;color:#E8EDF5;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+:root{
+  --bg:#0D1117;--bg2:#131920;--bg3:#1A2332;
+  --white:#FFFFFF;--text:#E8EDF5;--muted:rgba(232,237,245,.65);--muted2:rgba(232,237,245,.38);
+  --line:rgba(232,237,245,.07);--line2:rgba(232,237,245,.12);
+  --blue:#4F8EF7;--blue2:rgba(79,142,247,.1);
+}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:26px 64px;transition:background .4s,padding .35s;border-bottom:1px solid transparent}
+nav.on{background:rgba(13,17,23,.98);padding:16px 64px;border-color:var(--line)}
+.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.025em;color:var(--white);display:flex;align-items:center;gap:9px}
+.nav-logo img{width:32px;height:32px;border-radius:50%;object-fit:cover}
+.nav-back{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s;display:flex;align-items:center;gap:6px}
+.nav-back:hover{color:var(--blue)}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+.tag::before{content:'';display:block;width:18px;height:1px;background:var(--blue)}
+.section-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.93;color:var(--white)}
+.section-title span{color:var(--blue)}
+.r{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.r.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* Hero */
+.hero{padding:160px 64px 80px;text-align:center;position:relative;border-bottom:1px solid var(--line)}
+.hero-glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(79,142,247,.08),transparent 70%);pointer-events:none}
+.hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(2.5rem,5vw,5rem);color:var(--white);letter-spacing:-.03em;margin-bottom:20px}
+.hero h1 span{color:var(--blue)}
+.hero p{font-size:1rem;color:var(--muted);max-width:540px;margin:0 auto;line-height:1.8}
+
+/* Plans grid */
+.plans{padding:80px 64px;max-width:1400px;margin:0 auto}
+.plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-top:48px}
+.plan{background:var(--bg2);padding:40px 32px;display:flex;flex-direction:column;position:relative;transition:background .3s}
+.plan:hover{background:var(--bg3)}
+.plan.pop{background:var(--bg3);outline:1px solid var(--blue)}
+.plan-badge{position:absolute;top:0;right:0;background:var(--blue);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;padding:5px 12px}
+.plan-tier{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;display:flex;align-items:center;gap:7px}
+.plan-tier::before{content:'';width:12px;height:1px;background:var(--blue);display:block}
+.plan-price{font-family:'Fraunces',serif;font-size:3.5rem;color:var(--white);line-height:1;margin-bottom:4px}
+.plan-price sup{font-size:1.4rem;vertical-align:super}
+.plan-freq{font-size:.7rem;color:var(--muted);margin-bottom:20px}
+.plan-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:8px}
+.plan-desc{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--line);flex:0}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:10px;flex:1;margin-bottom:28px}
+.plan-features li{font-size:.8rem;color:var(--muted);display:flex;align-items:flex-start;gap:9px;line-height:1.5}
+.plan-features li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0}
+.plan-features li.prev{color:var(--muted2)}
+.plan-features li.prev::before{content:'✓';color:var(--muted2)}
+/* PayPal button container styling */
+.paypal-wrap{margin-top:auto}
+.paypal-wrap .paypal-buttons{border-radius:0 !important}
+
+/* Note */
+.note{text-align:center;padding:40px 64px 80px;font-size:.82rem;color:var(--muted2);line-height:1.8}
+.note a{color:var(--blue)}
+
+/* Footer */
+footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;color:var(--white);display:flex;align-items:center;gap:8px}
+.footer-logo img{width:26px;height:26px;border-radius:50%;object-fit:cover}
+.footer-copy{font-size:.63rem;color:var(--muted2)}
+
+/* Mobile nav burger */
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s}
+.mobile-menu{display:flex;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,17,23,.99);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease;transform:translateZ(0)}
+.mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto}
+.mobile-menu a{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.6rem;color:var(--muted)}
+.mobile-menu .mm-cta{background:var(--blue);color:#fff!important;padding:14px 36px;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+
+@media(max-width:1100px){.plans-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:960px){
+  nav{padding:18px 22px}nav.on{padding:13px 22px}
+  .hero{padding:120px 22px 60px}
+  .plans{padding:60px 22px}
+  .note{padding:20px 22px 60px}
+  footer{padding:28px 22px}
+  .nav-burger{display:flex}
+  .nav-back{display:none}
+}
+@media(max-width:600px){.plans-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="android-chrome-512x512.png" alt="" role="presentation">
+    Novo Web Build
+  </a>
+  <a class="nav-back" href="index.html">← Επιστροφή στην αρχική</a>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mobile-menu" id="mobile-menu">
+    <div style="position:absolute;top:22px;left:22px;display:flex;align-items:center;gap:10px">
+      <img src="android-chrome-512x512.png" alt="" role="presentation" style="width:34px;height:34px;border-radius:50%;object-fit:cover">
+      <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;color:var(--white)">Novo Web Build</span>
+    </div>
+    <button onclick="closeMM()" style="position:absolute;top:22px;right:22px;background:none;border:none;color:var(--muted);font-size:1.6rem;cursor:pointer">✕</button>
+    <a href="index.html" onclick="closeMM()">Αρχική</a>
+    <a href="about.html" onclick="closeMM()">Σχετικά</a>
+    <a href="services.html" onclick="closeMM()">Υπηρεσίες</a>
+    <a href="blog.html" onclick="closeMM()">Blog</a>
+    <a href="https://wa.me/306940144755" target="_blank" class="mm-cta">Ξεκινάμε →</a>
+  </div>
+</nav>
+
+<div class="hero r">
+  <div class="hero-glow"></div>
+  <div class="tag">Ήδη πελάτης μας;</div>
+  <h1>Διάλεξε το <span>πλάνο σου</span></h1>
+  <p>Κράτα την ιστοσελίδα σου πάντα ενημερωμένη, ασφαλή και σε άριστη κατάσταση. Χωρίς να ανησυχείς για τίποτα τεχνικό.</p>
+</div>
+
+<div class="plans">
+  <div class="plans-grid">
+
+    <!-- €30 Simple -->
+    <div class="plan r">
+      <div class="plan-tier">Simple</div>
+      <div class="plan-price"><sup>€</sup>30</div>
+      <div class="plan-freq">ανά μήνα · αυτόματη χρέωση</div>
+      <div class="plan-name">Βασική Συντήρηση</div>
+      <div class="plan-desc">Για επιχειρήσεις που θέλουν να έχουν την ησυχία τους ότι η ιστοσελίδα τους λειτουργεί σωστά.</div>
+      <ul class="plan-features">
+        <li>Μηνιαία συντήρηση & έλεγχος</li>
+        <li>Παρακολούθηση διαθεσιμότητας</li>
+        <li>Έλεγχος ασφάλειας</li>
+        <li>Ενημερώσεις τεχνικών στοιχείων</li>
+        <li>Μηνιαία αναφορά κατάστασης</li>
+      </ul>
+      <div class="paypal-wrap">
+        <div id="paypal-button-container-P-61D97880FR2200742NH4LVAY"></div>
+      </div>
+    </div>
+
+    <!-- €50 Standard -->
+    <div class="plan r d1">
+      <div class="plan-tier">Standard</div>
+      <div class="plan-price"><sup>€</sup>50</div>
+      <div class="plan-freq">ανά μήνα · αυτόματη χρέωση</div>
+      <div class="plan-name">Συντήρηση & Ενημερώσεις</div>
+      <div class="plan-desc">Για επιχειρήσεις που θέλουν να κρατάνε το περιεχόμενο τους φρέσκο χωρίς να ασχολούνται οι ίδιες.</div>
+      <ul class="plan-features">
+        <li class="prev">Όλα του Simple</li>
+        <li>2 ενημερώσεις περιεχομένου/μήνα</li>
+        <li>Αλλαγές κειμένων & εικόνων</li>
+        <li>Προτεραιότητα υποστήριξης</li>
+      </ul>
+      <div class="paypal-wrap">
+        <div id="paypal-button-container-P-18W292058L548333MNH4L2NY"></div>
+      </div>
+    </div>
+
+    <!-- €100 Growth -->
+    <div class="plan pop r d2">
+      <div class="plan-badge">Πιο Δημοφιλές</div>
+      <div class="plan-tier">Growth</div>
+      <div class="plan-price"><sup>€</sup>100</div>
+      <div class="plan-freq">ανά μήνα · αυτόματη χρέωση</div>
+      <div class="plan-name">Ανάπτυξη & SEO</div>
+      <div class="plan-desc">Για επιχειρήσεις που θέλουν να αναπτυχθούν online και να βρίσκονται ψηλότερα στα αποτελέσματα Google.</div>
+      <ul class="plan-features">
+        <li class="prev">Όλα του Standard</li>
+        <li>Μηνιαία βελτιστοποίηση SEO</li>
+        <li>Προσθήκη περιεχομένου κατόπιν αιτήματος</li>
+        <li>Μηνιαία αναφορά επισκεψιμότητας</li>
+        <li>Συμβουλές ανάπτυξης</li>
+      </ul>
+      <div class="paypal-wrap">
+        <div id="paypal-button-container-P-7FF38746N2761615LNH4L3XA"></div>
+      </div>
+    </div>
+
+    <!-- €140 Premium -->
+    <div class="plan r d3">
+      <div class="plan-tier">Premium</div>
+      <div class="plan-price"><sup>€</sup>140</div>
+      <div class="plan-freq">ανά μήνα · αυτόματη χρέωση</div>
+      <div class="plan-name">Απεριόριστη Υποστήριξη</div>
+      <div class="plan-desc">Για επιχειρήσεις που θέλουν έναν αξιόπιστο συνεργάτη για κάθε ανάγκη της ιστοσελίδας τους.</div>
+      <ul class="plan-features">
+        <li class="prev">Όλα του Growth</li>
+        <li>Απεριόριστες αλλαγές</li>
+        <li>Προτεραιότητα σε όλα τα αιτήματα</li>
+        <li>Άμεση επικοινωνία μέσω WhatsApp</li>
+        <li>Μηνιαία στρατηγική & προτάσεις</li>
+      </ul>
+      <div class="paypal-wrap">
+        <div id="paypal-button-container-P-70L54018MN901701NNH4L4JI"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="note r">
+  Δεν ξέρεις ποιο πλάνο σου ταιριάζει; <a href="https://wa.me/306940144755" target="_blank">Γράψε μας στο WhatsApp</a> και θα σε βοηθήσουμε να επιλέξεις.<br>
+  Μπορείς να ακυρώσεις οποιαδήποτε στιγμή. Χωρίς δεσμεύσεις.
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <img src="android-chrome-512x512.png" alt="" role="presentation">
+    Novo Web Build
+  </div>
+  <span class="footer-copy">© 2026 Novo Web Build · <a href="index.html" style="color:var(--muted2)">Αρχική</a></span>
+</footer>
+
+<script>
+// Nav scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>50),{passive:true});
+
+// Intersection observer
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.07});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+
+// Mobile menu
+const burger=document.getElementById('burger');
+const mm=document.getElementById('mobile-menu');
+burger.addEventListener('click',()=>{burger.classList.toggle('open');mm.classList.toggle('open');document.body.style.overflow=mm.classList.contains('open')?'hidden':''});
+function closeMM(){burger.classList.remove('open');mm.classList.remove('open');document.body.style.overflow=''}
+
+// PayPal buttons
+const plans = [
+  {id:'P-61D97880FR2200742NH4LVAY', container:'paypal-button-container-P-61D97880FR2200742NH4LVAY'},
+  {id:'P-18W292058L548333MNH4L2NY', container:'paypal-button-container-P-18W292058L548333MNH4L2NY'},
+  {id:'P-7FF38746N2761615LNH4L3XA', container:'paypal-button-container-P-7FF38746N2761615LNH4L3XA'},
+  {id:'P-70L54018MN901701NNH4L4JI', container:'paypal-button-container-P-70L54018MN901701NNH4L4JI'},
+];
+
+plans.forEach(function(plan){
+  paypal.Buttons({
+    style:{shape:'rect',color:'blue',layout:'vertical',label:'subscribe'},
+    createSubscription:function(data,actions){
+      return actions.subscription.create({plan_id:plan.id});
+    },
+    onApprove:function(data,actions){
+      alert('Η εγγραφή σου ολοκληρώθηκε! ID: '+data.subscriptionID);
+    }
+  }).render('#'+plan.container);
+});
+</script>
+</body>
+</html>
