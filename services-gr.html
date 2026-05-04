@@ -208,11 +208,21 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
 </div>
 </nav>
 
-<div class="ph r">
+<div class="ph r" style="display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap">
   <div class="ph-glow"></div>
+  <div style="flex:1;min-width:280px">
   <div class="tag">Υπηρεσίες</div>
   <h1 class="section-title">Κάθε επιχείρηση<br>αξίζει <span>το καλύτερο.</span></h1>
   <p>Από ολοκληρωμένες ιστοσελίδες ως ψηφιακούς καταλόγους QR και Link in Bio, φτιάχνουμε ό,τι χρειάζεσαι για να είσαι online επαγγελματικά.</p>
+  </div>
+  <div style="flex-shrink:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;position:relative" id="svc-logo-ring"><style>@media(max-width:960px){#svc-logo-ring{display:none}}</style>
+    <div style="position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(79,142,247,0.1) 0%,transparent 70%);pointer-events:none"></div>
+    <div style="width:260px;height:260px;border-radius:50%;border:1.5px solid rgba(79,142,247,0.3);display:flex;align-items:center;justify-content:center;position:relative">
+      <div style="position:absolute;inset:-12px;border-radius:50%;border:1px solid rgba(79,142,247,0.1)"></div>
+      <div style="position:absolute;inset:12px;border-radius:50%;border:1px solid rgba(79,142,247,0.08)"></div>
+      <img src="android-chrome-512x512.png" alt="Novo Web Build" style="width:180px;height:180px;border-radius:50%;object-fit:cover;position:relative;z-index:1">
+    </div>
+  </div>
 </div>
 
 <div class="svc-overview">
@@ -265,15 +275,15 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
   <div style="padding:64px 64px 0">
     <div class="tag">Τιμές Κατασκευής Ιστοσελίδας</div>
     <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:8px">Επέλεξε το <span>πακέτο σου</span></h2>
-    <p style="font-size:.9rem;color:var(--muted);margin-bottom:40px">Όλες οι τιμές είναι εφάπαξ. Χωρίς μηνιαίες χρεώσεις. Hosting από €5/μήνα επιπλέον.</p>
+    <p style="font-size:.9rem;color:var(--muted);margin-bottom:40px">Όλες οι τιμές είναι εφάπαξ. Χωρίς μηνιαίες χρεώσεις.</p>
   </div>
 
   <div style="padding:0 64px 64px">
     <div class="pt-grid">
       <!-- €400 Starter Website -->
       <div class="pt">
-        <div class="pt-tier">Essential</div>
-        <div class="pt-price"><sup style="font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:.05em;vertical-align:middle;opacity:.7">from </sup><sup>€</sup>400</div>
+        <div class="pt-tier">Βασικό</div>
+        <div class="pt-price"><sup style="font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:.05em;vertical-align:middle;opacity:.7">από </sup><sup>€</sup>400</div>
         <div class="pt-freq">εφάπαξ</div>
         <div class="pt-name">Starter Ιστοσελίδα</div>
         <div class="pt-ideal">Freelancers, μικρές τοπικές επιχειρήσεις, όποιος θέλει καθαρή επαγγελματική παρουσία</div>
@@ -294,7 +304,7 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
       <div class="pt pop">
         <div class="pt-badge">Πιο Δημοφιλές</div>
         <div class="pt-tier">Professional</div>
-        <div class="pt-price"><sup style="font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:.05em;vertical-align:middle;opacity:.7">from </sup><sup>€</sup>700</div>
+        <div class="pt-price"><sup style="font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:.05em;vertical-align:middle;opacity:.7">από </sup><sup>€</sup>700</div>
         <div class="pt-freq">εφάπαξ</div>
         <div class="pt-name">Professional Ιστοσελίδα</div>
         <div class="pt-ideal">Εστιατόρια, ξενοδοχεία, γυμναστήρια, κομμωτήρια, studios, επιχειρήσεις που αναπτύσσονται</div>
@@ -313,8 +323,8 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
 
       <!-- €1,200 Business -->
       <div class="pt">
-        <div class="pt-tier">Business</div>
-        <div class="pt-price"><sup style="font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:.05em;vertical-align:middle;opacity:.7">from </sup><sup>€</sup>1,200</div>
+        <div class="pt-tier">Επιχειρηματικό</div>
+        <div class="pt-price"><sup style="font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:.05em;vertical-align:middle;opacity:.7">από </sup><sup>€</sup>1,200</div>
         <div class="pt-freq">εφάπαξ</div>
         <div class="pt-name">Business Ιστοσελίδα</div>
         <div class="pt-ideal">Καταξιωμένες επιχειρήσεις, agencies, πολυ-υπηρεσιακές εταιρείες</div>
@@ -334,7 +344,7 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
       <!-- €2,000+ Custom -->
       <div class="pt">
         <div class="pt-tier">Custom</div>
-        <div class="pt-price"><sup style="font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:.05em;vertical-align:middle;opacity:.7">from </sup><sup>€</sup>2,000</div>
+        <div class="pt-price"><sup style="font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:.05em;vertical-align:middle;opacity:.7">από </sup><sup>€</sup>2,000</div>
         <div class="pt-freq">κατόπιν προσφοράς</div>
         <div class="pt-name">E-commerce / Custom</div>
         <div class="pt-ideal">Online καταστήματα, σύνθετες πλατφόρμες, οτιδήποτε με ειδικές απαιτήσεις</div>
