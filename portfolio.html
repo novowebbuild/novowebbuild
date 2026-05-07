@@ -499,6 +499,12 @@ function pauseVid(card) {
   if (v) { v.pause(); v.currentTime = 0; v.classList.remove('playing'); }
 }
 
+// Attach hover listeners for desktop
+document.querySelectorAll('.project').forEach(card => {
+  card.addEventListener('mouseenter', () => playVid(card));
+  card.addEventListener('mouseleave', () => pauseVid(card));
+});
+
 // ── Video: mobile tap ───────────────────────────────────────────────────────
 const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
 
