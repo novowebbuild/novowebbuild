@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Main EN pages -->
-  <url><loc>https://www.novowebbuild.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.novowebbuild.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.novowebbuild.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.novowebbuild.com/portfolio</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.novowebbuild.com/maintenance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://novowebbuild.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://novowebbuild.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://novowebbuild.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://novowebbuild.com/portfolio</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://novowebbuild.com/maintenance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Main GR pages -->
-  <url><loc>https://www.novowebbuild.com/index-gr</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.novowebbuild.com/about-gr</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.novowebbuild.com/services-gr</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.novowebbuild.com/portfolio-gr</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.novowebbuild.com/maintenance-gr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-gr</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://novowebbuild.com/index-gr</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://novowebbuild.com/about-gr</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://novowebbuild.com/services-gr</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://novowebbuild.com/portfolio-gr</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://novowebbuild.com/maintenance-gr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-gr</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Blog articles -->
-  <url><loc>https://www.novowebbuild.com/blog-5-reasons-business-website</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-perfect-website-brief</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-static-vs-dynamic-website</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-what-is-seo-small-business</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-colour-psychology-web-design</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-qr-menu-cafe-2025</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-google-seo-free-traffic</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-cheap-vs-good-website</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-digital-invitations-vs-paper</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-does-my-business-need-google-maps</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-how-much-does-a-website-cost</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.novowebbuild.com/blog-instagram-is-not-a-website</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-5-reasons-business-website</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-perfect-website-brief</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-static-vs-dynamic-website</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-what-is-seo-small-business</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-colour-psychology-web-design</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-qr-menu-cafe-2025</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-google-seo-free-traffic</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-cheap-vs-good-website</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-digital-invitations-vs-paper</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-does-my-business-need-google-maps</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-how-much-does-a-website-cost</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://novowebbuild.com/blog-instagram-is-not-a-website</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
 
 </urlset>
