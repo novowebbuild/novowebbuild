@@ -111,6 +111,19 @@ footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;dis
 }
 @media(max-width:600px){.plans-grid{grid-template-columns:1fr}}
 @media(max-width:960px){.nav-audit-btn{display:none}}
+
+@media(max-width:960px){
+  .plans-grid{grid-template-columns:1fr!important;gap:0}
+  .plan{padding:32px 22px!important}
+  .hero-maint{padding:120px 22px 60px!important}
+  .maint-features{grid-template-columns:1fr!important;padding:52px 22px!important}
+  .maint-faq{padding:52px 22px!important}
+  .maint-intro{padding:52px 22px!important;flex-direction:column!important}
+  section{padding-left:22px!important;padding-right:22px!important}
+}
+@media(max-width:600px){
+  .plan-price{font-size:2.5rem!important}
+}
 </style>
 </head>
 <body>
@@ -124,6 +137,7 @@ footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;dis
     <li><a href="about.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">About</a></li>
     <li><a href="services.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">Services</a></li>
     <li><a href="maintenance.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff">Maintenance</a></li>
+    <li><a href="portfolio.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">Work</a></li>
     <li><a href="blog.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">Blog</a></li>
   </ul>
   <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener" class="nav-audit-btn" style="background:#4F8EF7;color:#fff;padding:8px 18px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-right:8px;text-decoration:none">Free Audit →</a><a href="https://wa.me/306940144755" target="_blank" style="background:#4F8EF7;color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:9px 22px;display:none" class="nav-cta-maint">Get Started →</a>
@@ -144,6 +158,7 @@ footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;dis
     <a href="index.html" onclick="closeMM()">Home</a>
     <a href="about.html" onclick="closeMM()">About</a>
     <a href="services.html" onclick="closeMM()">Services</a>
+    <a href="portfolio.html" onclick="closeMM()">Work</a>
     <a href="blog.html" onclick="closeMM()">Blog</a>
     <a href="https://wa.me/306940144755" target="_blank" class="mm-cta">Get Started →</a>
   </div>
