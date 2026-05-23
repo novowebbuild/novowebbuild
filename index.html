@@ -136,9 +136,10 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
 .hero-h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(3.8rem,9vw,10rem);line-height:.9;letter-spacing:-.04em;color:var(--white);margin-bottom:40px;opacity:0;animation:fadeUp .9s .32s forwards}
 .hero-h1 span{color:var(--blue)}
 .hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;opacity:0;animation:fadeUp .9s .48s forwards}
-.hero-sub{font-size:1.02rem;line-height:1.78;color:var(--muted);max-width:380px}
-.hero-sub strong{color:var(--text);font-weight:500}
+.hero-sub{font-size:1.02rem;line-height:1.78;color:var(--white);max-width:380px}
+.hero-sub strong{color:var(--white);font-weight:500}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
+@media(min-width:961px){.hero-actions{display:none}}
 .hero-scroll-ind{position:absolute;left:64px;bottom:96px;z-index:2;display:flex;align-items:center;gap:10px;opacity:0;animation:fadeIn .7s 1.2s forwards}
 .hero-scroll-line{width:1px;height:44px;background:linear-gradient(to bottom,var(--blue),transparent);animation:scrollPulse 2.2s ease-in-out infinite}
 .hero-scroll-ind span{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
@@ -399,6 +400,10 @@ textarea.form-input{resize:vertical;min-height:120px}
       <img src="android-chrome-512x512.png" alt="Novo Web Build" style="width:180px;height:180px;border-radius:50%;object-fit:cover;position:relative;z-index:1">
     </div>
     <div style="font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--muted);text-align:center;letter-spacing:.02em">Built to convert. Designed to impress.</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1">
+      <a href="services.html" class="btn btn-blue">See Services →</a>
+      <a href="https://wa.me/306940144755" target="_blank" class="btn btn-outline">WhatsApp Us</a>
+    </div>
   </div>
   </div>
   <div class="hero-bottom">
