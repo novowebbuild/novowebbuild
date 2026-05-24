@@ -89,6 +89,9 @@ footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;dis
 
 .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
 .nav-burger span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s;text-decoration:none}
+.nav-links a:hover,.nav-links a.active{color:#fff}
 .mobile-menu{display:flex;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,17,23,.99);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease;transform:translateZ(0)}
 .mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto}
 .mobile-menu a{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.6rem;color:var(--muted)}
@@ -101,7 +104,7 @@ footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;dis
   .plans{padding:60px 22px}
   .note{padding:20px 22px 60px}
   footer{padding:28px 22px}
-  
+  .nav-links{display:none}
 .lang-toggle{display:flex;align-items:center;gap:2px;background:rgba(19,25,32,0.8);border:1px solid rgba(232,237,245,.12);padding:3px;flex-shrink:0}
 .lang-btn{font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:4px 9px;cursor:pointer;color:rgba(232,237,245,.6);transition:all .2s;border:none;background:none;font-family:'Plus Jakarta Sans',sans-serif}
 .lang-btn.active{background:#4F8EF7;color:#fff}
@@ -132,16 +135,16 @@ footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;dis
     <img src="android-chrome-512x512.png" alt="" role="presentation">
     Novo Web Build
   </a>
-  <ul style="display:flex;align-items:center;gap:32px;list-style:none">
-    <li><a href="index.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">Home</a></li>
-    <li><a href="about.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">About</a></li>
-    <li><a href="services.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">Services</a></li>
-    <li><a href="maintenance.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff">Maintenance</a></li>
-    <li><a href="portfolio.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">Work</a></li>
-    <li><a href="blog.html" style="font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(232,237,245,.6)'">Blog</a></li>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="maintenance.html" class="active">Maintenance</a></li>
+    <li><a href="portfolio.html">Work</a></li>
+    <li><a href="blog.html">Blog</a></li>
   </ul>
-  <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener" class="nav-audit-btn" style="background:#4F8EF7;color:#fff;padding:8px 18px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-right:8px;text-decoration:none">Free Audit →</a><a href="https://wa.me/306940144755" target="_blank" style="background:#4F8EF7;color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:9px 22px;display:none" class="nav-cta-maint">Get Started →</a>
-  <style>@media(min-width:961px){.nav-cta-maint{display:inline-block!important}}.nav-links-maint{display:flex}@media(max-width:960px){.nav-links-maint{display:none}.nav-burger{display:flex!important}}</style>
+  <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener" class="nav-audit-btn" style="background:#4F8EF7;color:#fff;padding:8px 18px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-right:8px;text-decoration:none">Free Audit →</a>
+  <a href="https://wa.me/306940144755" target="_blank" class="nav-cta">Get Started →</a>
   <div class="lang-toggle">
   <button class="lang-btn active" onclick="window.location.href='maintenance.html'">EN</button>
   <button class="lang-btn" onclick="window.location.href='maintenance-gr.html'">GR</button>
