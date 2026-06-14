@@ -73,6 +73,11 @@ nav.on{background:rgba(13,17,23,.98);padding:16px 64px;border-color:var(--line)}
 
 /* Note */
 .note{text-align:center;padding:40px 64px 80px;font-size:.82rem;color:var(--muted2);line-height:1.8}
+.qr-section{padding:0 64px 40px;max-width:1400px;margin:0 auto}
+.qr-card{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;background:var(--bg2);border:1px solid var(--line);padding:48px}
+.qr-right{display:flex;flex-direction:column;justify-content:center}
+@media(max-width:900px){.qr-card{grid-template-columns:1fr;gap:32px;padding:32px 22px}}
+@media(max-width:960px){.qr-section{padding:0 22px 40px}}
 .note a{color:var(--blue)}
 
 /* Footer */
@@ -256,6 +261,30 @@ footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;dis
   </div>
 </div>
 
+<!-- QR Menu Service -->
+<div class="qr-section r">
+  <div class="qr-card">
+    <div class="qr-left">
+      <div class="plan-tier">QR Menu</div>
+      <div class="plan-price"><sup>€</sup>15</div>
+      <div class="plan-freq">per month · automatic billing</div>
+      <div class="plan-name">Digital QR Menu for Restaurants & Cafés</div>
+      <div class="plan-desc">A mobile-friendly digital menu your customers open by scanning a QR code. Always up to date, no reprinting, no hassle.</div>
+      <ul class="plan-features">
+        <li>Custom digital menu, mobile-optimised</li>
+        <li>1 menu update per month</li>
+        <li>Hosting & QR code included</li>
+        <li>Ongoing support</li>
+      </ul>
+    </div>
+    <div class="qr-right">
+      <div class="paypal-wrap">
+        <div id="paypal-button-container-P-1WT03411RD354604TNIXLR2I"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="note r">
   Δεν ξέρεις ποιο πλάνο σου ταιριάζει; <a href="https://wa.me/306940144755" target="_blank">Message us on WhatsApp</a> and we'll help you choose.<br>
   Μπορείς να ακυρώσεις οποιαδήποτε στιγμή. Χωρίς δεσμεύσεις.
@@ -290,6 +319,7 @@ const plans = [
   {id:'P-18W292058L548333MNH4L2NY', container:'paypal-button-container-P-18W292058L548333MNH4L2NY'},
   {id:'P-7FF38746N2761615LNH4L3XA', container:'paypal-button-container-P-7FF38746N2761615LNH4L3XA'},
   {id:'P-70L54018MN901701NNH4L4JI', container:'paypal-button-container-P-70L54018MN901701NNH4L4JI'},
+  {id:'P-1WT03411RD354604TNIXLR2I', container:'paypal-button-container-P-1WT03411RD354604TNIXLR2I'},
 ];
 
 plans.forEach(function(plan){
