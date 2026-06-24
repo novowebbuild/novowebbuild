@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Websites that Sell | Novo Web Build</title>
-<meta name="description" content="Professional website design for small businesses worldwide. Fast delivery, clean design, zero hassle. Get your site live fast.">
+<meta name="description" content="Professional website design for businesses of any size worldwide. Fast delivery, clean design, zero hassle. Get your site live fast.">
 <meta property="og:title" content="Websites that Sell | Novo Web Build">
-<meta property="og:description" content="Professional websites for small businesses. Fast, clean, affordable.">
+<meta property="og:description" content="Professional websites for businesses of any size. Fast, clean, affordable.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://novowebbuild.com/android-chrome-512x512.png">
 <link rel="canonical" href="https://novowebbuild.com/">
@@ -319,21 +319,27 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
 }
 
 /* ── INQUIRY FORM ── */
-#inquiry{padding:108px 64px;background:var(--bg2);border-top:1px solid var(--line)}
-.inq-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+#inquiry{padding:108px 64px;background:linear-gradient(180deg,var(--bg2),var(--bg));border-top:1px solid var(--line);position:relative;overflow:hidden}
+#inquiry::before{content:"";position:absolute;top:-120px;right:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(79,142,247,.08),transparent 65%);pointer-events:none}
+.inq-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;position:relative;z-index:1}
 .inq-left h2{font-size:clamp(2rem,4vw,3.5rem);margin-bottom:36px}
 .inq-left p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:52px}
-.inq-detail{display:flex;flex-direction:column;gap:24px;margin-bottom:40px}
-.inq-row{display:flex;align-items:center;gap:12px}
-.inq-icon{width:36px;height:36px;background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.inq-detail{display:flex;flex-direction:column;gap:14px;margin-bottom:40px}
+.inq-row{display:flex;align-items:center;gap:14px;padding:14px 16px;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;transition:border-color .25s,background .25s,transform .25s}
+.inq-row:hover{border-color:rgba(79,142,247,.35);background:rgba(79,142,247,.04);transform:translateX(3px)}
+.inq-icon{width:40px;height:40px;background:rgba(79,142,247,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .inq-val{font-size:.88rem;color:var(--muted)}
 .inq-val a{color:var(--blue);transition:opacity .2s}.inq-val a:hover{opacity:.75}
 .inq-form{display:flex;flex-direction:column;gap:0}
+.inq-form-card{background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line2);border-radius:16px;padding:38px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.inq-form-card::before{content:"";position:absolute;inset:0;border-radius:16px;padding:1px;background:linear-gradient(160deg,rgba(79,142,247,.4),transparent 40%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.6}
 .inq-row-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-group{display:flex;flex-direction:column;margin-bottom:16px}
-.form-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:7px;font-weight:500}
-.form-input{background:var(--bg3);border:1px solid var(--line2);color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:300;padding:13px 16px;outline:none;transition:border-color .25s;appearance:none;width:100%}
-.form-input:focus{border-color:var(--blue)}
+.form-group{display:flex;flex-direction:column;margin-bottom:18px}
+.form-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600;transition:color .25s}
+.form-group:focus-within .form-label{color:var(--blue)}
+.form-input{background:rgba(13,17,23,.6);border:1px solid var(--line2);border-radius:9px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:300;padding:14px 16px;outline:none;transition:border-color .25s,box-shadow .25s,background .25s;appearance:none;width:100%}
+.form-input:hover{border-color:rgba(79,142,247,.3)}
+.form-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(79,142,247,.14);background:rgba(13,17,23,.85)}
 .form-input::placeholder{color:var(--muted2)}
 textarea.form-input{resize:vertical;min-height:120px}
 .svc-checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
@@ -345,11 +351,12 @@ textarea.form-input{resize:vertical;min-height:120px}
 .svc-check input:checked ~ .svc-check-box{border-color:var(--blue)}
 .svc-check input:checked ~ .svc-check-box::after{opacity:1}
 .svc-check:has(input:checked){border-color:var(--blue);background:var(--blue3)}
-.form-submit{margin-top:8px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.form-note{font-size:.72rem;color:var(--muted2)}
-.form-success{display:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);padding:16px 20px;margin-top:12px}
+.form-submit{margin-top:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.form-submit .btn{width:100%;justify-content:center;padding:16px 30px}
+.form-note{font-size:.72rem;color:var(--muted2);width:100%;text-align:center}
+.form-success{display:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);border-radius:9px;padding:16px 20px;margin-top:12px}
 .form-success p{font-size:.88rem;color:#22c55e}
-.form-error{display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);padding:16px 20px;margin-top:12px}
+.form-error{display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:9px;padding:16px 20px;margin-top:12px}
 .form-error p{font-size:.88rem;color:#ef4444}
 @media(max-width:960px){
   #inquiry{padding:72px 22px}
@@ -431,7 +438,7 @@ textarea.form-input{resize:vertical;min-height:120px}
     <div class="hero-kicker"><div class="hero-kicker-dot"></div><span>Web Design Studio · Worldwide</span></div>
     <h1 class="hero-h1">Websites<br>that <span>sell.</span></h1>
     <p class="hero-tag">Turn clicks into clients.</p>
-    <p class="hero-sub">We build <strong>professional websites</strong> for small businesses, fast delivery, clean design, zero hassle. You focus on your business, we handle the rest.</p>
+    <p class="hero-sub">We build <strong>professional websites</strong> for businesses of any size, from startups to established companies. Fast delivery, clean design, zero hassle.</p>
     <div class="hero-actions">
       <a href="services.html" class="btn btn-blue">See Services →</a>
       <a href="https://wa.me/306940144755" target="_blank" class="btn btn-outline">WhatsApp Us</a>
@@ -466,14 +473,14 @@ textarea.form-input{resize:vertical;min-height:120px}
 <section id="why">
   <div class="why-l r">
     <h2 class="section-title">Why choose<br><span>Novo Web Build</span></h2>
-    <div class="why-row"><div class="why-n">01</div><div class="why-t"><h3>Simple process</h3><p>Tell us what you need, send us your content, we handle everything. Zero technical knowledge required.</p></div></div>
-    <div class="why-row"><div class="why-n">02</div><div class="why-t"><h3>100% custom design</h3><p>Every website is built from scratch for you. No templates, no cookie-cutter layouts, original every time.</p></div></div>
-    <div class="why-row"><div class="why-n">03</div><div class="why-t"><h3>Fast delivery</h3><p>No delays, no surprises. We respect your time and your deadline.</p></div></div>
-    <div class="why-row"><div class="why-n">04</div><div class="why-t"><h3>Ongoing support</h3><p>We're here for changes, questions and continuous support.</p></div></div>
+    <div class="why-row"><div class="why-n">01</div><div class="why-t"><h3>Simple process</h3><p>You send your content, we handle everything. Zero technical knowledge needed.</p></div></div>
+    <div class="why-row"><div class="why-n">02</div><div class="why-t"><h3>100% custom design</h3><p>Built from scratch for you. No templates, original every time.</p></div></div>
+    <div class="why-row"><div class="why-n">03</div><div class="why-t"><h3>Fast delivery</h3><p>Most sites live within 14 working days. No delays, no surprises.</p></div></div>
+    <div class="why-row"><div class="why-n">04</div><div class="why-t"><h3>Ongoing support</h3><p>Here for changes, questions and support after launch.</p></div></div>
     
   </div>
   <div class="why-r r d1">
-    <div><div class="wstat-n">14 days</div><div class="wstat-l">Typical delivery</div></div>
+    <div><div class="wstat-n">14 days</div><div class="wstat-l">Max delivery time</div></div>
     
     <div class="wstat-div"></div>
     <div><div class="wstat-n">100%</div><div class="wstat-l">Mobile responsive</div></div>
@@ -488,10 +495,10 @@ textarea.form-input{resize:vertical;min-height:120px}
     <h2 class="section-title">Ready in <span>4 simple steps</span></h2>
   </div>
   <div class="process-grid">
-    <div class="proc r"><div class="proc-num">1</div><div class="proc-name">Tell us what you need</div><p class="proc-desc">Send a message with a few details, your business, style preferences, what you need. No technical knowledge required.</p></div>
-    <div class="proc r d1"><div class="proc-num">2</div><div class="proc-name">Send us your content</div><p class="proc-desc">Logo, photos, text. If you don't have something, we'll figure it out together. We guide you through everything.</p></div>
-    <div class="proc r d2"><div class="proc-num">3</div><div class="proc-name">We build your website</div><p class="proc-desc">You request any changes you want, we make them fast.</p></div>
-    <div class="proc r d3"><div class="proc-num">4</div><div class="proc-name">We go live</div><p class="proc-desc">We handle hosting and domain setup. Your website is live at your address, you don't touch anything technical.</p></div>
+    <div class="proc r"><div class="proc-num">1</div><div class="proc-name">Tell us what you need</div><p class="proc-desc">A few details about your business and style. That's it.</p></div>
+    <div class="proc r d1"><div class="proc-num">2</div><div class="proc-name">Send us your content</div><p class="proc-desc">Logo, photos, text. Missing something? We sort it out together.</p></div>
+    <div class="proc r d2"><div class="proc-num">3</div><div class="proc-name">We build your website</div><p class="proc-desc">We design it, you request changes, we make them fast.</p></div>
+    <div class="proc r d3"><div class="proc-num">4</div><div class="proc-name">We go live</div><p class="proc-desc">We handle hosting and domain. You touch nothing technical.</p></div>
   </div>
 </section>
 
@@ -503,18 +510,18 @@ textarea.form-input{resize:vertical;min-height:120px}
     <a href="https://wa.me/306940144755" target="_blank" class="btn btn-blue">Ask on WhatsApp →</a>
   </div>
   <div class="faq-list r d1">
-    <div class="faq-item open"><div class="faq-q">Do I need any technical knowledge?<span class="faq-icon">+</span></div><div class="faq-a">Not at all. You give us your logo, photos and text. We handle everything from design to going live.</div></div>
-    <div class="faq-item"><div class="faq-q">How long until my website is ready?<span class="faq-icon">+</span></div><div class="faq-a">Delivery time varies by project. Most websites are completed within 14 working days. After delivery we make any revisions you want quickly.</div></div>
+    <div class="faq-item open"><div class="faq-q">Do I need any technical knowledge?<span class="faq-icon">+</span></div><div class="faq-a">None. You give us your logo, photos and text, we handle the rest.</div></div>
+    <div class="faq-item"><div class="faq-q">How long until my website is ready?<span class="faq-icon">+</span></div><div class="faq-a">Most websites are ready within 14 working days, revisions included.</div></div>
     <div class="faq-item"><div class="faq-q">Can I make changes after delivery?<span class="faq-icon">+</span></div><div class="faq-a">Yes! Every package includes revision rounds. For ongoing changes, our maintenance plans start at €50/month.</div></div>
-    <div class="faq-item"><div class="faq-q">Where are you based and do you work internationally?<span class="faq-icon">+</span></div><div class="faq-a">We work with clients anywhere in the world. Everything is done online: calls, briefs, reviews and handover. Timezone is never an issue.</div></div>
-    <div class="faq-item"><div class="faq-q">What do I need to provide to get started?<span class="faq-icon">+</span></div><div class="faq-a">Your logo, some photos, and the text you want on the site. We guide you through exactly what we need, most clients are surprised how simple it is.</div></div>
+    <div class="faq-item"><div class="faq-q">Where are you based and do you work internationally?<span class="faq-icon">+</span></div><div class="faq-a">We work worldwide, fully online. Timezone is never an issue.</div></div>
+    <div class="faq-item"><div class="faq-q">What do I need to provide to get started?<span class="faq-icon">+</span></div><div class="faq-a">Your logo, photos and text. We guide you through the rest.</div></div>
   </div>
 </section>
 
 <section id="audit" style="padding:80px 64px;border-bottom:1px solid var(--line);text-align:center">
   <div class="tag r" style="justify-content:center;margin-bottom:20px">Free Tool</div>
   <h2 class="section-title r" style="text-align:center;margin-bottom:20px">How does your website<br><span>really perform?</span></h2>
-  <p class="r" style="text-align:center;color:var(--muted);font-size:.92rem;line-height:1.75;max-width:460px;margin:0 auto 36px">Get an instant audit of your site's speed, SEO, mobile performance and security. Free, no signup needed.</p>
+  <p class="r" style="text-align:center;color:var(--muted);font-size:.92rem;line-height:1.75;max-width:460px;margin:0 auto 36px">Instant check of speed, SEO, mobile and security. Free, no signup.</p>
   <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener" class="r" style="display:inline-block;background:#ffffff;color:#0D1117;padding:14px 36px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:opacity .2s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Run Free Audit →</a>
 </section>
 
@@ -585,17 +592,7 @@ textarea.form-input{resize:vertical;min-height:120px}
       </div>
     </div>
 
-    <div class="r d1">
-      <!-- 
-        ════════════════════════════════════════════
-        FORMSPREE SETUP (takes 2 minutes):
-        1. Go to formspree.io
-        2. Sign up with novowebbuild@gmail.com
-        3. Click "New Form" → name it "Novo Web Build Contact"
-        4. Copy your form endpoint (looks like: https://formspree.io/f/xyzxyz)
-        5. Replace YOUR_FORMSPREE_ENDPOINT below with your real endpoint
-        ════════════════════════════════════════════
-      -->
+    <div class="r d1 inq-form-card">
       <form id="inq-form" action="https://formspree.io/f/xjgjjvlv" method="POST" onsubmit="return submitForm(event)">
         <!-- Hidden fields -->
         <input type="hidden" name="_subject" value="New inquiry from Novo Web Build website">
@@ -733,7 +730,7 @@ async function submitForm(e) {
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo"><img src="android-chrome-512x512.png" alt="Novo Web Build" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">Novo Web Build</div>
-      <p>Professional websites for small businesses, fast, clean, and built to grow your business online.</p>
+      <p>Professional websites for businesses of any size, fast, clean, and built to grow you online.</p>
       <div class="footer-contact">
         <a href="https://wa.me/306940144755" target="_blank">📱 WhatsApp: +30 694 014 4755</a>
         <a href="mailto:novowebbuild@gmail.com">✉️ novowebbuild@gmail.com</a>

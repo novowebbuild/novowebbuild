@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ιστοσελίδες που Πουλάνε | Novo Web Build</title>
-<meta name="description" content="Επαγγελματικές ιστοσελίδες για μικρές επιχειρήσεις. Γρήγορη παράδοση, καθαρό design, χωρίς τεχνικές γνώσεις. Έτοιμη γρήγορα.">
+<meta name="description" content="Επαγγελματικές ιστοσελίδες για επιχειρήσεις κάθε μεγέθους. Γρήγορη παράδοση, καθαρό design, χωρίς τεχνικές γνώσεις. Έτοιμη γρήγορα.">
 <meta property="og:title" content="Websites that Sell | Novo Web Build">
 <meta property="og:description" content="Professional websites for small businesses. Fast, clean, affordable.">
 <meta property="og:type" content="website">
@@ -319,22 +319,28 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
 }
 
 /* ── INQUIRY FORM ── */
-#inquiry{padding:108px 64px;background:var(--bg2);border-top:1px solid var(--line)}
-.inq-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+#inquiry{padding:108px 64px;background:linear-gradient(180deg,var(--bg2),var(--bg));border-top:1px solid var(--line);position:relative;overflow:hidden}
+#inquiry::before{content:"";position:absolute;top:-120px;right:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(79,142,247,.08),transparent 65%);pointer-events:none}
+.inq-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;position:relative;z-index:1}
 .inq-left h2{font-size:clamp(2rem,4vw,3.5rem);margin-bottom:36px}
 #inquiry .section-title{margin-bottom:36px;line-height:1.15}
 .inq-left p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:52px}
-.inq-detail{display:flex;flex-direction:column;gap:24px;margin-bottom:40px}
-.inq-row{display:flex;align-items:center;gap:12px}
-.inq-icon{width:36px;height:36px;background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.inq-detail{display:flex;flex-direction:column;gap:14px;margin-bottom:40px}
+.inq-row{display:flex;align-items:center;gap:14px;padding:14px 16px;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;transition:border-color .25s,background .25s,transform .25s}
+.inq-row:hover{border-color:rgba(79,142,247,.35);background:rgba(79,142,247,.04);transform:translateX(3px)}
+.inq-icon{width:40px;height:40px;background:rgba(79,142,247,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .inq-val{font-size:.88rem;color:var(--muted)}
 .inq-val a{color:var(--blue);transition:opacity .2s}.inq-val a:hover{opacity:.75}
 .inq-form{display:flex;flex-direction:column;gap:0}
+.inq-form-card{background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line2);border-radius:16px;padding:38px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.inq-form-card::before{content:"";position:absolute;inset:0;border-radius:16px;padding:1px;background:linear-gradient(160deg,rgba(79,142,247,.4),transparent 40%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.6}
 .inq-row-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-group{display:flex;flex-direction:column;margin-bottom:16px}
-.form-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:7px;font-weight:500}
-.form-input{background:var(--bg3);border:1px solid var(--line2);color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:300;padding:13px 16px;outline:none;transition:border-color .25s;appearance:none;width:100%}
-.form-input:focus{border-color:var(--blue)}
+.form-group{display:flex;flex-direction:column;margin-bottom:18px}
+.form-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600;transition:color .25s}
+.form-group:focus-within .form-label{color:var(--blue)}
+.form-input{background:rgba(13,17,23,.6);border:1px solid var(--line2);border-radius:9px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:300;padding:14px 16px;outline:none;transition:border-color .25s,box-shadow .25s,background .25s;appearance:none;width:100%}
+.form-input:hover{border-color:rgba(79,142,247,.3)}
+.form-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(79,142,247,.14);background:rgba(13,17,23,.85)}
 .form-input::placeholder{color:var(--muted2)}
 textarea.form-input{resize:vertical;min-height:120px}
 .svc-checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
@@ -346,11 +352,12 @@ textarea.form-input{resize:vertical;min-height:120px}
 .svc-check input:checked ~ .svc-check-box{border-color:var(--blue)}
 .svc-check input:checked ~ .svc-check-box::after{opacity:1}
 .svc-check:has(input:checked){border-color:var(--blue);background:var(--blue3)}
-.form-submit{margin-top:8px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.form-note{font-size:.72rem;color:var(--muted2)}
-.form-success{display:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);padding:16px 20px;margin-top:12px}
+.form-submit{margin-top:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.form-submit .btn{width:100%;justify-content:center;padding:16px 30px}
+.form-note{font-size:.72rem;color:var(--muted2);width:100%;text-align:center}
+.form-success{display:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);border-radius:9px;padding:16px 20px;margin-top:12px}
 .form-success p{font-size:.88rem;color:#22c55e}
-.form-error{display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);padding:16px 20px;margin-top:12px}
+.form-error{display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:9px;padding:16px 20px;margin-top:12px}
 .form-error p{font-size:.88rem;color:#ef4444}
 @media(max-width:960px){
   #inquiry{padding:72px 22px}
@@ -412,7 +419,7 @@ textarea.form-input{resize:vertical;min-height:120px}
     <div class="hero-kicker"><div class="hero-kicker-dot"></div><span>Κατασκευή Ιστοσελίδων · Παγκοσμίως</span></div>
     <h1 class="hero-h1">Η online παρουσία<br>που <span>αξίζεις.</span></h1>
     <p class="hero-tag">Μετατρέπουμε επισκέπτες σε πελάτες.</p>
-    <p class="hero-sub">Χτίζουμε <strong>επαγγελματικές ιστοσελίδες</strong> για μικρές επιχειρήσεις. Γρήγορη παράδοση, καθαρός σχεδιασμός, χωρίς στρες. Εσύ ασχολείσαι με τη δουλειά σου, εμείς με τα υπόλοιπα.</p>
+    <p class="hero-sub">Χτίζουμε <strong>επαγγελματικές ιστοσελίδες</strong> για επιχειρήσεις κάθε μεγέθους, από startups μέχρι μεγάλες εταιρείες. Γρήγορη παράδοση, καθαρός σχεδιασμός, χωρίς στρες.</p>
     <div class="hero-actions">
       <a href="services-gr.html" class="btn btn-blue">Δες τις Υπηρεσίες →</a>
       <a href="https://wa.me/306940144755" target="_blank" class="btn btn-outline">WhatsApp</a>
@@ -447,14 +454,14 @@ textarea.form-input{resize:vertical;min-height:120px}
 <section id="why">
   <div class="why-l r">
     <h2 class="section-title">Γιατί να επιλέξεις<br><span>Novo Web Build</span></h2>
-    <div class="why-row"><div class="why-n">01</div><div class="why-t"><h3>Απλή διαδικασία</h3><p>Μας λες τι θέλεις, μας στέλνεις το περιεχόμενο, εμείς αναλαμβάνουμε τα πάντα. Μηδέν τεχνικές γνώσεις απαραίτητες.</p></div></div>
-    <div class="why-row"><div class="why-n">02</div><div class="why-t"><h3>100% custom design</h3><p>Κάθε ιστοσελίδα φτιάχνεται από μηδέν, αποκλειστικά για σένα. Χωρίς templates, χωρίς αντιγραφές.</p></div></div>
-    <div class="why-row"><div class="why-n">03</div><div class="why-t"><h3>Γρήγορη παράδοση</h3><p>Χωρίς καθυστερήσεις, χωρίς εκπλήξεις. Σεβόμαστε τον χρόνο σου και την προθεσμία.</p></div></div>
-    <div class="why-row"><div class="why-n">04</div><div class="why-t"><h3>Συνεχής υποστήριξη</h3><p>Είμαστε εδώ για αλλαγές, ερωτήσεις και οτιδήποτε χρειαστείς μετά την παράδοση.</p></div></div>
+    <div class="why-row"><div class="why-n">01</div><div class="why-t"><h3>Απλή διαδικασία</h3><p>Μας στέλνεις το υλικό σου, εμείς αναλαμβάνουμε τα πάντα. Μηδέν τεχνικές γνώσεις.</p></div></div>
+    <div class="why-row"><div class="why-n">02</div><div class="why-t"><h3>100% custom design</h3><p>Φτιαγμένη από μηδέν, αποκλειστικά για σένα. Χωρίς templates.</p></div></div>
+    <div class="why-row"><div class="why-n">03</div><div class="why-t"><h3>Γρήγορη παράδοση</h3><p>Οι περισσότερες online εντός 14 εργάσιμων. Χωρίς καθυστερήσεις.</p></div></div>
+    <div class="why-row"><div class="why-n">04</div><div class="why-t"><h3>Συνεχής υποστήριξη</h3><p>Εδώ για αλλαγές, ερωτήσεις και υποστήριξη μετά το launch.</p></div></div>
     
   </div>
   <div class="why-r r d1">
-    <div><div class="wstat-n">14 μέρες</div><div class="wstat-l">Συνήθης παράδοση</div></div>
+    <div><div class="wstat-n">14 μέρες</div><div class="wstat-l">Μέγιστος χρόνος παράδοσης</div></div>
     
     <div class="wstat-div"></div>
     <div><div class="wstat-n">100%</div><div class="wstat-l">Mobile-responsive</div></div>
@@ -469,10 +476,10 @@ textarea.form-input{resize:vertical;min-height:120px}
     <h2 class="section-title">Έτοιμο σε <span>4 απλά βήματα</span></h2>
   </div>
   <div class="process-grid">
-    <div class="proc r"><div class="proc-num">1</div><div class="proc-name">Μας λες τι θέλεις</div><p class="proc-desc">Στείλε μας μήνυμα με λίγες λεπτομέρειες για την επιχείρησή σου και τι ψάχνεις. Δεν χρειάζεσαι τεχνικές γνώσεις.</p></div>
-    <div class="proc r d1"><div class="proc-num">2</div><div class="proc-name">Μας στέλνεις το υλικό σου</div><p class="proc-desc">Λογότυπο, φωτογραφίες, κείμενα. Αν κάτι λείπει, το λύνουμε μαζί. Σε καθοδηγούμε σε κάθε βήμα.</p></div>
-    <div class="proc r d2"><div class="proc-num">3</div><div class="proc-name">Χτίζουμε την ιστοσελίδα σου</div><p class="proc-desc">Ζητάς ό,τι αλλαγή θέλεις και εμείς την κάνουμε γρήγορα.</p></div>
-    <div class="proc r d3"><div class="proc-num">4</div><div class="proc-name">Βγαίνουμε online</div><p class="proc-desc">Αναλαμβάνουμε hosting και domain. Η ιστοσελίδα σου είναι online, χωρίς να χρειαστεί να αγγίξεις τίποτα τεχνικό.</p></div>
+    <div class="proc r"><div class="proc-num">1</div><div class="proc-name">Μας λες τι θέλεις</div><p class="proc-desc">Λίγες λεπτομέρειες για την επιχείρηση και το στυλ σου. Τίποτα άλλο.</p></div>
+    <div class="proc r d1"><div class="proc-num">2</div><div class="proc-name">Μας στέλνεις το υλικό σου</div><p class="proc-desc">Λογότυπο, φωτογραφίες, κείμενα. Λείπει κάτι; Το λύνουμε μαζί.</p></div>
+    <div class="proc r d2"><div class="proc-num">3</div><div class="proc-name">Χτίζουμε την ιστοσελίδα σου</div><p class="proc-desc">Τη σχεδιάζουμε, ζητάς αλλαγές, τις κάνουμε γρήγορα.</p></div>
+    <div class="proc r d3"><div class="proc-num">4</div><div class="proc-name">Βγαίνουμε online</div><p class="proc-desc">Αναλαμβάνουμε hosting και domain. Δεν αγγίζεις τίποτα τεχνικό.</p></div>
   </div>
 </section>
 
@@ -484,11 +491,11 @@ textarea.form-input{resize:vertical;min-height:120px}
     <a href="https://wa.me/306940144755" target="_blank" class="btn btn-blue">Ρώτησέ μας στο WhatsApp →</a>
   </div>
   <div class="faq-list r d1">
-    <div class="faq-item open"><div class="faq-q">Χρειάζομαι τεχνικές γνώσεις;<span class="faq-icon">+</span></div><div class="faq-a">Καθόλου. Μας δίνεις το λογότυπο, τις φωτογραφίες και τα κείμενα. Εμείς αναλαμβάνουμε τα πάντα, από το σχεδιασμό ως την ανάρτηση.</div></div>
-    <div class="faq-item"><div class="faq-q">Πόσο καιρό παίρνει να είναι έτοιμη η ιστοσελίδα;<span class="faq-icon">+</span></div><div class="faq-a">Εξαρτάται από το project. Οι περισσότερες ιστοσελίδες ολοκληρώνονται εντός 14 εργάσιμων ημερών. Μετά την παράδοση κάνουμε άμεσα όποιες αλλαγές θέλεις.</div></div>
+    <div class="faq-item open"><div class="faq-q">Χρειάζομαι τεχνικές γνώσεις;<span class="faq-icon">+</span></div><div class="faq-a">Καμία. Μας δίνεις λογότυπο, φωτογραφίες και κείμενα, αναλαμβάνουμε τα υπόλοιπα.</div></div>
+    <div class="faq-item"><div class="faq-q">Πόσο καιρό παίρνει να είναι έτοιμη η ιστοσελίδα;<span class="faq-icon">+</span></div><div class="faq-a">Οι περισσότερες ιστοσελίδες είναι έτοιμες εντός 14 εργάσιμων, με τις διορθώσεις.</div></div>
     <div class="faq-item"><div class="faq-q">Μπορώ να κάνω αλλαγές μετά την παράδοση;<span class="faq-icon">+</span></div><div class="faq-a">Φυσικά. Κάθε πακέτο περιλαμβάνει γύρους διορθώσεων. Για συνεχής αλλαγές, τα πακέτα συντήρησης ξεκινάνε από €50/μήνα.</div></div>
-    <div class="faq-item"><div class="faq-q">Πού βρίσκεστε; Δουλεύετε και εκτός Ελλάδας;<span class="faq-icon">+</span></div><div class="faq-a">Δουλεύουμε με πελάτες σε όλον τον κόσμο. Όλα γίνονται online — κλήσεις, briefings, αξιολόγηση, παράδοση. Η ζώνη ώρας δεν είναι ποτέ πρόβλημα.</div></div>
-    <div class="faq-item"><div class="faq-q">Τι πρέπει να έχω έτοιμο για να ξεκινήσουμε;<span class="faq-icon">+</span></div><div class="faq-a">Το λογότυπό σου, μερικές φωτογραφίες και τα κείμενα. Σε καθοδηγούμε βήμα-βήμα, και οι περισσότεροι πελάτες εκπλήσσονται πόσο εύκολο είναι.</div></div>
+    <div class="faq-item"><div class="faq-q">Πού βρίσκεστε; Δουλεύετε και εκτός Ελλάδας;<span class="faq-icon">+</span></div><div class="faq-a">Δουλεύουμε παγκοσμίως, εξ ολοκλήρου online. Η ζώνη ώρας δεν είναι ποτέ πρόβλημα.</div></div>
+    <div class="faq-item"><div class="faq-q">Τι πρέπει να έχω έτοιμο για να ξεκινήσουμε;<span class="faq-icon">+</span></div><div class="faq-a">Το λογότυπο, φωτογραφίες και κείμενα. Σε καθοδηγούμε στα υπόλοιπα.</div></div>
   </div>
 </section>
 
@@ -577,17 +584,7 @@ textarea.form-input{resize:vertical;min-height:120px}
       </div>
     </div>
 
-    <div class="r d1">
-      <!-- 
-        ════════════════════════════════════════════
-        FORMSPREE SETUP (takes 2 minutes):
-        1. Go to formspree.io
-        2. Sign up with novowebbuild@gmail.com
-        3. Click "New Form" → name it "Novo Web Build Contact"
-        4. Copy your form endpoint (looks like: https://formspree.io/f/xyzxyz)
-        5. Replace YOUR_FORMSPREE_ENDPOINT below with your real endpoint
-        ════════════════════════════════════════════
-      -->
+    <div class="r d1 inq-form-card">
       <form id="inq-form" action="https://formspree.io/f/xjgjjvlv" method="POST" onsubmit="return submitForm(event)">
         <!-- Hidden fields -->
         <input type="hidden" name="_subject" value="New inquiry from Novo Web Build website">
@@ -725,7 +722,7 @@ async function submitForm(e) {
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo"><img src="android-chrome-512x512.png" alt="Novo Web Build" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">Novo Web Build</div>
-      <p>Επαγγελματικές ιστοσελίδες για μικρές επιχειρήσεις. Γρήγορες, καθαρές και χτισμένες για ανάπτυξη.</p>
+      <p>Επαγγελματικές ιστοσελίδες για επιχειρήσεις κάθε μεγέθους. Γρήγορες, καθαρές και χτισμένες για ανάπτυξη.</p>
       <div class="footer-contact">
         <a href="https://wa.me/306940144755" target="_blank">📱 WhatsApp: +30 694 014 4755</a>
         <a href="mailto:novowebbuild@gmail.com">✉️ novowebbuild@gmail.com</a>
