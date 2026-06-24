@@ -134,14 +134,21 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .9s .68s forwards}
 .hero-logo-ring{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;position:relative}
 .hlr-glow{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(79,142,247,0.12) 0%,transparent 70%);pointer-events:none;animation:hlrPulse 5s ease-in-out infinite}
-.hlr-ring{width:280px;height:280px;border-radius:50%;border:1.5px solid rgba(79,142,247,0.3);display:flex;align-items:center;justify-content:center;position:relative}
+.hlr-ring{width:280px;height:280px;border-radius:50%;border:1.5px solid rgba(79,142,247,0.3);display:flex;align-items:center;justify-content:center;position:relative;perspective:1100px}
 .hlr-orbit1{position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(79,142,247,0.12);animation:hlrSpin 24s linear infinite}
 .hlr-orbit2{position:absolute;inset:14px;border-radius:50%;border:1px solid rgba(79,142,247,0.08)}
-.hlr-img{width:200px;height:200px;border-radius:50%;object-fit:cover;position:relative;z-index:1}
+.hlr-coin{position:relative;width:200px;height:200px;z-index:1;transform-style:preserve-3d;animation:coinFlip 9s cubic-bezier(.45,.05,.55,.95) infinite;will-change:transform}
+.hlr-img{position:absolute;inset:0;width:200px;height:200px;border-radius:50%;object-fit:cover;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.hlr-img.back{transform:rotateY(180deg)}
+.hlr-sheen{position:absolute;inset:0;border-radius:50%;background:linear-gradient(105deg,transparent 32%,rgba(255,255,255,.5) 48%,rgba(191,212,255,.35) 53%,transparent 68%);mix-blend-mode:screen;pointer-events:none;opacity:0;animation:coinSheen 9s cubic-bezier(.45,.05,.55,.95) infinite;z-index:3}
+.hlr-edge{position:absolute;top:50%;left:50%;width:6px;height:200px;border-radius:50%;background:linear-gradient(to bottom,transparent,rgba(143,184,255,.9),rgba(79,142,247,.7),transparent);transform:translate(-50%,-50%);opacity:0;animation:coinEdge 9s linear infinite;pointer-events:none;z-index:2;box-shadow:0 0 24px rgba(79,142,247,.6)}
 .hlr-tagline{font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--muted);text-align:center;letter-spacing:.02em;max-width:280px}
 @keyframes hlrPulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
 @keyframes hlrSpin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){.hlr-glow,.hlr-orbit1{animation:none}}
+@keyframes coinFlip{0%{transform:rotateY(0deg)}100%{transform:rotateY(360deg)}}
+@keyframes coinSheen{0%{opacity:0}12%{opacity:.95}28%{opacity:0}50%{opacity:0}62%{opacity:.8}78%{opacity:0}100%{opacity:0}}
+@keyframes coinEdge{0%,100%{opacity:0}23%{opacity:0}25%{opacity:1}27%{opacity:0}73%{opacity:0}75%{opacity:1}77%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.hlr-glow,.hlr-orbit1,.hlr-coin,.hlr-sheen,.hlr-edge{animation:none}.hlr-coin{transform:none}}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;z-index:0;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,#000 40%,transparent 100%)}
 .hero-glow{position:absolute;top:15%;right:5%;width:700px;height:700px;background:radial-gradient(circle,rgba(79,142,247,.1) 0%,transparent 65%);z-index:0;pointer-events:none}
 .hero-glow2{position:absolute;bottom:0;left:10%;width:400px;height:300px;background:radial-gradient(circle,rgba(79,142,247,.06) 0%,transparent 65%);z-index:0;pointer-events:none}
@@ -419,7 +426,12 @@ textarea.form-input{resize:vertical;min-height:120px}
     <div class="hlr-ring">
       <div class="hlr-orbit1"></div>
       <div class="hlr-orbit2"></div>
-      <img src="android-chrome-512x512.png" alt="Novo Web Build" class="hlr-img">
+      <div class="hlr-coin">
+        <img src="android-chrome-512x512.png" alt="Novo Web Build" class="hlr-img front">
+        <img src="android-chrome-512x512.png" alt="Novo Web Build" class="hlr-img back">
+        <div class="hlr-sheen"></div>
+        <div class="hlr-edge"></div>
+      </div>
     </div>
     <div class="hlr-tagline">Built to convert. Designed to impress.</div>
   </div>
