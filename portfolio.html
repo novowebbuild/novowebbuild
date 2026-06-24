@@ -27,14 +27,20 @@ img{display:block;max-width:100%}
 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:24px 64px;transition:background .4s,padding .3s,border-color .4s;border-bottom:1px solid transparent}
-nav.on{background:rgba(245,245,242,.97);padding:14px 64px;border-color:rgba(0,0,0,.07)}
-.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:-.025em;color:#111;display:flex;align-items:center;gap:9px}
+nav.on{background:rgba(245,245,242,.72);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);padding:13px 64px;border-color:rgba(0,0,0,.1)}
+.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:-.025em;color:#111;display:flex;align-items:center;gap:9px;transition:opacity .2s}
+.nav-logo:hover{opacity:.8}
 .nav-logo img{width:30px;height:30px;border-radius:50%;object-fit:cover}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-.nav-links a{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4);transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:#111}
-.nav-cta{background:#111;color:#fff!important;padding:8px 20px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:opacity .2s;white-space:nowrap}
-.nav-cta:hover{opacity:.8}
+.nav-links a{position:relative;font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4);transition:color .25s;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;background:#111;transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.nav-links a:hover{color:#111}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-links a.active{color:#111}
+.nav-links a.active::after{transform:scaleX(1)}
+.nav-cta{background:#111;color:#fff!important;padding:9px 22px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.28)}
+.nav-cta:active{transform:translateY(0)}
 .lang-toggle{display:flex;align-items:center;gap:2px;background:rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.1);padding:3px;margin-left:12px;flex-shrink:0}
 .lang-btn{font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:4px 9px;cursor:pointer;color:rgba(0,0,0,.4);transition:all .2s;border:none;background:none;font-family:'Plus Jakarta Sans',sans-serif}
 .lang-btn.active{background:#111;color:#fff}
@@ -297,8 +303,8 @@ footer{background:#111;padding:36px 64px;display:flex;justify-content:space-betw
         <span>Tap to preview</span>
       </div>
       <div class="project-info">
-        <div class="project-name">Zagorochoria</div>
-        <div class="project-cat">Hotel · Greece</div>
+        <div class="project-name">Diving School</div>
+        <div class="project-cat">Diving School · Mytilene</div>
       </div>
     </div>
 
@@ -325,8 +331,8 @@ footer{background:#111;padding:36px 64px;display:flex;justify-content:space-betw
         <span>Tap to preview</span>
       </div>
       <div class="project-info">
-        <div class="project-name">Mountain Guesthouse</div>
-        <div class="project-cat">Guesthouse · Greece</div>
+        <div class="project-name">Restaurant</div>
+        <div class="project-cat">Restaurant · Thessaloniki</div>
       </div>
     </div>
 
