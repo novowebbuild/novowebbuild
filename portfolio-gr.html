@@ -38,6 +38,7 @@ nav.on{background:rgba(245,245,242,.72);backdrop-filter:saturate(160%) blur(16px
 .nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
 .nav-links a.active{color:#111}
 .nav-links a.active::after{transform:scaleX(1)}
+.nav-links a:focus:not(:hover):not(.active)::after{transform:scaleX(0)}
 .nav-cta{background:#111;color:#fff!important;padding:9px 22px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.18)}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.28)}
 .nav-cta:active{transform:translateY(0)}
