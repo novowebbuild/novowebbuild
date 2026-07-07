@@ -128,7 +128,7 @@ footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 
 @media(max-width:960px){.nav-burger{display:flex}.nav-cta{display:none}}
 
 @media(max-width:960px){
-  nav{padding:18px 22px}nav.on{padding:13px 22px}.nav-links{display:none}
+  nav{padding:18px 22px;transition:background .3s,padding .3s}nav.on{padding:13px 22px;background:rgba(13,17,23,.96);backdrop-filter:none;-webkit-backdrop-filter:none}.nav-links{display:none}
   footer{padding:48px 22px 28px}
   .footer-top{grid-template-columns:1fr 1fr;gap:28px}
 }
