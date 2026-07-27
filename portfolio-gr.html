@@ -3,482 +3,370 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Οι Εργασίες μας | Novo Web Build</title>
-<meta name="description" content="Έργα web design από τη Novo Web Build. Κατασκευή ιστοσελίδων για ξενοδοχεία, εστιατόρια, μπαρ και επιχειρήσεις παγκοσμίως.">
-<meta property="og:title" content="Οι Εργασίες μας | Novo Web Build">
-<meta property="og:description" content="Κατασκευή ιστοσελίδων για ξενοδοχεία, εστιατόρια, μπαρ και επιχειρήσεις παγκοσμίως.">
-<meta property="og:image" content="https://novowebbuild.com/android-chrome-512x512.png">
+<title>Portfolio | Novo Web Build</title>
+<meta name="description" content="Μια επιλογή ιστοσελίδων και ψηφιακών έργων που έχουμε κατασκευάσει για επιχειρήσεις στην Ελλάδα και όχι μόνο.">
+<meta property="og:title" content="Portfolio | Novo Web Build">
+<meta property="og:description" content="Μια επιλογή ιστοσελίδων και ψηφιακών έργων που έχουμε κατασκευάσει για επιχειρήσεις στην Ελλάδα και όχι μόνο.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://novowebbuild.com/android-chrome-512x512.png">
 <link rel="canonical" href="https://novowebbuild.com/portfolio-gr">
+<meta name="theme-color" content="#0C0E11">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<!-- Google Analytics -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-3HXLY3GNPP"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3HXLY3GNPP');</script>
+<style>
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px 40px;padding:10px 0 90px}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr;gap:34px}}
+.phero{display:grid;grid-template-columns:1fr auto;gap:0 48px;align-items:center}
+.phero h1{grid-column:1}
+.phero .lead{grid-column:1}
+.hbadge{grid-column:2;grid-row:1/span 2;position:relative;display:flex;align-items:center;justify-content:center;width:min(190px,100%);aspect-ratio:1}
+.hbadge svg{position:absolute;inset:0;width:100%;height:100%;animation:spinb 24s linear infinite}
+.hbadge svg text{font-family:'Plus Jakarta Sans';font-size:10.5px;font-weight:700;letter-spacing:.32em;fill:var(--mut);text-transform:uppercase}
+.hbadge img{width:76px;height:76px;border-radius:50%;position:relative;z-index:1}
+.hbadge::after{content:"";position:absolute;width:60%;height:60%;background:radial-gradient(circle,rgba(79,142,247,.16),transparent 70%);pointer-events:none}
+@keyframes spinb{to{transform:rotate(360deg)}}
+@media(max-width:900px){.phero{grid-template-columns:1fr}.hbadge{display:none}}
+@media(prefers-reduced-motion:reduce){.hbadge svg{animation:none}}
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:#F5F5F2;color:#111;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{background:#0C0E11;color:#F2F4F7;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+:root{
+  --bg:#0C0E11;--panel:#111418;--ink:#F2F4F7;--ink2:#B9BEC6;--mut:#787E88;
+  --blue:#4F8EF7;--line:rgba(242,244,247,.1);--line2:rgba(242,244,247,.06);
+}
 a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
+::selection{background:var(--blue);color:#fff}
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-thumb{background:var(--blue)}
+.wrap{max-width:1500px;margin:0 auto;padding-left:48px;padding-right:48px}
 
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:24px 64px;transition:background .4s,padding .3s,border-color .4s;border-bottom:1px solid transparent}
-nav.on{background:rgba(245,245,242,.72);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);padding:13px 64px;border-color:rgba(0,0,0,.1)}
-.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:-.025em;color:#111;display:flex;align-items:center;gap:9px;transition:opacity .2s}
-.nav-logo:hover{opacity:.8}
-.nav-logo img{width:30px;height:30px;border-radius:50%;object-fit:cover}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-.nav-links a{position:relative;font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4);transition:color .25s;padding:4px 0}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;background:#111;transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.16,1,.3,1)}
-.nav-links a:hover{color:#111}
-.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
-.nav-links a.active{color:#111}
-.nav-links a.active::after{transform:scaleX(1)}
-.nav-links a:focus:not(:hover):not(.active)::after{transform:scaleX(0)}
-.nav-cta{background:#111;color:#fff!important;padding:9px 22px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.18)}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.28)}
-.nav-cta:active{transform:translateY(0)}
-.lang-toggle{display:flex;align-items:center;gap:2px;background:rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.1);padding:3px;margin-left:12px;flex-shrink:0}
-.lang-btn{font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:4px 9px;cursor:pointer;color:rgba(0,0,0,.4);transition:all .2s;border:none;background:none;font-family:'Plus Jakarta Sans',sans-serif}
-.lang-btn.active{background:#111;color:#fff}
-.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.nav-burger span{display:block;width:22px;height:2px;background:#111;transition:all .3s}
+/* NAV */
+nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px 48px;transition:background .3s,border-color .3s,padding .3s;border-bottom:1px solid transparent}
+nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px}
+.logo{font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.02rem;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.logo img{width:26px;height:26px;border-radius:50%;display:block;flex-shrink:0}
+.nl{display:flex;gap:34px;font-size:.82rem;font-weight:400;color:var(--ink2);list-style:none}
+.nl a{position:relative;padding:3px 0;transition:color .25s}
+.nl a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.19,1,.22,1)}
+.nl a:hover{color:var(--ink)}
+.nl a:hover::after{transform:scaleX(1);transform-origin:left}
+.nl a.active{color:var(--ink)}
+.nl a.active::after{transform:scaleX(1)}
+.nl a:focus:not(:hover):not(.active)::after{transform:scaleX(0)}
+.nav-right{display:flex;align-items:center;gap:22px}
+.ncta{font-size:.82rem;font-weight:500;border-bottom:1px solid var(--blue);padding-bottom:2px;transition:color .25s}
+.ncta:hover{color:var(--blue)}
+.lang{display:flex;gap:2px;border:1px solid var(--line);padding:3px}
+.lang a,.lang span{font-size:.66rem;font-weight:500;padding:4px 9px;letter-spacing:.06em}
+.lang span{background:var(--blue);color:#fff}
+.lang a{color:var(--mut);transition:color .2s}
+.lang a:hover{color:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{width:22px;height:1.5px;background:var(--ink);display:block;transition:transform .3s,opacity .3s}
 
-/* ── MOBILE MENU ── */
-.mobile-menu{display:flex;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(245,245,242,.99);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease;transform:translateZ(0)}
-.mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto}
-.mobile-menu a{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.6rem;color:rgba(0,0,0,.4);letter-spacing:-.02em;transition:color .2s}
-.mobile-menu a:hover,.mobile-menu a.active{color:#111}
-.mobile-menu .mm-cta{background:#111;color:#fff!important;padding:14px 36px;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+/* MOBILE MENU */
+.mm{position:fixed;inset:0;background:rgba(12,14,17,.99);z-index:60;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:48px 32px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility .25s}
+.mm.open{opacity:1;visibility:visible;pointer-events:auto}
+.mm a{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.7rem;letter-spacing:-.02em;color:var(--ink2);transition:color .2s}
+.mm a:hover,.mm a.active{color:var(--ink)}
+.mm a.active{color:var(--blue)}
+.mm .mm-x{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--mut);font-size:1.7rem;cursor:pointer;font-family:'DM Sans'}
+.mm .mm-cta{font-size:1rem;font-weight:500;color:var(--blue);border-bottom:1px solid var(--blue);padding-bottom:2px;margin-top:10px}
 
-/* ── HERO ── */
-.hero{padding:160px 64px 80px;border-bottom:1px solid rgba(0,0,0,.08)}
-.hero-kicker{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:#4F8EF7;margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.hero-kicker::before{content:'';display:block;width:18px;height:1px;background:#4F8EF7}
-.hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(3rem,7vw,7rem);line-height:.92;letter-spacing:-.04em;color:#111;margin-bottom:24px}
-.hero h1 span{color:#4F8EF7}
-.hero-sub{font-size:1rem;color:rgba(0,0,0,.45);max-width:520px;line-height:1.75}
+/* HERO */
+.hero{padding:190px 0 90px}
+.hero h1{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.7rem,7vw,5.9rem);line-height:1.05;letter-spacing:-.035em;max-width:15ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:52px;flex-wrap:wrap}
+.hero-foot p{font-size:1.02rem;line-height:1.7;color:var(--ink2);max-width:44ch}
+.hero-meta{font-size:.8rem;color:var(--mut);line-height:1.95;text-align:right}
+.hero-meta b{color:var(--ink);font-weight:500}
+.rise{opacity:0;transform:translateY(26px);animation:rise .9s cubic-bezier(.19,1,.22,1) forwards}
+.rise.d1{animation-delay:.12s}.rise.d2{animation-delay:.24s}
+@keyframes rise{to{opacity:1;transform:none}}
 
-/* ── PORTFOLIO GRID ── */
-.portfolio{padding:0}
-.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#e0e0dc}
+/* WORK */
+.work{padding:40px 0 30px}
+.work-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:26px;margin-bottom:38px}
+.work-head h2{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1rem;letter-spacing:-.01em}
+.work-head a{font-size:.82rem;color:var(--mut);transition:color .25s}
+.work-head a:hover{color:var(--blue)}
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px 40px}
+.wi{display:block}
+.wi .frame{position:relative;overflow:hidden;aspect-ratio:16/10.4;background:var(--panel)}
+.wi video{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transform:scale(1.015);transition:transform .8s cubic-bezier(.19,1,.22,1),opacity .4s}
+.wi:hover video{transform:scale(1.06);opacity:1}
+.wi .cap{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;gap:14px}
+.wi .cap b{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.95rem;letter-spacing:-.01em}
+.wi .cap span{font-size:.76rem;color:var(--mut);text-align:right}
+.wi.wide{grid-column:1/-1}
+.wi.wide .frame{aspect-ratio:21/9}
 
-.project{position:relative;overflow:hidden;cursor:pointer;background:#1a1a1a;aspect-ratio:16/10}
-.project-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;opacity:0;transition:opacity .4s ease}
-.project-vid.playing{opacity:1}
-.project-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:4rem;color:rgba(255,255,255,.06);letter-spacing:-.04em;transition:opacity .3s;pointer-events:none;user-select:none}
-.project:hover .project-num,.project.tapped .project-num{opacity:0}
-.project-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 40%,transparent 70%);opacity:0;transition:opacity .35s}
-.project:hover .project-overlay,.project.tapped .project-overlay{opacity:1}
-.project-info{position:absolute;bottom:0;left:0;right:0;padding:28px;transform:translateY(10px);opacity:0;transition:all .35s cubic-bezier(.16,1,.3,1)}
-.project:hover .project-info,.project.tapped .project-info{transform:translateY(0);opacity:1}
-.project-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:5px;letter-spacing:-.02em}
-.project-cat{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+/* SERVICES */
+.svc{padding:110px 0}
+.svc h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.9rem,3.6vw,3rem);letter-spacing:-.03em;margin-bottom:48px;max-width:20ch}
+.srow{position:relative;display:grid;grid-template-columns:1.05fr 1.55fr auto;gap:28px;align-items:baseline;padding:32px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s;cursor:pointer}
+.srow:last-of-type{border-bottom:1px solid var(--line)}
+.srow:hover{background:var(--panel)}
+.srow h3{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.35rem;letter-spacing:-.02em;transition:color .25s,transform .4s cubic-bezier(.19,1,.22,1)}
+.srow:hover h3{color:var(--blue);transform:translateX(8px)}
+.srow p{font-size:.92rem;color:var(--ink2);line-height:1.7;max-width:52ch}
+.srow .pr{font-size:.85rem;color:var(--mut);white-space:nowrap;display:flex;align-items:baseline;gap:12px}
+.srow .pr b{color:var(--ink);font-weight:500}
+.srow .arr{color:var(--blue);font-size:1rem;opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .4s cubic-bezier(.19,1,.22,1)}
+.srow:hover .arr{opacity:1;transform:none}
+.svc-note{margin-top:26px;font-size:.82rem;color:var(--mut)}
+.svc-note a{color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .25s,border-color .25s}
+.svc-note a:hover{color:var(--blue);border-color:var(--blue)}
 
-/* tap hint icon — mobile only, fades out after first interaction */
-.tap-hint{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;gap:6px;pointer-events:none;opacity:.5;transition:opacity .3s}
-.tap-hint svg{width:28px;height:28px;fill:rgba(255,255,255,.7)}
-.tap-hint span{font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600}
+/* PROOF */
+.proof{border-top:1px solid var(--line);background:var(--panel)}
+.proof-in{padding:90px 0;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.proof blockquote{font-family:'Plus Jakarta Sans';font-weight:500;font-size:clamp(1.2rem,2.1vw,1.7rem);line-height:1.45;letter-spacing:-.015em;max-width:26ch}
+.proof cite{display:block;margin-top:22px;font-style:normal;font-size:.8rem;color:var(--mut)}
+.proof cite a{color:var(--ink2);border-bottom:1px solid var(--line);transition:color .25s}
+.proof cite a:hover{color:var(--blue)}
+.pstats{display:flex;flex-direction:column;gap:22px;font-size:.95rem;color:var(--ink2);line-height:1.65}
+.pstats div{padding-left:18px;border-left:1px solid var(--line)}
+.pstats b{color:var(--ink);font-weight:500}
 
-/* ── CTA SECTION ── */
-.portfolio-cta{padding:80px 64px;border-top:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;background:#F5F5F2}
-.portfolio-cta h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.5vw,3rem);color:#111;letter-spacing:-.03em;line-height:1}
-.portfolio-cta h2 span{color:#4F8EF7}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;transition:all .22s;cursor:pointer;border:none}
-.btn-dark{background:#111;color:#fff}.btn-dark:hover{opacity:.85}
-.btn-outline-dark{background:transparent;color:rgba(0,0,0,.5);border:1px solid rgba(0,0,0,.2)}.btn-outline-dark:hover{border-color:#111;color:#111}
+/* CONTACT */
+.contact{padding:120px 0 110px}
+.contact h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.4rem,5.6vw,4.6rem);letter-spacing:-.035em;line-height:1.06;max-width:14ch}
+.contact h2 span{color:var(--blue)}
+.c-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;margin-top:56px;align-items:start}
+.c-links{display:flex;flex-direction:column;gap:16px;font-size:.9rem}
+.c-links a{color:var(--ink);width:fit-content;border-bottom:1px solid var(--line);padding-bottom:3px;transition:border-color .25s,color .25s}
+.c-links a:hover{color:var(--blue);border-color:var(--blue)}
+.c-links .note{font-size:.78rem;color:var(--mut);margin-top:14px;line-height:1.7}
+.cf{display:flex;flex-direction:column}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cf label{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:8px;font-weight:500}
+.cf .fg{margin-bottom:20px}
+.cf input,.cf textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:300;padding:8px 0 12px;outline:none;transition:border-color .3s;border-radius:0;appearance:none}
+.cf input:focus,.cf textarea:focus{border-color:var(--blue)}
+.cf textarea{resize:vertical;min-height:84px}
+.cf input::placeholder,.cf textarea::placeholder{color:var(--mut)}
+.cf button{margin-top:8px;width:fit-content;background:none;border:none;cursor:pointer;font-family:'Plus Jakarta Sans';font-weight:700;font-size:1rem;color:var(--ink);letter-spacing:-.01em;padding:0 0 4px;border-bottom:2px solid var(--blue);transition:color .25s}
+.cf button:hover{color:var(--blue)}
+.f-ok{display:none;margin-top:18px;font-size:.88rem;color:#22c55e}
+.f-err{display:none;margin-top:18px;font-size:.88rem;color:#ef4444}
 
-/* ── FOOTER ── */
-footer{background:#111;padding:36px 64px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.footer-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px}
-.footer-logo img{width:26px;height:26px;border-radius:50%;object-fit:cover}
-.footer-copy{font-size:.63rem;color:rgba(255,255,255,.3)}
-.footer-links{display:flex;gap:20px;flex-wrap:wrap}
-.footer-links a{font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);transition:color .2s}
-.footer-links a:hover{color:#fff}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:34px 48px;display:flex;justify-content:space-between;align-items:center;font-size:.74rem;color:var(--mut);flex-wrap:wrap;gap:16px}
+.f-links{display:flex;gap:22px;flex-wrap:wrap}
+.f-links a{transition:color .25s}
+.f-links a:hover{color:var(--ink)}
 
-/* ── SCROLL ANIMATIONS ── */
-.r{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
-.r.in{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-
-/* ── RESPONSIVE ── */
-
-/* Tablet: 601–960px */
-@media(min-width:601px) and (max-width:960px){
-  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){
+  .wrap{padding-left:22px;padding-right:22px}
+  nav{padding:16px 22px}nav.on{padding:12px 22px}
+  .nl{display:none}
+  .ncta{display:none}
+  .burger{display:flex}
+  .hero{padding:130px 0 60px}
+  .hero-meta{text-align:left}
+  .work{padding:20px 0}
+  .wgrid{grid-template-columns:1fr;gap:34px}
+  .wi.wide .frame,.wi .frame{aspect-ratio:16/10.4}
+  .svc{padding:80px 0}
+  .srow{grid-template-columns:1fr;gap:10px;padding:24px 0}
+  .proof-in{grid-template-columns:1fr;gap:40px;padding:70px 0}
+  .contact{padding:80px 0}
+  .c-grid{grid-template-columns:1fr;gap:48px}
+  .cf-row{grid-template-columns:1fr}
+  footer{padding:26px 22px;flex-direction:column;align-items:flex-start}
 }
-
-/* Mobile + Tablet: ≤960px */
-@media(max-width:960px){
-  nav{padding:18px 22px}
-  nav.on{padding:13px 22px;background:rgba(245,245,242,.97);backdrop-filter:none;-webkit-backdrop-filter:none}
-  .nav-links{display:none}
-  .nav-cta{display:none}
-  .nav-burger{display:flex}
-  .hero{padding:110px 22px 52px}
-  .hero h1{font-size:clamp(2.6rem,11vw,4.5rem)}
-  .hero-sub{font-size:.95rem}
-  .portfolio-cta{padding:52px 22px;flex-direction:column;align-items:flex-start}
-  footer{padding:28px 22px}
-  .footer-links{gap:14px}
+@media(prefers-reduced-motion:reduce){
+  .rise{animation:none;opacity:1;transform:none}
+  .wi video{transition:none}
+  html{scroll-behavior:auto}
 }
-
-/* Mobile only: ≤600px */
-@media(max-width:600px){
-  .portfolio-grid{grid-template-columns:1fr}
-  .project{aspect-ratio:4/3}
-  /* Show tap hints on mobile */
-  .tap-hint{display:flex}
-  .project.tapped .tap-hint{opacity:0}
-  .project-info{padding:20px}
-  .project-name{font-size:1rem}
-  .btn{padding:12px 22px;font-size:.68rem}
-  .portfolio-cta .btn-group{flex-direction:column;width:100%}
-  .portfolio-cta .btn{justify-content:center}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+.mq{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;position:relative}
+.mq-track{display:flex;width:max-content;animation:mqs 36s linear infinite}
+.mq span{font-size:.78rem;color:var(--mut);white-space:nowrap;padding-right:14px}
+.mq span::after{content:"·";padding-left:14px;color:var(--blue)}
+@keyframes mqs{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq-track{animation:none}}
+.story-vis{position:relative}
+.story-vis img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:saturate(.92) brightness(.9)}
+@media(max-width:900px){.story-vis{order:-1}.story-vis img{aspect-ratio:16/10}}
+</style>
+<style>
+.phero{padding:170px 0 60px}
+.phero h1{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.4rem,5.8vw,4.8rem);line-height:1.06;letter-spacing:-.035em;max-width:16ch;text-wrap:balance}
+.phero h1 em{font-style:normal;color:var(--blue)}
+.phero .lead{margin-top:30px;font-size:1rem;line-height:1.7;color:var(--ink2);max-width:52ch}
+.sec{padding:70px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:26px;margin-bottom:8px;gap:20px;flex-wrap:wrap}
+.sec-head h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em}
+.sec-head .from{font-size:.85rem;color:var(--mut)}
+.sec-head .from b{color:var(--ink);font-weight:500}
+.sec>p{font-size:.95rem;color:var(--ink2);line-height:1.7;max-width:62ch;margin-bottom:8px}
+.feat-line{font-size:.86rem;color:var(--mut);line-height:1.9;max-width:74ch;margin-top:14px}
+.feat-line b{color:var(--ink2);font-weight:400}
+.golink{display:inline-block;margin-top:24px;font-family:'Plus Jakarta Sans';font-weight:700;font-size:.95rem;color:var(--ink);border-bottom:2px solid var(--blue);padding-bottom:3px;transition:color .25s}
+.golink:hover{color:var(--blue)}
+.trow{position:relative;display:grid;grid-template-columns:1.2fr 2fr auto;gap:26px;align-items:baseline;padding:28px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s}
+.trow:last-of-type{border-bottom:1px solid var(--line)}
+.trow:hover{background:var(--panel)}
+.trow .tn{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.15rem;letter-spacing:-.02em;transition:color .25s,transform .4s cubic-bezier(.19,1,.22,1)}
+.trow:hover .tn{color:var(--blue);transform:translateX(8px)}
+.trow .tn small{display:block;font-family:'DM Sans';font-weight:300;font-size:.74rem;color:var(--mut);margin-top:4px;letter-spacing:0}
+.trow .tf{font-size:.85rem;color:var(--ink2);line-height:1.75}
+.trow .pr{font-size:.85rem;color:var(--mut);white-space:nowrap;display:flex;align-items:baseline;gap:12px}
+.trow .pr b{color:var(--ink);font-weight:500}
+.trow .arr{color:var(--blue);opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .4s cubic-bezier(.19,1,.22,1)}
+.trow:hover .arr{opacity:1;transform:none}
+.tag-pop{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-left:10px}
+.story{padding:70px 0;display:grid;grid-template-columns:.8fr 1.5fr .9fr;gap:56px;border-top:1px solid var(--line);align-items:center}
+.story h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em}
+.story .txt p{font-size:.98rem;color:var(--ink2);line-height:1.8;max-width:58ch}
+.story .txt p+p{margin-top:20px}
+.facts{padding:20px 0 90px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px}
+.facts div{padding-left:18px;border-left:1px solid var(--line);font-size:.92rem;color:var(--ink2);line-height:1.65}
+.facts b{color:var(--ink);font-weight:500;display:block;margin-bottom:4px;font-size:.95rem}
+.pcta{padding:100px 0 110px}
+.pcta h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.035em;line-height:1.08;max-width:16ch}
+.pcta h2 a{color:var(--blue);position:relative;white-space:nowrap}
+.pcta h2 a::after{content:"";position:absolute;left:0;bottom:5px;height:3px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.19,1,.22,1)}
+.pcta h2 a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:900px){
+  .phero{padding:120px 0 40px}
+  .sec{padding:50px 0}
+  .trow{grid-template-columns:1fr;gap:10px;padding:24px 16px;margin:0 -16px}
+  .story{grid-template-columns:1fr;gap:32px;padding:50px 0}
+  .facts{padding:10px 0 60px;gap:24px}
+  .pcta{padding:70px 0 80px}
 }
-@media(max-width:960px){.nav-audit-btn{display:none}}
 </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
 <nav id="nav">
-  <a class="nav-logo" href="/index-gr">
-    <img src="android-chrome-512x512.png" alt="" role="presentation">
-    Novo Web Build
-  </a>
-  <ul class="nav-links">
-    <li><a href="/index-gr">Αρχική</a></li>
-    <li><a href="/about-gr">Σχετικά</a></li>
-    <li><a href="/services-gr">Υπηρεσίες</a></li>
-    <li><a href="/maintenance-gr">Συντήρηση</a></li>
-    <li><a href="/blog-gr">Άρθρα</a></li>
-    <li><a href="/portfolio-gr" class="active">Εργασίες</a></li>
+  <a class="logo" href="index-gr.html"><img src="android-chrome-512x512.png" alt="Novo Web Build logo">Novo Web Build</a>
+  <ul class="nl">
+    <li><a href="about-gr.html">Σχετικά</a></li>
+    <li><a href="services-gr.html">Υπηρεσίες</a></li>
+    <li><a href="maintenance-gr.html">Συντήρηση</a></li>
+    <li><a href="blog-gr.html">Άρθρα</a></li>
+    <li><a href="portfolio-gr.html" class="active">Portfolio</a></li>
   </ul>
-  <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener" class="nav-audit-btn" style="background:#4F8EF7;color:#fff;padding:8px 18px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-right:8px;text-decoration:none">Ανάλυση Ιστοσελίδας →</a><a href="https://wa.me/306940144755" target="_blank" class="nav-cta">Ξεκινήστε →</a>
-  <div class="lang-toggle">
-    <button class="lang-btn" onclick="window.location.href='/portfolio'">EN</button>
-    <button class="lang-btn active" onclick="window.location.href='/portfolio-gr'">GR</button>
+  <div class="nav-right">
+    <a class="ncta" href="index-gr.html#contact">Ξεκίνα ένα project</a>
+    <div class="lang"><a href="portfolio.html">EN</a><span>GR</span></div>
+    <button class="burger" onclick="document.getElementById('mm').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-  <button class="nav-burger" id="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
-<!-- ── MOBILE MENU ── -->
-<div class="mobile-menu" id="mobile-menu">
-  <div style="position:absolute;top:22px;left:22px;display:flex;align-items:center;gap:10px">
-    <img src="android-chrome-512x512.png" alt="" role="presentation" style="width:34px;height:34px;border-radius:50%;object-fit:cover">
-    <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;color:#111">Novo Web Build</span>
-  </div>
-  <button onclick="closeMM()" style="position:absolute;top:22px;right:22px;background:none;border:none;color:rgba(0,0,0,.4);font-size:1.6rem;cursor:pointer;line-height:1;padding:4px">✕</button>
-  <a href="/" onclick="closeMM()">Αρχική</a>
-  <a href="/about" onclick="closeMM()">Σχετικά</a>
-  <a href="/services" onclick="closeMM()">Υπηρεσίες</a>
-  <a href="/maintenance" onclick="closeMM()">Συντήρηση</a>
-  <a href="/blog" onclick="closeMM()">Άρθρα</a>
-  <a href="/portfolio-gr" class="active" onclick="closeMM()">Εργασίες</a>
-  <a href="https://wa.me/306940144755" target="_blank" class="mm-cta">Ξεκινήστε →</a>
+<div class="mm" id="mm">
+  <button class="mm-x" onclick="document.getElementById('mm').classList.remove('open')" aria-label="Close">✕</button>
+  <a href="index-gr.html">Αρχική</a>
+  <a href="about-gr.html">Σχετικά</a>
+  <a href="services-gr.html">Υπηρεσίες</a>
+  <a href="maintenance-gr.html">Συντήρηση</a>
+  <a href="blog-gr.html">Άρθρα</a>
+  <a href="portfolio-gr.html" class="active">Portfolio</a>
+  <a href="index-gr.html#contact" class="mm-cta" onclick="document.getElementById('mm').classList.remove('open')">Ξεκίνα ένα project →</a>
 </div>
 
-<!-- ── HERO ── -->
-<div class="hero r">
-  <div class="hero-kicker">Οι Εργασίες μας</div>
-  <h1>Κάθε ιστοσελίδα έχει<br>τη <span>δική της ιστορία.</span></h1>
-  <p class="hero-sub">Μια επιλογή ιστοσελίδων και ψηφιακών έργων που έχουμε κατασκευάσει για επιχειρήσεις παγκοσμίως. Τοποθετήστε τον κέρσορα ή αγγίξτε για προεπισκόπηση.</p>
-</div>
-
-<!-- ── PORTFOLIO GRID ── -->
-<div class="portfolio">
-  <div class="portfolio-grid">
-
-    <div class="project r" data-index="0">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778166588/Screen_Recording_2026-05-07_220851_jiasdj.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778166588/Screen_Recording_2026-05-07_220851_jiasdj.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">01</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Airbnb Villas</div>
-        <div class="project-cat">Villa Rentals · Thailand</div>
-      </div>
-    </div>
-
-    <div class="project r d1" data-index="1">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778166211/buggy_rides_tenerife_wi6aoe.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778166211/buggy_rides_tenerife_wi6aoe.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">02</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Buggy Rides Tenerife</div>
-        <div class="project-cat">Tour Operator · Canary Islands</div>
-      </div>
-    </div>
-
-    <div class="project r d2" data-index="2">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778170101/Sea_and_city_fast_y4dclx.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778170101/Sea_and_city_fast_y4dclx.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">03</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Sea &amp; City Apartments</div>
-        <div class="project-cat">Apartments · Kos, Greece</div>
-      </div>
-    </div>
-
-    <div class="project r d1" data-index="3">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778170101/Dionisos_fast_gi7ne7.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778170101/Dionisos_fast_gi7ne7.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">04</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Seaside Resort</div>
-        <div class="project-cat">Hotel · Greece</div>
-      </div>
-    </div>
-
-    <div class="project r d2" data-index="4">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778170101/Bokun_fast_lyc1dh.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778170101/Bokun_fast_lyc1dh.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">05</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Bokun Guest House</div>
-        <div class="project-cat">Guesthouse · Croatia</div>
-      </div>
-    </div>
-
-    <div class="project r d3" data-index="5">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778166212/hoops_Bar_tihkdo.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778166212/hoops_Bar_tihkdo.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">06</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Hoops Bar</div>
-        <div class="project-cat">Bar · Tenerife</div>
-      </div>
-    </div>
-
-    <div class="project r d1" data-index="6">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779378386/Surf_school_y3clej.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779378386/Surf_school_y3clej.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">07</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Surf School Fuerteventura</div>
-        <div class="project-cat">Surf School · Spain</div>
-      </div>
-    </div>
-
-    <div class="project r d2" data-index="7">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1782293366/tzanopoulos_ta9j2d.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1782293366/tzanopoulos_ta9j2d.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">08</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Diving School</div>
-        <div class="project-cat">Diving School · Mytilene</div>
-      </div>
-    </div>
-
-    <div class="project r d3" data-index="8">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779701723/Sol_and_mar_Real_estate_spain_ntcp6x.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779701723/Sol_and_mar_Real_estate_spain_ntcp6x.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">09</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Sol & Mar</div>
-        <div class="project-cat">Real Estate · Spain</div>
-      </div>
-    </div>
-
-    <div class="project r d1" data-index="9">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1782293352/opsaras_cgnr7p.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1782293352/opsaras_cgnr7p.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">10</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Restaurant</div>
-        <div class="project-cat">Restaurant · Thessaloniki</div>
-      </div>
-    </div>
-
-    <div class="project r d2" data-index="10">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779701321/koh_tao_DIving_school_fast_lqxyjh.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779701321/koh_tao_DIving_school_fast_lqxyjh.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">11</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">XP Diving School</div>
-        <div class="project-cat">Diving School · Thailand</div>
-      </div>
-    </div>
-
-    <div class="project r d3" data-index="11">
-      <video class="project-vid" poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1783528760/Twins_Box_ewbqu0.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1783528760/Twins_Box_ewbqu0.mp4" muted playsinline loop preload="none"></video>
-      <div class="project-num">12</div>
-      <div class="project-overlay"></div>
-      <div class="tap-hint">
-        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/></svg>
-        <span>Αγγίξτε για προεπισκόπηση</span>
-      </div>
-      <div class="project-info">
-        <div class="project-name">Twins Box</div>
-        <div class="project-cat">Crossfit Gym · Thessaloniki</div>
-      </div>
-    </div>
-
+<header class="phero wrap">
+  <h1>Κάθε ιστοσελίδα έχει <em>τη δική της ιστορία.</em></h1>
+  <p class="lead">Μια επιλογή ιστοσελίδων και ψηφιακών έργων που έχουμε κατασκευάσει για επιχειρήσεις στην Ελλάδα και όχι μόνο.</p>
+  <div class="hbadge" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <defs><path id="circ" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/></defs>
+      <text><textPath href="#circ">NOVO WEB BUILD · WEB DESIGN STUDIO · NOVO WEB BUILD · WEB DESIGN ·</textPath></text>
+    </svg>
+    <img src="android-chrome-512x512.png" alt="">
   </div>
-</div>
+</header>
 
-<!-- ── CTA ── -->
-<div class="portfolio-cta r">
-  <div>
-    <h2>Θέλετε ιστοσελίδα<br>σαν <span>αυτές;</span></h2>
-    <p style="font-size:.9rem;color:rgba(0,0,0,.45);margin-top:12px;line-height:1.7">Στείλτε μας μήνυμα και θα επικοινωνήσουμε μαζί σας σε λίγες ώρες.</p>
-  </div>
-  <div class="btn-group" style="display:flex;gap:12px;flex-wrap:wrap">
-    <a href="https://wa.me/306940144755" target="_blank" class="btn btn-dark">WhatsApp →</a>
-    <a href="/services" class="btn btn-outline-dark">Υπηρεσίες</a>
-  </div>
-</div>
+<section class="pgrid wrap">
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778166588/Screen_Recording_2026-05-07_220851_jiasdj.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778166588/Screen_Recording_2026-05-07_220851_jiasdj.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Airbnb Villas</b><span>Villa Rentals · Thailand</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778166211/buggy_rides_tenerife_wi6aoe.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778166211/buggy_rides_tenerife_wi6aoe.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Buggy Rides Tenerife</b><span>Tour Operator · Canary Islands</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778170101/Sea_and_city_fast_y4dclx.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778170101/Sea_and_city_fast_y4dclx.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Sea &amp; City Apartments</b><span>Apartments · Kos, Greece</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778170101/Dionisos_fast_gi7ne7.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778170101/Dionisos_fast_gi7ne7.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Seaside Resort</b><span>Hotel · Greece</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778170101/Bokun_fast_lyc1dh.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778170101/Bokun_fast_lyc1dh.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Bokun Guest House</b><span>Guesthouse · Croatia</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1778166212/hoops_Bar_tihkdo.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778166212/hoops_Bar_tihkdo.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Hoops Bar</b><span>Bar · Tenerife</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779378386/Surf_school_y3clej.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779378386/Surf_school_y3clej.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Surf School Fuerteventura</b><span>Surf School · Spain</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1782293366/tzanopoulos_ta9j2d.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1782293366/tzanopoulos_ta9j2d.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Diving School</b><span>Diving School · Mytilene</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779701723/Sol_and_mar_Real_estate_spain_ntcp6x.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779701723/Sol_and_mar_Real_estate_spain_ntcp6x.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Sol & Mar</b><span>Real Estate · Spain</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1782293352/opsaras_cgnr7p.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1782293352/opsaras_cgnr7p.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Restaurant</b><span>Restaurant · Thessaloniki</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779701321/koh_tao_DIving_school_fast_lqxyjh.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779701321/koh_tao_DIving_school_fast_lqxyjh.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>XP Diving School</b><span>Diving School · Thailand</span></div>
+    </div>
+    <div class="wi">
+      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1783528760/Twins_Box_ewbqu0.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1783528760/Twins_Box_ewbqu0.mp4" muted playsinline loop preload="none"></video></div>
+      <div class="cap"><b>Twins Box</b><span>Crossfit Gym · Thessaloniki</span></div>
+    </div>
+</section>
 
-<!-- ── FOOTER ── -->
 <footer>
-  <div class="footer-logo">
-    <img src="android-chrome-512x512.png" alt="" role="presentation">
-    Novo Web Build
+  <div>© 2026 Novo Web Build · Θεσσαλονίκη, Ελλάδα</div>
+  <div class="f-links">
+    <a href="about.html">About</a>
+    <a href="services-gr.html">Υπηρεσίες</a>
+    <a href="maintenance-gr.html">Συντήρηση</a>
+    <a href="blog-gr.html">Άρθρα</a>
+    <a href="portfolio-gr.html">Portfolio</a>
+    <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener">Δωρεάν Έλεγχος</a>
   </div>
-  <div class="footer-links">
-    <a href="/index-gr">Αρχική</a>
-    <a href="/services-gr">Υπηρεσίες</a>
-    <a href="/portfolio-gr">Εργασίες</a>
-    <a href="/blog-gr">Άρθρα</a>
-    <a href="https://wa.me/306940144755" target="_blank">WhatsApp</a>
-  </div>
-  <span class="footer-copy">© 2026 Novo Web Build</span>
 </footer>
 
 <script>
-// ── Scroll: nav on/off ──────────────────────────────────────────────────────
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('on', scrollY > 50), {passive:true});
-
-// ── Scroll: reveal animations ───────────────────────────────────────────────
-const io = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-}), {threshold: .07});
-document.querySelectorAll('.r').forEach(el => io.observe(el));
-
-// ── Mobile menu ─────────────────────────────────────────────────────────────
-const burger = document.getElementById('burger');
-const mm = document.getElementById('mobile-menu');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  mm.classList.toggle('open');
-  document.body.style.overflow = mm.classList.contains('open') ? 'hidden' : '';
-});
-function closeMM() {
-  burger.classList.remove('open');
-  mm.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-// ── Poster images via Cloudinary thumbnails ──────────────────────────────────
-function applyPosters() {
-  document.querySelectorAll('.project').forEach(card => {
-    const v = card.querySelector('.project-vid');
-    if (v && v.poster) {
-      card.style.backgroundImage = `url('${v.poster}')`;
-      card.style.backgroundSize = 'cover';
-      card.style.backgroundPosition = 'top center';
-    }
-  });
-}
-document.addEventListener('DOMContentLoaded', applyPosters);
-
-// ── Video: desktop hover ────────────────────────────────────────────────────
-function playVid(card) {
-  const v = card.querySelector('.project-vid');
-  if (v) { v.play().catch(() => {}); v.classList.add('playing'); }
-}
-function pauseVid(card) {
-  const v = card.querySelector('.project-vid');
-  if (v) { v.pause(); v.currentTime = 0; v.classList.remove('playing'); }
-}
-
-// Attach hover listeners for desktop
-document.querySelectorAll('.project').forEach(card => {
-  card.addEventListener('mouseenter', () => playVid(card));
-  card.addEventListener('mouseleave', () => pauseVid(card));
-});
-
-// ── Video: mobile tap ───────────────────────────────────────────────────────
-const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
-
-document.querySelectorAll('.project').forEach(card => {
-  card.addEventListener('click', e => {
-    if (!isTouchDevice()) return;
-    const wasOpen = card.classList.contains('tapped');
-    document.querySelectorAll('.project.tapped').forEach(c => {
-      if (c !== card) { c.classList.remove('tapped'); pauseVid(c); }
-    });
-    if (wasOpen) {
-      card.classList.remove('tapped');
-      pauseVid(card);
-    } else {
-      card.classList.add('tapped');
-      playVid(card);
-    }
-  });
-});
-
-// Tap outside → close all
-document.addEventListener('click', e => {
-  if (!isTouchDevice()) return;
-  if (!e.target.closest('.project')) {
-    document.querySelectorAll('.project.tapped').forEach(c => {
-      c.classList.remove('tapped');
-      pauseVid(c);
-    });
-  }
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('on',scrollY>40)},{passive:true});
+(function(){function norm(s){s=(s||'').split('/').pop();s=s.replace(/\.html$/,'');if(s===''||s==='index'||s==='index-gr')return 'home';return s;}var cur=norm(location.pathname);var links=document.querySelectorAll('.nl a, .mm a');links.forEach(function(a){var h=a.getAttribute('href')||'';if(h.indexOf('#')===0||h.indexOf('http')===0)return;a.classList.remove('active');if(norm(h)===cur)a.classList.add('active');});})();
+</script>
+<script>
+document.querySelectorAll('.wi').forEach(w=>{
+  const v=w.querySelector('video');
+  w.addEventListener('mouseenter',()=>{v.play().catch(()=>{})});
+  w.addEventListener('mouseleave',()=>{v.pause()});
+  w.addEventListener('click',()=>{if(v.paused){v.play().catch(()=>{})}else{v.pause()}});
 });
 </script>
 </body>

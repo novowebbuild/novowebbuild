@@ -3,340 +3,413 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maintenance Plans | Novo Web Build</title>
-<meta name="description" content="Monthly website maintenance plans for Novo Web Build clients. From €30/month.">
+<title>Website Maintenance Plans | Novo Web Build</title>
+<meta name="description" content="Monthly website maintenance from €30/mo: updates, security, SEO and support. QR menu service €15/mo. Cancel anytime.">
+<meta property="og:title" content="Website Maintenance Plans | Novo Web Build">
+<meta property="og:description" content="Monthly website maintenance from €30/mo: updates, security, SEO and support. QR menu service €15/mo. Cancel anytime.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://novowebbuild.com/android-chrome-512x512.png">
+<link rel="canonical" href="https://novowebbuild.com/maintenance">
+<meta name="theme-color" content="#0C0E11">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<!-- Google Analytics -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-3HXLY3GNPP"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3HXLY3GNPP');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
-<!-- PayPal SDK -->
 <script src="https://www.paypal.com/sdk/js?client-id=BAAFN4pE-H9QjoYo5j061z2Og2LTvR8LFSSbE_OQxybJnhMuJdJ4N3H14cR94ojSe_mVjzMNWm4ADv5PXo&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <style>
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;padding:20px 0 30px}
+.plan{border-top:1px solid var(--line);padding:34px 0 40px}
+.plan .tier{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:500;display:flex;gap:12px;align-items:baseline}
+.plan .price{font-family:'Plus Jakarta Sans';font-weight:800;font-size:2.4rem;letter-spacing:-.03em;margin:10px 0 2px}
+.plan .price small{font-size:.8rem;font-weight:300;color:var(--mut);font-family:'DM Sans';letter-spacing:0;margin-left:8px}
+.plan .pname{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.05rem;margin-bottom:6px}
+.plan .pdesc{font-size:.88rem;color:var(--ink2);line-height:1.65;margin-bottom:14px;max-width:44ch}
+.plan ul{list-style:none;margin-bottom:22px;padding:0}
+.plan li{font-size:.86rem;color:var(--ink2);line-height:2;padding-left:16px;position:relative}
+.plan li::before{content:"—";position:absolute;left:0;color:var(--blue)}
+.paypal-wrap{max-width:300px}
+.qrplan{border:1px solid var(--line);background:var(--panel);padding:44px;display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;margin:30px 0 10px}
+.qrplan .plan{border:0;padding:0}
+.mnote{padding:30px 0 90px;font-size:.85rem;color:var(--mut);line-height:1.8}
+.mnote a{color:var(--ink);border-bottom:1px solid var(--line)}
+.mnote a:hover{color:var(--blue);border-color:var(--blue)}
+@media(max-width:900px){.plans{grid-template-columns:1fr;gap:0}.qrplan{grid-template-columns:1fr;gap:28px;padding:28px 22px}}
+.phero{display:grid;grid-template-columns:1fr auto;gap:0 48px;align-items:center}
+.phero h1{grid-column:1}
+.phero .lead{grid-column:1}
+.hbadge{grid-column:2;grid-row:1/span 2;position:relative;display:flex;align-items:center;justify-content:center;width:min(190px,100%);aspect-ratio:1}
+.hbadge svg{position:absolute;inset:0;width:100%;height:100%;animation:spinb 24s linear infinite}
+.hbadge svg text{font-family:'Plus Jakarta Sans';font-size:10.5px;font-weight:700;letter-spacing:.32em;fill:var(--mut);text-transform:uppercase}
+.hbadge img{width:76px;height:76px;border-radius:50%;position:relative;z-index:1}
+.hbadge::after{content:"";position:absolute;width:60%;height:60%;background:radial-gradient(circle,rgba(79,142,247,.16),transparent 70%);pointer-events:none}
+@keyframes spinb{to{transform:rotate(360deg)}}
+@media(max-width:900px){.phero{grid-template-columns:1fr}.hbadge{display:none}}
+@media(prefers-reduced-motion:reduce){.hbadge svg{animation:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{background:#0D1117;color:#E8EDF5;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{background:#0C0E11;color:#F2F4F7;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 :root{
-  --bg:#0D1117;--bg2:#131920;--bg3:#1A2332;
-  --white:#FFFFFF;--text:#E8EDF5;--muted:rgba(232,237,245,.65);--muted2:rgba(232,237,245,.38);
-  --line:rgba(232,237,245,.07);--line2:rgba(232,237,245,.12);
-  --blue:#4F8EF7;--blue2:rgba(79,142,247,.1);
+  --bg:#0C0E11;--panel:#111418;--ink:#F2F4F7;--ink2:#B9BEC6;--mut:#787E88;
+  --blue:#4F8EF7;--line:rgba(242,244,247,.1);--line2:rgba(242,244,247,.06);
 }
 a{color:inherit;text-decoration:none}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:26px 64px;transition:background .4s,padding .35s;border-bottom:1px solid transparent}
-nav.on{background:rgba(13,17,23,.72);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);padding:15px 64px;border-color:var(--line2)}
-.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.025em;color:var(--white);display:flex;align-items:center;gap:9px}
-.nav-logo img{width:32px;height:32px;border-radius:50%;object-fit:cover}
-.nav-back{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s;display:flex;align-items:center;gap:6px}
-.nav-back:hover{color:var(--blue)}
-.tag{display:inline-flex;align-items:center;gap:10px;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
-.tag::before{content:'';display:block;width:18px;height:1px;background:var(--blue)}
-.section-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.93;color:var(--white)}
-.section-title span{color:var(--blue)}
-.r{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
-.r.in{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+::selection{background:var(--blue);color:#fff}
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-thumb{background:var(--blue)}
+.wrap{max-width:1500px;margin:0 auto;padding-left:48px;padding-right:48px}
 
-/* Hero */
-.hero{padding:160px 64px 80px;text-align:center;position:relative;border-bottom:1px solid var(--line)}
-.hero-glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(600px,100%);height:400px;background:radial-gradient(ellipse,rgba(79,142,247,.08),transparent 70%);pointer-events:none}
-.hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(2.5rem,5vw,5rem);color:var(--white);letter-spacing:-.03em;margin-bottom:20px}
-.hero h1 span{color:var(--blue)}
-.hero p{font-size:1rem;color:var(--muted);max-width:540px;margin:0 auto;line-height:1.8}
+/* NAV */
+nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px 48px;transition:background .3s,border-color .3s,padding .3s;border-bottom:1px solid transparent}
+nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px}
+.logo{font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.02rem;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.logo img{width:26px;height:26px;border-radius:50%;display:block;flex-shrink:0}
+.nl{display:flex;gap:34px;font-size:.82rem;font-weight:400;color:var(--ink2);list-style:none}
+.nl a{position:relative;padding:3px 0;transition:color .25s}
+.nl a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.19,1,.22,1)}
+.nl a:hover{color:var(--ink)}
+.nl a:hover::after{transform:scaleX(1);transform-origin:left}
+.nl a.active{color:var(--ink)}
+.nl a.active::after{transform:scaleX(1)}
+.nl a:focus:not(:hover):not(.active)::after{transform:scaleX(0)}
+.nav-right{display:flex;align-items:center;gap:22px}
+.ncta{font-size:.82rem;font-weight:500;border-bottom:1px solid var(--blue);padding-bottom:2px;transition:color .25s}
+.ncta:hover{color:var(--blue)}
+.lang{display:flex;gap:2px;border:1px solid var(--line);padding:3px}
+.lang a,.lang span{font-size:.66rem;font-weight:500;padding:4px 9px;letter-spacing:.06em}
+.lang span{background:var(--blue);color:#fff}
+.lang a{color:var(--mut);transition:color .2s}
+.lang a:hover{color:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{width:22px;height:1.5px;background:var(--ink);display:block;transition:transform .3s,opacity .3s}
 
-/* Plans grid */
-.plans{padding:80px 64px;max-width:1400px;margin:0 auto}
-.plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-top:48px}
-.plan{background:var(--bg2);padding:40px 32px;display:flex;flex-direction:column;position:relative;transition:background .3s}
-.plan:hover{background:var(--bg3)}
-.plan.pop{background:var(--bg3);outline:1px solid var(--blue)}
-.plan-badge{position:absolute;top:0;right:0;background:var(--blue);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;padding:5px 12px}
-.plan-tier{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;display:flex;align-items:center;gap:7px}
-.plan-tier::before{content:'';width:12px;height:1px;background:var(--blue);display:block}
-.plan-price{font-family:'Fraunces',serif;font-size:3.5rem;color:var(--white);line-height:1;margin-bottom:4px}
-.plan-price sup{font-size:1.4rem;vertical-align:super}
-.plan-freq{font-size:.7rem;color:var(--muted);margin-bottom:20px}
-.plan-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:8px}
-.plan-desc{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--line);flex:0}
-.plan-features{list-style:none;display:flex;flex-direction:column;gap:10px;flex:1;margin-bottom:28px}
-.plan-features li{font-size:.8rem;color:var(--muted);display:flex;align-items:flex-start;gap:9px;line-height:1.5}
-.plan-features li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0}
-.plan-features li.prev{color:var(--muted2)}
-.plan-features li.prev::before{content:'✓';color:var(--muted2)}
-/* PayPal button container styling */
-.paypal-wrap{margin-top:auto}
-.paypal-wrap .paypal-buttons{border-radius:0 !important}
+/* MOBILE MENU */
+.mm{position:fixed;inset:0;background:rgba(12,14,17,.99);z-index:60;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:48px 32px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility .25s}
+.mm.open{opacity:1;visibility:visible;pointer-events:auto}
+.mm a{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.7rem;letter-spacing:-.02em;color:var(--ink2);transition:color .2s}
+.mm a:hover,.mm a.active{color:var(--ink)}
+.mm a.active{color:var(--blue)}
+.mm .mm-x{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--mut);font-size:1.7rem;cursor:pointer;font-family:'DM Sans'}
+.mm .mm-cta{font-size:1rem;font-weight:500;color:var(--blue);border-bottom:1px solid var(--blue);padding-bottom:2px;margin-top:10px}
 
-/* Note */
-.note{text-align:center;padding:40px 64px 80px;font-size:.82rem;color:var(--muted2);line-height:1.8}
-.qr-section{padding:0 64px 40px;max-width:1400px;margin:0 auto}
-.qr-card{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;background:var(--bg2);border:1px solid var(--line);padding:48px}
-.qr-right{display:flex;flex-direction:column;justify-content:center}
-@media(max-width:900px){.qr-card{grid-template-columns:1fr;gap:32px;padding:32px 22px}}
-@media(max-width:960px){.qr-section{padding:0 22px 40px}}
-.note a{color:var(--blue)}
+/* HERO */
+.hero{padding:190px 0 90px}
+.hero h1{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.7rem,7vw,5.9rem);line-height:1.05;letter-spacing:-.035em;max-width:15ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:52px;flex-wrap:wrap}
+.hero-foot p{font-size:1.02rem;line-height:1.7;color:var(--ink2);max-width:44ch}
+.hero-meta{font-size:.8rem;color:var(--mut);line-height:1.95;text-align:right}
+.hero-meta b{color:var(--ink);font-weight:500}
+.rise{opacity:0;transform:translateY(26px);animation:rise .9s cubic-bezier(.19,1,.22,1) forwards}
+.rise.d1{animation-delay:.12s}.rise.d2{animation-delay:.24s}
+@keyframes rise{to{opacity:1;transform:none}}
 
-/* Footer */
-footer{background:#0a0e14;border-top:1px solid var(--line);padding:36px 64px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.footer-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;color:var(--white);display:flex;align-items:center;gap:8px}
-.footer-logo img{width:26px;height:26px;border-radius:50%;object-fit:cover}
-.footer-copy{font-size:.63rem;color:var(--muted2)}
+/* WORK */
+.work{padding:40px 0 30px}
+.work-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:26px;margin-bottom:38px}
+.work-head h2{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1rem;letter-spacing:-.01em}
+.work-head a{font-size:.82rem;color:var(--mut);transition:color .25s}
+.work-head a:hover{color:var(--blue)}
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px 40px}
+.wi{display:block}
+.wi .frame{position:relative;overflow:hidden;aspect-ratio:16/10.4;background:var(--panel)}
+.wi video{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transform:scale(1.015);transition:transform .8s cubic-bezier(.19,1,.22,1),opacity .4s}
+.wi:hover video{transform:scale(1.06);opacity:1}
+.wi .cap{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;gap:14px}
+.wi .cap b{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.95rem;letter-spacing:-.01em}
+.wi .cap span{font-size:.76rem;color:var(--mut);text-align:right}
+.wi.wide{grid-column:1/-1}
+.wi.wide .frame{aspect-ratio:21/9}
 
-/* Mobile nav burger */
+/* SERVICES */
+.svc{padding:110px 0}
+.svc h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.9rem,3.6vw,3rem);letter-spacing:-.03em;margin-bottom:48px;max-width:20ch}
+.srow{position:relative;display:grid;grid-template-columns:1.05fr 1.55fr auto;gap:28px;align-items:baseline;padding:32px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s;cursor:pointer}
+.srow:last-of-type{border-bottom:1px solid var(--line)}
+.srow:hover{background:var(--panel)}
+.srow h3{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.35rem;letter-spacing:-.02em;transition:color .25s,transform .4s cubic-bezier(.19,1,.22,1)}
+.srow:hover h3{color:var(--blue);transform:translateX(8px)}
+.srow p{font-size:.92rem;color:var(--ink2);line-height:1.7;max-width:52ch}
+.srow .pr{font-size:.85rem;color:var(--mut);white-space:nowrap;display:flex;align-items:baseline;gap:12px}
+.srow .pr b{color:var(--ink);font-weight:500}
+.srow .arr{color:var(--blue);font-size:1rem;opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .4s cubic-bezier(.19,1,.22,1)}
+.srow:hover .arr{opacity:1;transform:none}
+.svc-note{margin-top:26px;font-size:.82rem;color:var(--mut)}
+.svc-note a{color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .25s,border-color .25s}
+.svc-note a:hover{color:var(--blue);border-color:var(--blue)}
 
-.lang-toggle{display:flex;align-items:center;gap:2px;background:rgba(19,25,32,0.8);border:1px solid rgba(232,237,245,.12);padding:3px;flex-shrink:0}
-.lang-btn{font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:4px 9px;cursor:pointer;color:rgba(232,237,245,.6);transition:all .2s;border:none;background:none;font-family:'Plus Jakarta Sans',sans-serif}
-.lang-btn.active{background:#4F8EF7;color:#fff}
+/* PROOF */
+.proof{border-top:1px solid var(--line);background:var(--panel)}
+.proof-in{padding:90px 0;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.proof blockquote{font-family:'Plus Jakarta Sans';font-weight:500;font-size:clamp(1.2rem,2.1vw,1.7rem);line-height:1.45;letter-spacing:-.015em;max-width:26ch}
+.proof cite{display:block;margin-top:22px;font-style:normal;font-size:.8rem;color:var(--mut)}
+.proof cite a{color:var(--ink2);border-bottom:1px solid var(--line);transition:color .25s}
+.proof cite a:hover{color:var(--blue)}
+.pstats{display:flex;flex-direction:column;gap:22px;font-size:.95rem;color:var(--ink2);line-height:1.65}
+.pstats div{padding-left:18px;border-left:1px solid var(--line)}
+.pstats b{color:var(--ink);font-weight:500}
 
-.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.nav-burger span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{position:relative;font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,237,245,.6);transition:color .25s;text-decoration:none;padding:4px 0}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.16,1,.3,1)}
-.nav-links a:hover{color:#fff}
-.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
-.nav-links a.active{color:#fff}
-.nav-links a.active::after{transform:scaleX(1)}
-.nav-links a:focus:not(:hover):not(.active)::after{transform:scaleX(0)}
-.mobile-menu{display:flex;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,17,23,.99);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease;transform:translateZ(0)}
-.mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto}
-.mobile-menu a{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.6rem;color:var(--muted)}
-.mobile-menu .mm-cta{background:var(--blue);color:#fff!important;padding:14px 36px;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+/* CONTACT */
+.contact{padding:120px 0 110px}
+.contact h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.4rem,5.6vw,4.6rem);letter-spacing:-.035em;line-height:1.06;max-width:14ch}
+.contact h2 span{color:var(--blue)}
+.c-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;margin-top:56px;align-items:start}
+.c-links{display:flex;flex-direction:column;gap:16px;font-size:.9rem}
+.c-links a{color:var(--ink);width:fit-content;border-bottom:1px solid var(--line);padding-bottom:3px;transition:border-color .25s,color .25s}
+.c-links a:hover{color:var(--blue);border-color:var(--blue)}
+.c-links .note{font-size:.78rem;color:var(--mut);margin-top:14px;line-height:1.7}
+.cf{display:flex;flex-direction:column}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cf label{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:8px;font-weight:500}
+.cf .fg{margin-bottom:20px}
+.cf input,.cf textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:300;padding:8px 0 12px;outline:none;transition:border-color .3s;border-radius:0;appearance:none}
+.cf input:focus,.cf textarea:focus{border-color:var(--blue)}
+.cf textarea{resize:vertical;min-height:84px}
+.cf input::placeholder,.cf textarea::placeholder{color:var(--mut)}
+.cf button{margin-top:8px;width:fit-content;background:none;border:none;cursor:pointer;font-family:'Plus Jakarta Sans';font-weight:700;font-size:1rem;color:var(--ink);letter-spacing:-.01em;padding:0 0 4px;border-bottom:2px solid var(--blue);transition:color .25s}
+.cf button:hover{color:var(--blue)}
+.f-ok{display:none;margin-top:18px;font-size:.88rem;color:#22c55e}
+.f-err{display:none;margin-top:18px;font-size:.88rem;color:#ef4444}
 
-@media(max-width:1100px){.plans-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:960px){
-  nav{padding:18px 22px;transition:background .3s,padding .3s}nav.on{padding:13px 22px;background:rgba(13,17,23,.96);backdrop-filter:none;-webkit-backdrop-filter:none}
-  .hero{padding:120px 22px 60px!important}
-  .plans{padding:60px 22px}
-  .note{padding:20px 22px 60px}
-  footer{padding:28px 22px}
-  .nav-links{display:none}
-.lang-toggle{display:flex;align-items:center;gap:2px;background:rgba(19,25,32,0.8);border:1px solid rgba(232,237,245,.12);padding:3px;flex-shrink:0}
-.lang-btn{font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:4px 9px;cursor:pointer;color:rgba(232,237,245,.6);transition:all .2s;border:none;background:none;font-family:'Plus Jakarta Sans',sans-serif}
-.lang-btn.active{background:#4F8EF7;color:#fff}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:34px 48px;display:flex;justify-content:space-between;align-items:center;font-size:.74rem;color:var(--mut);flex-wrap:wrap;gap:16px}
+.f-links{display:flex;gap:22px;flex-wrap:wrap}
+.f-links a{transition:color .25s}
+.f-links a:hover{color:var(--ink)}
 
-.nav-burger{display:flex}
-  .nav-back{display:none}
+@media(max-width:900px){
+  .wrap{padding-left:22px;padding-right:22px}
+  nav{padding:16px 22px}nav.on{padding:12px 22px}
+  .nl{display:none}
+  .ncta{display:none}
+  .burger{display:flex}
+  .hero{padding:130px 0 60px}
+  .hero-meta{text-align:left}
+  .work{padding:20px 0}
+  .wgrid{grid-template-columns:1fr;gap:34px}
+  .wi.wide .frame,.wi .frame{aspect-ratio:16/10.4}
+  .svc{padding:80px 0}
+  .srow{grid-template-columns:1fr;gap:10px;padding:24px 0}
+  .proof-in{grid-template-columns:1fr;gap:40px;padding:70px 0}
+  .contact{padding:80px 0}
+  .c-grid{grid-template-columns:1fr;gap:48px}
+  .cf-row{grid-template-columns:1fr}
+  footer{padding:26px 22px;flex-direction:column;align-items:flex-start}
 }
-@media(max-width:600px){.plans-grid{grid-template-columns:1fr}}
-@media(max-width:960px){.nav-audit-btn{display:none}}
-
-@media(max-width:960px){
-  .plans-grid{grid-template-columns:1fr!important;gap:0}
-  .plan{padding:32px 22px!important}
-  .hero-maint{padding:120px 22px 60px!important}
-  .maint-features{grid-template-columns:1fr!important;padding:52px 22px!important}
-  .maint-faq{padding:52px 22px!important}
-  .maint-intro{padding:52px 22px!important;flex-direction:column!important}
-  section{padding-left:22px!important;padding-right:22px!important}
+@media(prefers-reduced-motion:reduce){
+  .rise{animation:none;opacity:1;transform:none}
+  .wi video{transition:none}
+  html{scroll-behavior:auto}
 }
-@media(max-width:600px){
-  .plan-price{font-size:2.5rem!important}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+.mq{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;position:relative}
+.mq-track{display:flex;width:max-content;animation:mqs 36s linear infinite}
+.mq span{font-size:.78rem;color:var(--mut);white-space:nowrap;padding-right:14px}
+.mq span::after{content:"·";padding-left:14px;color:var(--blue)}
+@keyframes mqs{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq-track{animation:none}}
+.story-vis{position:relative}
+.story-vis img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:saturate(.92) brightness(.9)}
+@media(max-width:900px){.story-vis{order:-1}.story-vis img{aspect-ratio:16/10}}
+</style>
+<style>
+.phero{padding:170px 0 60px}
+.phero h1{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.4rem,5.8vw,4.8rem);line-height:1.06;letter-spacing:-.035em;max-width:16ch;text-wrap:balance}
+.phero h1 em{font-style:normal;color:var(--blue)}
+.phero .lead{margin-top:30px;font-size:1rem;line-height:1.7;color:var(--ink2);max-width:52ch}
+.sec{padding:70px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:26px;margin-bottom:8px;gap:20px;flex-wrap:wrap}
+.sec-head h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em}
+.sec-head .from{font-size:.85rem;color:var(--mut)}
+.sec-head .from b{color:var(--ink);font-weight:500}
+.sec>p{font-size:.95rem;color:var(--ink2);line-height:1.7;max-width:62ch;margin-bottom:8px}
+.feat-line{font-size:.86rem;color:var(--mut);line-height:1.9;max-width:74ch;margin-top:14px}
+.feat-line b{color:var(--ink2);font-weight:400}
+.golink{display:inline-block;margin-top:24px;font-family:'Plus Jakarta Sans';font-weight:700;font-size:.95rem;color:var(--ink);border-bottom:2px solid var(--blue);padding-bottom:3px;transition:color .25s}
+.golink:hover{color:var(--blue)}
+.trow{position:relative;display:grid;grid-template-columns:1.2fr 2fr auto;gap:26px;align-items:baseline;padding:28px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s}
+.trow:last-of-type{border-bottom:1px solid var(--line)}
+.trow:hover{background:var(--panel)}
+.trow .tn{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.15rem;letter-spacing:-.02em;transition:color .25s,transform .4s cubic-bezier(.19,1,.22,1)}
+.trow:hover .tn{color:var(--blue);transform:translateX(8px)}
+.trow .tn small{display:block;font-family:'DM Sans';font-weight:300;font-size:.74rem;color:var(--mut);margin-top:4px;letter-spacing:0}
+.trow .tf{font-size:.85rem;color:var(--ink2);line-height:1.75}
+.trow .pr{font-size:.85rem;color:var(--mut);white-space:nowrap;display:flex;align-items:baseline;gap:12px}
+.trow .pr b{color:var(--ink);font-weight:500}
+.trow .arr{color:var(--blue);opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .4s cubic-bezier(.19,1,.22,1)}
+.trow:hover .arr{opacity:1;transform:none}
+.tag-pop{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-left:10px}
+.story{padding:70px 0;display:grid;grid-template-columns:.8fr 1.5fr .9fr;gap:56px;border-top:1px solid var(--line);align-items:center}
+.story h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em}
+.story .txt p{font-size:.98rem;color:var(--ink2);line-height:1.8;max-width:58ch}
+.story .txt p+p{margin-top:20px}
+.facts{padding:20px 0 90px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px}
+.facts div{padding-left:18px;border-left:1px solid var(--line);font-size:.92rem;color:var(--ink2);line-height:1.65}
+.facts b{color:var(--ink);font-weight:500;display:block;margin-bottom:4px;font-size:.95rem}
+.pcta{padding:100px 0 110px}
+.pcta h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.035em;line-height:1.08;max-width:16ch}
+.pcta h2 a{color:var(--blue);position:relative;white-space:nowrap}
+.pcta h2 a::after{content:"";position:absolute;left:0;bottom:5px;height:3px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.19,1,.22,1)}
+.pcta h2 a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:900px){
+  .phero{padding:120px 0 40px}
+  .sec{padding:50px 0}
+  .trow{grid-template-columns:1fr;gap:10px;padding:24px 16px;margin:0 -16px}
+  .story{grid-template-columns:1fr;gap:32px;padding:50px 0}
+  .facts{padding:10px 0 60px;gap:24px}
+  .pcta{padding:70px 0 80px}
 }
 </style>
 </head>
 <body>
+
 <nav id="nav">
-  <a class="nav-logo" href="index.html">
-    <img src="android-chrome-512x512.png" alt="" role="presentation">
-    Novo Web Build
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
+  <a class="logo" href="index.html"><img src="android-chrome-512x512.png" alt="Novo Web Build logo">Novo Web Build</a>
+  <ul class="nl">
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="maintenance.html" class="active">Maintenance</a></li>
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="portfolio.html">Work</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
   </ul>
-  <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener" class="nav-audit-btn" style="background:#4F8EF7;color:#fff;padding:8px 18px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-right:8px;text-decoration:none">Free Audit →</a>
-  <a href="https://wa.me/306940144755" target="_blank" class="nav-cta">Get Started →</a>
-  <div class="lang-toggle">
-  <button class="lang-btn active" onclick="window.location.href='maintenance.html'">EN</button>
-  <button class="lang-btn" onclick="window.location.href='maintenance-gr.html'">GR</button>
-</div>
-<button class="nav-burger" id="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="mobile-menu" id="mobile-menu">
-    <div style="position:absolute;top:22px;left:22px;display:flex;align-items:center;gap:10px">
-      <img src="android-chrome-512x512.png" alt="" role="presentation" style="width:34px;height:34px;border-radius:50%;object-fit:cover">
-      <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;color:var(--white)">Novo Web Build</span>
-    </div>
-    <button onclick="closeMM()" style="position:absolute;top:22px;right:22px;background:none;border:none;color:var(--muted);font-size:1.6rem;cursor:pointer">✕</button>
-    <a href="index.html" onclick="closeMM()">Home</a>
-    <a href="about.html" onclick="closeMM()">About</a>
-    <a href="services.html" onclick="closeMM()">Services</a>
-    <a href="maintenance.html" onclick="closeMM()" class="active">Maintenance</a>
-    <a href="blog.html" onclick="closeMM()">Blog</a>
-    <a href="portfolio.html" onclick="closeMM()">Work</a>
-    <a href="https://wa.me/306940144755" target="_blank" class="mm-cta">Get Started →</a>
+  <div class="nav-right">
+    <a class="ncta" href="index.html#contact">Start a project</a>
+    <div class="lang"><span>EN</span><a href="maintenance-gr.html">GR</a></div>
+    <button class="burger" onclick="document.getElementById('mm').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<div class="hero r">
-  <div class="hero-glow"></div>
-  <div style="font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:24px;display:flex;align-items:center;gap:14px;justify-content:center"><span style="display:block;width:24px;height:1px;background:var(--blue)"></span>ALREADY A CLIENT?<span style="display:block;width:24px;height:1px;background:var(--blue)"></span></div>
-  <h1>Choose your <span>plan</span></h1>
-  <p>Keep your website always updated, secure and in top condition. No technical worries on your end.</p>
+<div class="mm" id="mm">
+  <button class="mm-x" onclick="document.getElementById('mm').classList.remove('open')" aria-label="Close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="maintenance.html" class="active">Maintenance</a>
+  <a href="blog.html">Blog</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="index.html#contact" class="mm-cta" onclick="document.getElementById('mm').classList.remove('open')">Start a project →</a>
 </div>
 
-<div class="plans">
-  <div class="plans-grid">
-
-    <!-- €30 Simple -->
-    <div class="plan r">
-      <div class="plan-tier">Simple</div>
-      <div class="plan-price"><sup>€</sup>30</div>
-      <div class="plan-freq">per month · automatic billing</div>
-      <div class="plan-name">Basic Maintenance</div>
-      <div class="plan-desc">For businesses that want peace of mind knowing their website is running smoothly.</div>
-      <ul class="plan-features">
-        <li>Monthly maintenance & checks</li>
-        <li>Uptime monitoring</li>
-        <li>Security checks</li>
-        <li>Technical updates</li>
-        <li>Monthly status report</li>
-      </ul>
-      <div class="paypal-wrap">
-        <div id="paypal-button-container-P-61D97880FR2200742NH4LVAY"></div>
-      </div>
-    </div>
-
-    <!-- €50 Standard -->
-    <div class="plan r d1">
-      <div class="plan-tier">Standard</div>
-      <div class="plan-price"><sup>€</sup>50</div>
-      <div class="plan-freq">per month · automatic billing</div>
-      <div class="plan-name">Maintenance & Updates</div>
-      <div class="plan-desc">For businesses that want to keep their content fresh without doing it themselves.</div>
-      <ul class="plan-features">
-        <li class="prev">Everything in Simple</li>
-        <li>2 content updates per month</li>
-        <li>Text & image changes</li>
-        <li>Priority support</li>
-      </ul>
-      <div class="paypal-wrap">
-        <div id="paypal-button-container-P-18W292058L548333MNH4L2NY"></div>
-      </div>
-    </div>
-
-    <!-- €100 Growth -->
-    <div class="plan pop r d2">
-      <div class="plan-badge">Most Popular</div>
-      <div class="plan-tier">Growth</div>
-      <div class="plan-price"><sup>€</sup>100</div>
-      <div class="plan-freq">per month · automatic billing</div>
-      <div class="plan-name">Growth & SEO</div>
-      <div class="plan-desc">For businesses that want to grow online and rank higher in Google search results.</div>
-      <ul class="plan-features">
-        <li class="prev">Everything in Standard</li>
-        <li>Monthly SEO optimisation</li>
-        <li>Content additions on request</li>
-        <li>Monthly traffic report</li>
-        <li>Growth advice</li>
-      </ul>
-      <div class="paypal-wrap">
-        <div id="paypal-button-container-P-7FF38746N2761615LNH4L3XA"></div>
-      </div>
-    </div>
-
-    <!-- €140 Premium -->
-    <div class="plan r d3">
-      <div class="plan-tier">Premium</div>
-      <div class="plan-price"><sup>€</sup>140</div>
-      <div class="plan-freq">per month · automatic billing</div>
-      <div class="plan-name">Unlimited Support</div>
-      <div class="plan-desc">For businesses that want a reliable partner for every website need they have.</div>
-      <ul class="plan-features">
-        <li class="prev">Everything in Growth</li>
-        <li>Unlimited changes</li>
-        <li>Priority on all requests</li>
-        <li>Direct WhatsApp communication</li>
-        <li>Monthly strategy & suggestions</li>
-      </ul>
-      <div class="paypal-wrap">
-        <div id="paypal-button-container-P-70L54018MN901701NNH4L4JI"></div>
-      </div>
-    </div>
-
+<header class="phero wrap">
+  <h1>Choose your plan</h1>
+  <p class="lead">Keep your website always updated, secure and in top condition. No technical worries on your end.</p>
+  <div class="hbadge" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <defs><path id="circ" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/></defs>
+      <text><textPath href="#circ">NOVO WEB BUILD · WEB DESIGN STUDIO · NOVO WEB BUILD · WEB DESIGN ·</textPath></text>
+    </svg>
+    <img src="android-chrome-512x512.png" alt="">
   </div>
-</div>
+</header>
 
-<!-- QR Menu Service -->
-<div class="qr-section r">
-  <div class="qr-card">
-    <div class="qr-left">
-      <div class="plan-tier">QR Menu</div>
-      <div class="plan-price"><sup>€</sup>15</div>
-      <div class="plan-freq">per month · automatic billing</div>
-      <div class="plan-name">Digital QR Menu for Restaurants & Cafés</div>
-      <div class="plan-desc">A mobile-friendly digital menu your customers open by scanning a QR code. Always up to date, no reprinting, no hassle.</div>
-      <ul class="plan-features">
+<section class="plans wrap">
+  <div class="plan">
+    <div class="tier">Simple</div>
+    <div class="price">€30<small>per month · automatic billing</small></div>
+    <div class="pname">Basic Maintenance</div>
+    <div class="pdesc">For businesses that want peace of mind knowing their website is running smoothly.</div>
+    <ul>
+      <li>Monthly maintenance & checks</li>
+      <li>Uptime monitoring</li>
+      <li>Security checks</li>
+      <li>Technical updates</li>
+      <li>Monthly status report</li>
+    </ul>
+    <div class="paypal-wrap"><div id="paypal-button-container-P-61D97880FR2200742NH4LVAY"></div></div>
+  </div>
+  <div class="plan">
+    <div class="tier">Standard</div>
+    <div class="price">€50<small>per month · automatic billing</small></div>
+    <div class="pname">Maintenance & Updates</div>
+    <div class="pdesc">For businesses that want to keep their content fresh without doing it themselves.</div>
+    <ul>
+      <li>Everything in Simple</li>
+      <li>2 content updates per month</li>
+      <li>Text & image changes</li>
+      <li>Priority support</li>
+    </ul>
+    <div class="paypal-wrap"><div id="paypal-button-container-P-18W292058L548333MNH4L2NY"></div></div>
+  </div>
+  <div class="plan">
+    <div class="tier">Growth<span class="tag-pop">Most Popular</span></div>
+    <div class="price">€100<small>per month · automatic billing</small></div>
+    <div class="pname">Growth & SEO</div>
+    <div class="pdesc">For businesses that want to grow online and rank higher in Google search results.</div>
+    <ul>
+      <li>Everything in Standard</li>
+      <li>Monthly SEO optimisation</li>
+      <li>Content additions on request</li>
+      <li>Monthly traffic report</li>
+      <li>Growth advice</li>
+    </ul>
+    <div class="paypal-wrap"><div id="paypal-button-container-P-7FF38746N2761615LNH4L3XA"></div></div>
+  </div>
+  <div class="plan">
+    <div class="tier">Premium</div>
+    <div class="price">€140<small>per month · automatic billing</small></div>
+    <div class="pname">Unlimited Support</div>
+    <div class="pdesc">For businesses that want a reliable partner for every website need they have.</div>
+    <ul>
+      <li>Everything in Growth</li>
+      <li>Unlimited changes</li>
+      <li>Priority on all requests</li>
+      <li>Direct WhatsApp communication</li>
+      <li>Monthly strategy & suggestions</li>
+    </ul>
+    <div class="paypal-wrap"><div id="paypal-button-container-P-70L54018MN901701NNH4L4JI"></div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="qrplan">
+    <div class="plan">
+      <div class="tier">QR Menu</div>
+      <div class="price">€15<small>per month · automatic billing</small></div>
+      <div class="pname">Digital QR Menu for Restaurants & Cafés</div>
+      <div class="pdesc">A mobile-friendly digital menu your customers open by scanning a QR code. Always up to date, no reprinting, no hassle.</div>
+      <ul>
         <li>Custom digital menu, mobile-optimised</li>
         <li>1 menu update per month</li>
         <li>Hosting & QR code included</li>
         <li>Ongoing support</li>
       </ul>
     </div>
-    <div class="qr-right">
-      <div class="paypal-wrap">
-        <div id="paypal-button-container-P-1WT03411RD354604TNIXLR2I"></div>
-      </div>
-    </div>
+    <div class="paypal-wrap"><div id="paypal-button-container-P-1WT03411RD354604TNIXLR2I"></div></div>
   </div>
-</div>
-
-<div class="note r">
-  Δεν ξέρεις ποιο πλάνο σου ταιριάζει; <a href="https://wa.me/306940144755" target="_blank">Message us on WhatsApp</a> and we'll help you choose.<br>
-  Μπορείς να ακυρώσεις οποιαδήποτε στιγμή. Χωρίς δεσμεύσεις.
-</div>
+  <div class="mnote">Not sure which plan fits? <a href="https://wa.me/306940144755" target="_blank" rel="noopener">Message us on WhatsApp</a> and we'll help you choose.<br>Cancel anytime. No commitments.</div>
+</section>
 
 <footer>
-  <div class="footer-logo">
-    <img src="android-chrome-512x512.png" alt="" role="presentation">
-    Novo Web Build
+  <div>© 2026 Novo Web Build · Thessaloniki, Greece</div>
+  <div class="f-links">
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="maintenance.html">Maintenance</a>
+    <a href="blog.html">Blog</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener">Free Audit</a>
   </div>
-  <span class="footer-copy">© 2026 Novo Web Build · <a href="index.html" style="color:var(--muted2)">Home</a></span>
 </footer>
 
 <script>
-// Nav scroll
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>50),{passive:true});
-
-// Intersection observer
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.07});
-document.querySelectorAll('.r').forEach(el=>io.observe(el));
-
-// Mobile menu
-const burger=document.getElementById('burger');
-const mm=document.getElementById('mobile-menu');
-burger.addEventListener('click',()=>{burger.classList.toggle('open');mm.classList.toggle('open');document.body.style.overflow=mm.classList.contains('open')?'hidden':''});
-function closeMM(){burger.classList.remove('open');mm.classList.remove('open');document.body.style.overflow=''}
-
-// PayPal buttons
-const plans = [
-  {id:'P-61D97880FR2200742NH4LVAY', container:'paypal-button-container-P-61D97880FR2200742NH4LVAY'},
-  {id:'P-18W292058L548333MNH4L2NY', container:'paypal-button-container-P-18W292058L548333MNH4L2NY'},
-  {id:'P-7FF38746N2761615LNH4L3XA', container:'paypal-button-container-P-7FF38746N2761615LNH4L3XA'},
-  {id:'P-70L54018MN901701NNH4L4JI', container:'paypal-button-container-P-70L54018MN901701NNH4L4JI'},
-  {id:'P-1WT03411RD354604TNIXLR2I', container:'paypal-button-container-P-1WT03411RD354604TNIXLR2I'},
-];
-
-plans.forEach(function(plan){
+addEventListener('scroll',()=>{nav.classList.toggle('on',scrollY>40)},{passive:true});
+(function(){function norm(s){s=(s||'').split('/').pop();s=s.replace(/\.html$/,'');if(s===''||s==='index'||s==='index-gr')return 'home';return s;}var cur=norm(location.pathname);var links=document.querySelectorAll('.nl a, .mm a');links.forEach(function(a){var h=a.getAttribute('href')||'';if(h.indexOf('#')===0||h.indexOf('http')===0)return;a.classList.remove('active');if(norm(h)===cur)a.classList.add('active');});})();
+</script>
+<script>
+const pplans=[{id:'P-61D97880FR2200742NH4LVAY',container:'paypal-button-container-P-61D97880FR2200742NH4LVAY'},{id:'P-18W292058L548333MNH4L2NY',container:'paypal-button-container-P-18W292058L548333MNH4L2NY'},{id:'P-7FF38746N2761615LNH4L3XA',container:'paypal-button-container-P-7FF38746N2761615LNH4L3XA'},{id:'P-70L54018MN901701NNH4L4JI',container:'paypal-button-container-P-70L54018MN901701NNH4L4JI'},{id:'P-1WT03411RD354604TNIXLR2I',container:'paypal-button-container-P-1WT03411RD354604TNIXLR2I'}];
+pplans.forEach(function(plan){
   paypal.Buttons({
     style:{shape:'rect',color:'blue',layout:'vertical',label:'subscribe'},
-    createSubscription:function(data,actions){
-      return actions.subscription.create({plan_id:plan.id});
-    },
-    onApprove:function(data,actions){
-      alert('Η εγγραφή σου ολοκληρώθηκε! ID: '+data.subscriptionID);
-    }
+    createSubscription:function(data,actions){return actions.subscription.create({plan_id:plan.id});},
+    onApprove:function(data,actions){alert('Your subscription is complete! ID: '+data.subscriptionID);}
   }).render('#'+plan.container);
 });
 </script>

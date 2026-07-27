@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Σχετικά με εμάς | Novo Web Build</title>
-<meta name="description" content="Η Novo Web Build είναι ένα απομακρυσμένο studio κατασκευής ιστοσελίδων. Γρήγορα, καθαρά και οικονομικά sites για μικρές επιχειρήσεις.">
+<title>Σχετικά με Εμάς | Novo Web Build</title>
+<meta name="description" content="Στούντιο σχεδιασμού ιστοσελίδων στη Θεσσαλονίκη με custom-coded ιστοσελίδες για επιχειρήσεις κάθε μεγέθους. Χωρίς templates, online σε 14 εργάσιμες.">
+<meta property="og:title" content="Σχετικά με Εμάς | Novo Web Build">
+<meta property="og:description" content="Στούντιο σχεδιασμού ιστοσελίδων στη Θεσσαλονίκη με custom-coded ιστοσελίδες για επιχειρήσεις κάθε μεγέθους. Χωρίς templates, online σε 14 εργάσιμες.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://novowebbuild.com/android-chrome-512x512.png">
+<link rel="canonical" href="https://novowebbuild.com/about-gr">
+<meta name="theme-color" content="#0C0E11">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3HXLY3GNPP"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-3HXLY3GNPP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -20,336 +26,333 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{background:#0D1117;color:#E8EDF5;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{background:#0C0E11;color:#F2F4F7;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 :root{
-  --bg:#0D1117;--bg2:#131920;--bg3:#1A2332;--bg4:#0a0e14;
-  --white:#FFFFFF;--text:#E8EDF5;--muted:rgba(232,237,245,.5);--muted2:rgba(232,237,245,.25);
-  --line:rgba(232,237,245,.07);--line2:rgba(232,237,245,.12);
-  --blue:#4F8EF7;--blue2:rgba(79,142,247,.1);--blue3:rgba(79,142,247,.05);
-  --green:#22c55e;
+  --bg:#0C0E11;--panel:#111418;--ink:#F2F4F7;--ink2:#B9BEC6;--mut:#787E88;
+  --blue:#4F8EF7;--line:rgba(242,244,247,.1);--line2:rgba(242,244,247,.06);
 }
+a{color:inherit;text-decoration:none}
+::selection{background:var(--blue);color:#fff}
 ::-webkit-scrollbar{width:2px}
 ::-webkit-scrollbar-thumb{background:var(--blue)}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
+.wrap{max-width:1500px;margin:0 auto;padding-left:48px;padding-right:48px}
 
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:26px 64px;transition:background .4s,padding .35s,border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
-nav.on{background:rgba(13,17,23,.72);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);padding:15px 64px;border-color:var(--line2)}
-.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.025em;color:var(--white);display:flex;align-items:center;gap:9px;transition:opacity .2s}
-.nav-logo:hover{opacity:.82}
-.nav-logo-icon{width:30px;height:30px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:#fff;letter-spacing:-.01em;flex-shrink:0}
-.nav-links{display:flex;align-items:center;gap:34px;list-style:none}
-.nav-links a{position:relative;font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .25s;padding:4px 0}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.16,1,.3,1)}
-.nav-links a:hover{color:var(--white)}
-.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
-.nav-links a.active{color:var(--white)}
-.nav-links a.active::after{transform:scaleX(1)}
-.nav-links a:focus:not(:hover):not(.active)::after{transform:scaleX(0)}
-.nav-cta{position:relative;background:linear-gradient(135deg,#5f9bff,#4F8EF7 55%,#3d7ce8);color:#fff!important;padding:10px 24px;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease;display:inline-block;flex-shrink:0;box-shadow:0 4px 16px rgba(79,142,247,.3)}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(79,142,247,.48)}
-.nav-cta:active{transform:translateY(0)}
-.nav-audit-btn{position:relative;background:rgba(79,142,247,.08)!important;color:var(--white)!important;border:1px solid var(--line2);padding:9px 18px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-right:10px;text-decoration:none;border-radius:2px;transition:all .25s cubic-bezier(.16,1,.3,1)}
-.nav-audit-btn:hover{border-color:var(--blue);background:rgba(79,142,247,.15)!important;transform:translateY(-2px)}
-.nav-cta:hover{opacity:.85}
+/* NAV */
+nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px 48px;transition:background .3s,border-color .3s,padding .3s;border-bottom:1px solid transparent}
+nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px}
+.logo{font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.02rem;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.logo img{width:26px;height:26px;border-radius:50%;display:block;flex-shrink:0}
+.nl{display:flex;gap:34px;font-size:.82rem;font-weight:400;color:var(--ink2);list-style:none}
+.nl a{position:relative;padding:3px 0;transition:color .25s}
+.nl a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.19,1,.22,1)}
+.nl a:hover{color:var(--ink)}
+.nl a:hover::after{transform:scaleX(1);transform-origin:left}
+.nl a.active{color:var(--ink)}
+.nl a.active::after{transform:scaleX(1)}
+.nl a:focus:not(:hover):not(.active)::after{transform:scaleX(0)}
+.nav-right{display:flex;align-items:center;gap:22px}
+.ncta{font-size:.82rem;font-weight:500;border-bottom:1px solid var(--blue);padding-bottom:2px;transition:color .25s}
+.ncta:hover{color:var(--blue)}
+.lang{display:flex;gap:2px;border:1px solid var(--line);padding:3px}
+.lang a,.lang span{font-size:.66rem;font-weight:500;padding:4px 9px;letter-spacing:.06em}
+.lang span{background:var(--blue);color:#fff}
+.lang a{color:var(--mut);transition:color .2s}
+.lang a:hover{color:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{width:22px;height:1.5px;background:var(--ink);display:block;transition:transform .3s,opacity .3s}
 
-/* ── BUTTONS ── */
-.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:14px 30px;border-radius:2px;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease,background .25s ease,border-color .25s ease,color .25s ease;cursor:pointer;border:1px solid transparent;white-space:nowrap;overflow:hidden;will-change:transform}
-.btn::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);transition:left .6s ease;pointer-events:none}
-.btn:hover::after{left:140%}
-.btn-blue{background:linear-gradient(135deg,#5f9bff,#4F8EF7 55%,#3d7ce8);color:#fff;box-shadow:0 6px 20px rgba(79,142,247,.32)}
-.btn-blue:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(79,142,247,.5)}
-.btn-blue:active{transform:translateY(0);box-shadow:0 4px 14px rgba(79,142,247,.4)}
-.btn-white{background:var(--white);color:var(--bg)}.btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,255,255,.2)}
-.btn-outline{background:rgba(79,142,247,.04);color:var(--text);border:1px solid var(--line2)}
-.btn-outline:hover{transform:translateY(-2px);border-color:var(--blue);color:var(--blue);box-shadow:0 8px 24px rgba(79,142,247,.18);background:rgba(79,142,247,.08)}
-.btn-outline:active{transform:translateY(0)}
-.btn-dark{background:var(--bg3);color:var(--text);border:1px solid var(--line)}.btn-dark:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
-@media(prefers-reduced-motion:reduce){.btn,.btn::after{transition:none}.btn:hover{transform:none}}
-.btn-green{background:var(--green);color:#fff}.btn-green:hover{opacity:.87}
+/* MOBILE MENU */
+.mm{position:fixed;inset:0;background:rgba(12,14,17,.99);z-index:60;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:48px 32px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility .25s}
+.mm.open{opacity:1;visibility:visible;pointer-events:auto}
+.mm a{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.7rem;letter-spacing:-.02em;color:var(--ink2);transition:color .2s}
+.mm a:hover,.mm a.active{color:var(--ink)}
+.mm a.active{color:var(--blue)}
+.mm .mm-x{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--mut);font-size:1.7rem;cursor:pointer;font-family:'DM Sans'}
+.mm .mm-cta{font-size:1rem;font-weight:500;color:var(--blue);border-bottom:1px solid var(--blue);padding-bottom:2px;margin-top:10px}
 
-/* ── SHARED ELEMENTS ── */
-.tag{display:inline-flex;align-items:center;gap:10px;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
-.tag::before{content:'';display:block;width:18px;height:1px;background:var(--blue)}
-.section-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.93;color:var(--white)}
-.section-title span{color:var(--blue)}
+/* HERO */
+.hero{padding:190px 0 90px}
+.hero h1{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.7rem,7vw,5.9rem);line-height:1.05;letter-spacing:-.035em;max-width:15ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:52px;flex-wrap:wrap}
+.hero-foot p{font-size:1.02rem;line-height:1.7;color:var(--ink2);max-width:44ch}
+.hero-meta{font-size:.8rem;color:var(--mut);line-height:1.95;text-align:right}
+.hero-meta b{color:var(--ink);font-weight:500}
+.rise{opacity:0;transform:translateY(26px);animation:rise .9s cubic-bezier(.19,1,.22,1) forwards}
+.rise.d1{animation-delay:.12s}.rise.d2{animation-delay:.24s}
+@keyframes rise{to{opacity:1;transform:none}}
 
-/* ── FOOTER ── */
-footer{background:var(--bg4);border-top:1px solid var(--line);padding:64px 64px 36px}
-.footer-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--line);margin-bottom:28px}
-.footer-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;color:var(--white);letter-spacing:-.025em;display:flex;align-items:center;gap:8px;margin-bottom:14px}
-.footer-logo-icon{width:26px;height:26px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:800;color:#fff}
-.footer-brand p{font-size:.83rem;color:var(--muted);line-height:1.75;max-width:230px}
-.footer-brand .footer-contact{margin-top:20px;display:flex;flex-direction:column;gap:8px}
-.footer-brand .footer-contact a{font-size:.8rem;color:var(--muted);transition:color .2s;display:flex;align-items:center;gap:8px}
-.footer-brand .footer-contact a:hover{color:var(--blue)}
-.footer-col h4{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2);margin-bottom:18px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-col ul a{font-size:.83rem;color:var(--muted);transition:color .2s}
-.footer-col ul a:hover{color:var(--blue)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-copy{font-size:.63rem;color:var(--muted2);letter-spacing:.04em}
-.footer-socials{display:flex;gap:14px}
-.footer-socials a{font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);transition:color .2s}
-.footer-socials a:hover{color:var(--blue)}
+/* WORK */
+.work{padding:40px 0 30px}
+.work-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:26px;margin-bottom:38px}
+.work-head h2{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1rem;letter-spacing:-.01em}
+.work-head a{font-size:.82rem;color:var(--mut);transition:color .25s}
+.work-head a:hover{color:var(--blue)}
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px 40px}
+.wi{display:block}
+.wi .frame{position:relative;overflow:hidden;aspect-ratio:16/10.4;background:var(--panel)}
+.wi video{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transform:scale(1.015);transition:transform .8s cubic-bezier(.19,1,.22,1),opacity .4s}
+.wi:hover video{transform:scale(1.06);opacity:1}
+.wi .cap{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;gap:14px}
+.wi .cap b{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.95rem;letter-spacing:-.01em}
+.wi .cap span{font-size:.76rem;color:var(--mut);text-align:right}
+.wi.wide{grid-column:1/-1}
+.wi.wide .frame{aspect-ratio:21/9}
 
-/* ── REVEAL ── */
-.r{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
-.r.in{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+/* SERVICES */
+.svc{padding:110px 0}
+.svc h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.9rem,3.6vw,3rem);letter-spacing:-.03em;margin-bottom:48px;max-width:20ch}
+.srow{position:relative;display:grid;grid-template-columns:1.05fr 1.55fr auto;gap:28px;align-items:baseline;padding:32px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s;cursor:pointer}
+.srow:last-of-type{border-bottom:1px solid var(--line)}
+.srow:hover{background:var(--panel)}
+.srow h3{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.35rem;letter-spacing:-.02em;transition:color .25s,transform .4s cubic-bezier(.19,1,.22,1)}
+.srow:hover h3{color:var(--blue);transform:translateX(8px)}
+.srow p{font-size:.92rem;color:var(--ink2);line-height:1.7;max-width:52ch}
+.srow .pr{font-size:.85rem;color:var(--mut);white-space:nowrap;display:flex;align-items:baseline;gap:12px}
+.srow .pr b{color:var(--ink);font-weight:500}
+.srow .arr{color:var(--blue);font-size:1rem;opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .4s cubic-bezier(.19,1,.22,1)}
+.srow:hover .arr{opacity:1;transform:none}
+.svc-note{margin-top:26px;font-size:.82rem;color:var(--mut)}
+.svc-note a{color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .25s,border-color .25s}
+.svc-note a:hover{color:var(--blue);border-color:var(--blue)}
 
-/* ── RESPONSIVE ── */
+/* PROOF */
+.proof{border-top:1px solid var(--line);background:var(--panel)}
+.proof-in{padding:90px 0;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.proof blockquote{font-family:'Plus Jakarta Sans';font-weight:500;font-size:clamp(1.2rem,2.1vw,1.7rem);line-height:1.45;letter-spacing:-.015em;max-width:26ch}
+.proof cite{display:block;margin-top:22px;font-style:normal;font-size:.8rem;color:var(--mut)}
+.proof cite a{color:var(--ink2);border-bottom:1px solid var(--line);transition:color .25s}
+.proof cite a:hover{color:var(--blue)}
+.pstats{display:flex;flex-direction:column;gap:22px;font-size:.95rem;color:var(--ink2);line-height:1.65}
+.pstats div{padding-left:18px;border-left:1px solid var(--line)}
+.pstats b{color:var(--ink);font-weight:500}
 
-/* ── MOBILE NAV ── */
+/* CONTACT */
+.contact{padding:120px 0 110px}
+.contact h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.4rem,5.6vw,4.6rem);letter-spacing:-.035em;line-height:1.06;max-width:14ch}
+.contact h2 span{color:var(--blue)}
+.c-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;margin-top:56px;align-items:start}
+.c-links{display:flex;flex-direction:column;gap:16px;font-size:.9rem}
+.c-links a{color:var(--ink);width:fit-content;border-bottom:1px solid var(--line);padding-bottom:3px;transition:border-color .25s,color .25s}
+.c-links a:hover{color:var(--blue);border-color:var(--blue)}
+.c-links .note{font-size:.78rem;color:var(--mut);margin-top:14px;line-height:1.7}
+.cf{display:flex;flex-direction:column}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cf label{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:8px;font-weight:500}
+.cf .fg{margin-bottom:20px}
+.cf input,.cf textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:300;padding:8px 0 12px;outline:none;transition:border-color .3s;border-radius:0;appearance:none}
+.cf input:focus,.cf textarea:focus{border-color:var(--blue)}
+.cf textarea{resize:vertical;min-height:84px}
+.cf input::placeholder,.cf textarea::placeholder{color:var(--mut)}
+.cf button{margin-top:8px;width:fit-content;background:none;border:none;cursor:pointer;font-family:'Plus Jakarta Sans';font-weight:700;font-size:1rem;color:var(--ink);letter-spacing:-.01em;padding:0 0 4px;border-bottom:2px solid var(--blue);transition:color .25s}
+.cf button:hover{color:var(--blue)}
+.f-ok{display:none;margin-top:18px;font-size:.88rem;color:#22c55e}
+.f-err{display:none;margin-top:18px;font-size:.88rem;color:#ef4444}
 
-.lang-toggle{display:flex;align-items:center;gap:2px;background:var(--bg2);border:1px solid var(--line2);padding:3px;margin-left:12px;flex-shrink:0}
-.lang-btn{font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:4px 9px;cursor:pointer;color:var(--muted);transition:all .2s;border:none;background:none;font-family:'Plus Jakarta Sans',sans-serif}
-.lang-btn.active{background:var(--blue);color:#fff}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:34px 48px;display:flex;justify-content:space-between;align-items:center;font-size:.74rem;color:var(--mut);flex-wrap:wrap;gap:16px}
+.f-links{display:flex;gap:22px;flex-wrap:wrap}
+.f-links a{transition:color .25s}
+.f-links a:hover{color:var(--ink)}
 
-.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.nav-burger span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s}
-.nav-burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.nav-burger.open span:nth-child(2){opacity:0}
-.nav-burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-.mobile-menu{display:flex;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,17,23,.99);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease;will-change:opacity;transform:translateZ(0)}
-.mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto}
-.mobile-menu a{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.6rem;color:var(--muted);letter-spacing:-.02em;transition:color .2s}
-.mobile-menu a:hover{color:var(--white)}
-.mobile-menu .mm-cta{background:var(--blue);color:#fff!important;padding:14px 36px;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
-@media(max-width:960px){.nav-burger{display:flex}.nav-cta{display:none}}
-
-@media(max-width:960px){
-  nav{padding:18px 22px;transition:background .3s,padding .3s}nav.on{padding:13px 22px;background:rgba(13,17,23,.96);backdrop-filter:none;-webkit-backdrop-filter:none}.nav-links{display:none}
-  footer{padding:48px 22px 28px}
-  .footer-top{grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:900px){
+  .wrap{padding-left:22px;padding-right:22px}
+  nav{padding:16px 22px}nav.on{padding:12px 22px}
+  .nl{display:none}
+  .ncta{display:none}
+  .burger{display:flex}
+  .hero{padding:130px 0 60px}
+  .hero-meta{text-align:left}
+  .work{padding:20px 0}
+  .wgrid{grid-template-columns:1fr;gap:34px}
+  .wi.wide .frame,.wi .frame{aspect-ratio:16/10.4}
+  .svc{padding:80px 0}
+  .srow{grid-template-columns:1fr;gap:10px;padding:24px 0}
+  .proof-in{grid-template-columns:1fr;gap:40px;padding:70px 0}
+  .contact{padding:80px 0}
+  .c-grid{grid-template-columns:1fr;gap:48px}
+  .cf-row{grid-template-columns:1fr}
+  footer{padding:26px 22px;flex-direction:column;align-items:flex-start}
 }
-@media(max-width:600px){.footer-top{grid-template-columns:1fr}}
-
-.ph{padding:160px 64px 100px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;overflow:hidden}
-.ph-glow{position:absolute;top:20%;right:5%;width:500px;height:500px;background:radial-gradient(circle,rgba(79,142,247,.08),transparent 65%);pointer-events:none}
-.ph h1{font-size:clamp(3rem,7vw,7.5rem)}
-.ph p{font-size:1rem;color:var(--muted);line-height:1.82}
-.story{padding:100px 64px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;border-bottom:1px solid var(--line)}
-.story-vis{background:var(--bg2);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid var(--line)}
-.story-vis-big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(5rem,13vw,13rem);color:var(--blue2);letter-spacing:-.06em;user-select:none;line-height:1}
-.story-vis-logo{max-width:75%;max-height:75%;position:relative;z-index:2}
-.story-vis-tag{position:absolute;bottom:20px;left:20px;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2);background:var(--bg3);padding:6px 12px;border:1px solid var(--line)}
-.story-glow{position:absolute;top:30%;left:30%;width:200px;height:200px;background:radial-gradient(circle,rgba(79,142,247,.08),transparent 70%)}
-.story-t h2{font-size:clamp(2rem,3.8vw,3.2rem);margin-bottom:22px}
-.story-t p{font-size:.94rem;line-height:1.85;color:var(--muted);margin-bottom:14px}
-.mission{background:var(--blue);padding:80px 64px;text-align:center}
-.mission h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,5rem);color:#fff;margin-bottom:14px;letter-spacing:-.03em}
-.mission p{font-size:1rem;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto;line-height:1.8}
-.values{padding:100px 64px;border-bottom:1px solid var(--line)}
-.values h2{font-size:clamp(2rem,3.8vw,3.2rem);margin-bottom:56px}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
-.value{background:var(--bg);padding:44px 32px;transition:background .3s}
-.value:hover{background:var(--bg2)}
-.value-icon{font-size:1.8rem;margin-bottom:16px}
-.value-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.98rem;color:var(--white);margin-bottom:10px}
-.value-desc{font-size:.84rem;line-height:1.8;color:var(--muted)}
-.stats-row{background:var(--bg2);border-top:1px solid var(--line);padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
-.stat-i{padding:52px 36px;text-align:center;border-right:1px solid var(--line)}
-.stat-i:last-child{border-right:none}
-.stat-n{font-family:'Fraunces',serif;font-size:4rem;color:var(--blue);line-height:1;margin-bottom:8px}
-.stat-l{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.about-cta{padding:100px 64px;text-align:center}
-.about-cta h2{font-size:clamp(2.4rem,5vw,5.5rem);margin-bottom:16px}
-.about-cta p{font-size:1rem;color:var(--muted);line-height:1.75;max-width:400px;margin:0 auto 40px}
-@media(max-width:960px){
-  .ph,.story{grid-template-columns:1fr;padding:120px 22px 72px}
-  .story{padding:72px 22px}.mission,.values,.about-cta{padding:72px 22px}
-  .values-grid{grid-template-columns:1fr}
-  .stats-row{grid-template-columns:1fr 1fr}
-  .stat-i{border-right:none;border-bottom:1px solid var(--line)}
-  .story-vis{overflow:hidden}
+@media(prefers-reduced-motion:reduce){
+  .rise{animation:none;opacity:1;transform:none}
+  .wi video{transition:none}
+  html{scroll-behavior:auto}
 }
-@media(max-width:420px){
-  .stats-row{grid-template-columns:1fr}
-}
-@media(max-width:960px){.nav-audit-btn{display:none}}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+.mq{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;position:relative}
+.mq-track{display:flex;width:max-content;animation:mqs 36s linear infinite}
+.mq span{font-size:.78rem;color:var(--mut);white-space:nowrap;padding-right:14px}
+.mq span::after{content:"·";padding-left:14px;color:var(--blue)}
+@keyframes mqs{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq-track{animation:none}}
+.story-vis{position:relative}
+.story-vis img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:saturate(.92) brightness(.9)}
+@media(max-width:900px){.story-vis{order:-1}.story-vis img{aspect-ratio:16/10}}
+.phero{display:grid;grid-template-columns:1fr auto;gap:0 48px;align-items:center}
+.phero h1{grid-column:1}
+.phero .lead{grid-column:1}
+.hbadge{grid-column:2;grid-row:1/span 2;position:relative;display:flex;align-items:center;justify-content:center;width:min(190px,100%);aspect-ratio:1}
+.hbadge svg{position:absolute;inset:0;width:100%;height:100%;animation:spinb 24s linear infinite}
+.hbadge svg text{font-family:'Plus Jakarta Sans';font-size:10.5px;font-weight:700;letter-spacing:.32em;fill:var(--mut);text-transform:uppercase}
+.hbadge img{width:76px;height:76px;border-radius:50%;position:relative;z-index:1}
+.hbadge::after{content:"";position:absolute;width:60%;height:60%;background:radial-gradient(circle,rgba(79,142,247,.16),transparent 70%);pointer-events:none}
+@keyframes spinb{to{transform:rotate(360deg)}}
+@media(max-width:900px){.phero{grid-template-columns:1fr}.hbadge{display:none}}
+@media(prefers-reduced-motion:reduce){.hbadge svg{animation:none}}
+.rev{padding:60px 0 70px;display:flex;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line)}
+.rvbtn{flex:1;min-width:250px;border:1px solid var(--line);background:var(--panel);padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;transition:border-color .3s,transform .3s}
+.rvbtn:hover{border-color:var(--blue);transform:translateY(-2px)}
+.rvbtn .rl b{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.02rem;display:block;margin-bottom:4px}
+.rvbtn .rl span{font-size:.78rem;color:var(--mut)}
+.rvbtn .stars{font-size:1.05rem;letter-spacing:3px;white-space:nowrap}
+.rvbtn.g .stars{color:#FFC83D}
+.rvbtn.tp .stars{color:#00B67A}
+@media(max-width:900px){.rev{padding:40px 0 50px}}
 </style>
-<meta property="og:title" content="About Us | Novo Web Build">
-<meta property="og:description" content="A remote web design studio building professional websites for small businesses worldwide.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://novowebbuild.com/android-chrome-512x512.png">
-<link rel="canonical" href="https://novowebbuild.com/about">
-
+<style>
+.phero{padding:170px 0 60px}
+.phero h1{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.4rem,5.8vw,4.8rem);line-height:1.06;letter-spacing:-.035em;max-width:16ch;text-wrap:balance}
+.phero h1 em{font-style:normal;color:var(--blue)}
+.phero .lead{margin-top:30px;font-size:1rem;line-height:1.7;color:var(--ink2);max-width:52ch}
+.sec{padding:70px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:26px;margin-bottom:8px;gap:20px;flex-wrap:wrap}
+.sec-head h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em}
+.sec-head .from{font-size:.85rem;color:var(--mut)}
+.sec-head .from b{color:var(--ink);font-weight:500}
+.sec>p{font-size:.95rem;color:var(--ink2);line-height:1.7;max-width:62ch;margin-bottom:8px}
+.feat-line{font-size:.86rem;color:var(--mut);line-height:1.9;max-width:74ch;margin-top:14px}
+.feat-line b{color:var(--ink2);font-weight:400}
+.golink{display:inline-block;margin-top:24px;font-family:'Plus Jakarta Sans';font-weight:700;font-size:.95rem;color:var(--ink);border-bottom:2px solid var(--blue);padding-bottom:3px;transition:color .25s}
+.golink:hover{color:var(--blue)}
+.trow{position:relative;display:grid;grid-template-columns:1.2fr 2fr auto;gap:26px;align-items:baseline;padding:28px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s}
+.trow:last-of-type{border-bottom:1px solid var(--line)}
+.trow:hover{background:var(--panel)}
+.trow .tn{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.15rem;letter-spacing:-.02em;transition:color .25s,transform .4s cubic-bezier(.19,1,.22,1)}
+.trow:hover .tn{color:var(--blue);transform:translateX(8px)}
+.trow .tn small{display:block;font-family:'DM Sans';font-weight:300;font-size:.74rem;color:var(--mut);margin-top:4px;letter-spacing:0}
+.trow .tf{font-size:.85rem;color:var(--ink2);line-height:1.75}
+.trow .pr{font-size:.85rem;color:var(--mut);white-space:nowrap;display:flex;align-items:baseline;gap:12px}
+.trow .pr b{color:var(--ink);font-weight:500}
+.trow .arr{color:var(--blue);opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .4s cubic-bezier(.19,1,.22,1)}
+.trow:hover .arr{opacity:1;transform:none}
+.tag-pop{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-left:10px}
+.story{padding:70px 0;display:grid;grid-template-columns:.8fr 1.5fr .9fr;gap:56px;border-top:1px solid var(--line);align-items:center}
+.story h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em}
+.story .txt p{font-size:.98rem;color:var(--ink2);line-height:1.8;max-width:58ch}
+.story .txt p+p{margin-top:20px}
+.facts{padding:20px 0 90px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px}
+.facts div{padding-left:18px;border-left:1px solid var(--line);font-size:.92rem;color:var(--ink2);line-height:1.65}
+.facts b{color:var(--ink);font-weight:500;display:block;margin-bottom:4px;font-size:.95rem}
+.pcta{padding:100px 0 110px}
+.pcta h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.035em;line-height:1.08;max-width:16ch}
+.pcta h2 a{color:var(--blue);position:relative;white-space:nowrap}
+.pcta h2 a::after{content:"";position:absolute;left:0;bottom:5px;height:3px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.19,1,.22,1)}
+.pcta h2 a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:900px){
+  .phero{padding:120px 0 40px}
+  .sec{padding:50px 0}
+  .trow{grid-template-columns:1fr;gap:10px;padding:24px 16px;margin:0 -16px}
+  .story{grid-template-columns:1fr;gap:32px;padding:50px 0}
+  .facts{padding:10px 0 60px;gap:24px}
+  .pcta{padding:70px 0 80px}
+}
+</style>
 </head>
 <body>
-  </div>
+
 <nav id="nav">
-  <a class="nav-logo" href="index-gr.html">
-    <img src="android-chrome-512x512.png" alt="Novo Web Build" style="width:32px;height:32px;border-radius:50%;object-fit:cover;flex-shrink:0">
-    Novo Web Build
-  </a>
-  <ul class="nav-links">
-    <li><a href="index-gr.html">Αρχική</a></li>
+  <a class="logo" href="index-gr.html"><img src="android-chrome-512x512.png" alt="Novo Web Build logo">Novo Web Build</a>
+  <ul class="nl">
     <li><a href="about-gr.html" class="active">Σχετικά</a></li>
     <li><a href="services-gr.html">Υπηρεσίες</a></li>
     <li><a href="maintenance-gr.html">Συντήρηση</a></li>
     <li><a href="blog-gr.html">Άρθρα</a></li>
-    <li><a href="portfolio-gr.html">Δουλειές μας</a></li>
+    <li><a href="portfolio-gr.html">Portfolio</a></li>
   </ul>
-  <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener" class="nav-audit-btn" style="background:#4F8EF7;color:#fff;padding:8px 18px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-right:8px;text-decoration:none">Ανάλυση Ιστοσελίδας →</a><a href="https://wa.me/306940144755" target="_blank" class="nav-cta">Ξεκινάμε →</a>
-<div class="lang-toggle">
-  <button class="lang-btn" onclick="window.location.href='about.html'">EN</button>
-  <button class="lang-btn active" onclick="window.location.href='about-gr.html'">GR</button>
-</div>
-<button class="nav-burger" id="burger" aria-label="Menu">
-  <span></span><span></span><span></span>
-</button>
-<div class="mobile-menu" id="mobile-menu">
-  <div style="position:absolute;top:22px;left:22px;display:flex;align-items:center;gap:10px">
-    <img src="android-chrome-512x512.png" alt="Novo Web Build" style="width:34px;height:34px;border-radius:50%;object-fit:cover">
-    <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;color:var(--white);letter-spacing:-.02em">Novo Web Build</span>
+  <div class="nav-right">
+    <a class="ncta" href="index-gr.html#contact">Ξεκίνα ένα project</a>
+    <div class="lang"><a href="about.html">EN</a><span>GR</span></div>
+    <button class="burger" onclick="document.getElementById('mm').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-  <button onclick="closeMM()" style="position:absolute;top:22px;right:22px;background:none;border:none;color:var(--muted);font-size:1.6rem;cursor:pointer;line-height:1;padding:4px">✕</button>
-  <a href="index-gr.html" onclick="closeMM()">Αρχική</a>
-  <a href="about-gr.html" onclick="closeMM()" class="active">Σχετικά</a>
-  <a href="services-gr.html" onclick="closeMM()">Υπηρεσίες</a>
-  <a href="maintenance-gr.html" onclick="closeMM()">Συντήρηση</a>
-  <a href="blog-gr.html" onclick="closeMM()">Άρθρα</a>
-  <a href="portfolio-gr.html" onclick="closeMM()">Δουλειές μας</a>
-  <a href="https://wa.me/306940144755" target="_blank" class="mm-cta">Ξεκινάμε →</a>
-</div>
 </nav>
 
-<div class="ph">
-  <div class="ph-glow"></div>
-  <div class="r">
-    <div class="tag">Σχετικά</div>
-    <h1 class="section-title">Γνώρισε την<br><span>Novo Web Build</span></h1>
-  </div>
-  <div class="r d1">
-    <p>Είμαστε ένα remote studio κατασκευής ιστοσελίδων που πιστεύει ότι κάθε μικρή επιχείρηση αξίζει μια όμορφη, επαγγελματική online παρουσία, χωρίς να χρειάζεται μεγάλο budget ή τεχνικές γνώσεις.</p>
-  </div>
+<div class="mm" id="mm">
+  <button class="mm-x" onclick="document.getElementById('mm').classList.remove('open')" aria-label="Close">✕</button>
+  <a href="index-gr.html">Αρχική</a>
+  <a href="about-gr.html" class="active">Σχετικά</a>
+  <a href="services-gr.html">Υπηρεσίες</a>
+  <a href="maintenance-gr.html">Συντήρηση</a>
+  <a href="blog-gr.html">Άρθρα</a>
+  <a href="portfolio-gr.html">Portfolio</a>
+  <a href="index-gr.html#contact" class="mm-cta" onclick="document.getElementById('mm').classList.remove('open')">Ξεκίνα ένα project →</a>
 </div>
 
-<div class="story">
-  <div class="story-vis r" style="background:var(--bg3);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;padding:60px;position:relative;overflow:hidden">
-    <!-- dot matrix background -->
-    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(79,142,247,0.18) 1px,transparent 1px);background-size:22px 22px;pointer-events:none"></div>
-    <!-- fade edges to dark -->
-    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,transparent 30%,var(--bg3) 75%);pointer-events:none"></div>
-    <!-- radial glow behind logo -->
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);width:380px;height:380px;background:radial-gradient(circle,rgba(79,142,247,0.13) 0%,transparent 65%);pointer-events:none"></div>
-    <img src="android-chrome-512x512.png" alt="Novo Web Build" style="width:min(280px,70vw);height:min(280px,70vw);border-radius:50%;object-fit:cover;box-shadow:0 0 100px rgba(79,142,247,0.25)">
-    <div style="text-align:center">
-      <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.4rem;color:var(--white);margin-bottom:6px">Novo Web Build</div>
-      <div style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)">Remote Studio · Ιδρ. 2025</div>
-    </div>
-    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;font-size:1rem;color:var(--muted);letter-spacing:.08em;text-align:center;max-width:320px">Φτιαγμένες να πείθουν. Σχεδιασμένες να εντυπωσιάζουν.</div>
+<header class="phero wrap">
+  <h1>Οι καλές επιχειρήσεις αξίζουν να <em>βρίσκονται online.</em></h1>
+  <p class="lead">Η Novo Web Build υπάρχει γιατί πολλές καλές επιχειρήσεις μένουν αόρατες, αποθαρρυμένες από το κόστος ή την πολυπλοκότητα μιας σωστής ιστοσελίδας. Το λύσαμε.</p>
+  <div class="hbadge" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <defs><path id="circ" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/></defs>
+      <text><textPath href="#circ">NOVO WEB BUILD · WEB DESIGN STUDIO · NOVO WEB BUILD · WEB DESIGN ·</textPath></text>
+    </svg>
+    <img src="android-chrome-512x512.png" alt="">
   </div>
-  <div class="story-t r d1">
-    <div class="tag">Our Story</div>
-    <h2 class="section-title">Χτίστηκε από μια <span>απλή ιδέα</span></h2>
-    <p>Είδαμε πόσες μικρές επιχειρήσεις είχαν εξαιρετικά προϊόντα και υπηρεσίες αλλά καμία online παρουσία, είτε λόγω κόστους είτε λόγω πολυπλοκότητας.</p>
-    <p>Η Novo Web Build δημιουργήθηκε για να λύσει ακριβώς αυτό. Γρήγορα, καθαρά, προσιτά — και ο πελάτης δεν χρειάζεται να ξέρει τίποτα τεχνικό. Τα αναλαμβάνουμε όλα εμείς.</p>
-    <p>Κάθε ιστοσελίδα που φτιάχνουμε σχεδιάζεται αποκλειστικά για τον συγκεκριμένο πελάτη, από μηδέν. Χωρίς templates, χωρίς συντομεύσεις, χωρίς συμβιβασμό στην ποιότητα.</p>
-    <a href="services-gr.html" class="btn btn-blue" style="margin-top:8px">Δες τις Υπηρεσίες μας →</a>
-  </div>
-</div>
+</header>
 
-<div class="mission r">
-  <h2>Η Αποστολή μας</h2>
-  <p>Να κάνουμε το επαγγελματικό web design προσιτό σε κάθε μικρή επιχείρηση, όχι μόνο σε αυτές με μεγάλους προϋπολογισμούς.</p>
-</div>
+<div class="mq" aria-hidden="true"><div class="mq-track"><span>Εστιατόρια</span><span>Καφέ &amp; Bars</span><span>Γυμναστήρια</span><span>Real Estate</span><span>Βίλες &amp; Ξενοδοχεία</span><span>Καταδυτικές Σχολές</span><span>Κομμωτήρια</span><span>Startups</span><span>Τοπικές Επιχειρήσεις</span><span>Εστιατόρια</span><span>Καφέ &amp; Bars</span><span>Γυμναστήρια</span><span>Real Estate</span><span>Βίλες &amp; Ξενοδοχεία</span><span>Καταδυτικές Σχολές</span><span>Κομμωτήρια</span><span>Startups</span><span>Τοπικές Επιχειρήσεις</span></div></div>
 
-<div class="values">
-  <div class="r">
-    <div class="tag">What we stand for</div>
-    <h2 class="section-title">Our <span>values</span></h2>
+<section class="story wrap">
+  <h2>Το στούντιο</h2>
+  <div class="txt">
+    <p>Είμαστε στούντιο σχεδιασμού ιστοσελίδων με έδρα τη Θεσσαλονίκη, δουλεύοντας εξ ολοκλήρου online με πελάτες σε Ελλάδα, Ισπανία, Ιταλία και όχι μόνο. Κάθε ιστοσελίδα σχεδιάζεται και γράφεται από μηδέν, αποκλειστικά για τον πελάτη. Χωρίς templates, χωρίς συμβιβασμούς.</p>
+    <p>Δεν χρειάζεσαι καμία τεχνική γνώση. Μας στέλνεις λογότυπο, φωτογραφίες και κείμενα, και αναλαμβάνουμε όλα τα υπόλοιπα: design, κατασκευή, hosting, domain και launch. Γρήγορα, καθαρά, χωρίς τιμές μεγάλου agency.</p>
   </div>
-  <div class="values-grid">
-    <div class="value r"><div class="value-icon">⚡</div><div class="value-name">Ταχύτητα</div><p class="value-desc">Παραδίδουμε γρήγορα χωρίς να κόβουμε γωνίες. Η ιστοσελίδα σου είναι online σε λίγες μέρες.</p></div>
-    <div class="value r d1"><div class="value-icon">🎨</div><div class="value-name">Ποιότητα</div><p class="value-desc">Κάθε λεπτομέρεια μετράει. Είμαστε εμμονικοί με την ποιότητα γιατί η ιστοσελίδα σου είναι η πρώτη εντύπωση που δίνεις.</p></div>
-    <div class="value r d2"><div class="value-icon">🤝</div><div class="value-name">Απλότητα</div><p class="value-desc">Χωρίς ορολογία, χωρίς πολυπλοκότητα. Κάνουμε όλη τη διαδικασία όσο πιο απλή γίνεται για σένα.</p></div>
-  </div>
-</div>
+  <div class="story-vis"><img src="studio-dusk.jpg" alt="Δουλεύοντας το σούρουπο με laptop δίπλα στο νερό" loading="lazy"></div>
+</section>
 
-<div class="stats-row">
-  <div class="stat-i r"><div class="stat-n">14 μέρες</div><div class="stat-l">Συνήθης παράδοση</div></div>
-  <div class="stat-i r d1"><div class="stat-n">100%</div><div class="stat-l">Custom design, κάθε φορά</div></div>
-  <div class="stat-i r d2"><div class="stat-n">5★</div><div class="stat-l">Projects σε 7+ χώρες</div></div>
-  <div class="stat-i r d3"><div class="stat-n">∞</div><div class="stat-l">Δυνατότητα ανάπτυξης</div></div>
-</div>
+<section class="facts wrap">
+  <div><b>Θεσσαλονίκη, παγκοσμίως</b>Με έδρα την Ελλάδα, δουλεύουμε με επιχειρήσεις παντού, εξ ολοκλήρου online.</div>
+  <div><b>14 εργάσιμες, μέγιστο</b>Οι περισσότερες ιστοσελίδες είναι online σε δύο εβδομάδες, με τις διορθώσεις.</div>
+  <div><b>Μόνο custom κώδικας</b>Χωρίς βαρύ WordPress, χωρίς page builders. Γρήγορες, ασφαλείς, χειροποίητες σελίδες.</div>
+  <div><b>Εδώ και μετά το launch</b>Τα πλάνα συντήρησης κρατούν τη σελίδα σου ενημερωμένη, ασφαλή και σε ανάπτυξη.</div>
+</section>
 
-<div class="about-cta r">
-  <div class="tag" style="justify-content:center">Start today</div>
-  <h2 class="section-title">Let's build something <span>together</span></h2>
-  <p>Δωρεάν πρώτη συνάντηση. Γράψε μας και θα απαντήσουμε σε λίγες ώρες.</p>
-  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a href="https://wa.me/306940144755" target="_blank" class="btn btn-blue">WhatsApp →</a>
-    <a href="https://instagram.com/novowebbuild" target="_blank" class="btn btn-outline">Instagram DM</a>
-  </div>
-</div>
+<section class="rev wrap">
+  <a class="rvbtn g" href="https://www.google.com/maps/place/Novo+Web+Build/@40.6212503,22.9048275,10069m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4eb3463242eec2a9:0x4ad13818c7757d7!8m2!3d40.6211925!4d22.9460272!16s%2Fg%2F11z7g_g4ll?entry=ttu&amp;g_ep=EgoyMDI2MDcyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+    <div class="rl"><b>Google</b><span>5.0 · Δες τις κριτικές μας →</span></div>
+    <div class="stars">★★★★★</div>
+  </a>
+  <a class="rvbtn tp" href="https://www.trustpilot.com/review/novowebbuild.com" target="_blank" rel="noopener">
+    <div class="rl"><b>Trustpilot</b><span>5.0 · Δες τις κριτικές μας →</span></div>
+    <div class="stars">★★★★★</div>
+  </a>
+</section>
+
+<section class="pcta wrap">
+  <h2>Θες να δεις αποτελέσματα;<br><a href="portfolio-gr.html">Δες τα έργα μας.</a></h2>
+</section>
 
 <footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="footer-logo"><img src="android-chrome-512x512.png" alt="Novo Web Build" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">Novo Web Build</div>
-      <p>Επαγγελματικές ιστοσελίδες για μικρές επιχειρήσεις. Γρήγορες, καθαρές και χτισμένες για ανάπτυξη.</p>
-      <div class="footer-contact">
-        <a href="https://wa.me/306940144755" target="_blank">📱 WhatsApp: +30 694 014 4755</a>
-        <a href="mailto:novowebbuild@gmail.com">✉️ novowebbuild@gmail.com</a>
-        <a href="https://instagram.com/novowebbuild" target="_blank">📸 @novowebbuild</a>
-      </div>
-    </div>
-    <div class="footer-col"><h3>Σελίδες</h3><ul>
-      <li><a href="index-gr.html">Αρχική</a></li>
-      <li><a href="about-gr.html" class="active">Σχετικά</a></li>
-      <li><a href="services-gr.html">Υπηρεσίες</a></li>
-      <li><a href="maintenance-gr.html">Συντήρηση</a></li>
-    <li><a href="blog-gr.html">Άρθρα</a></li>
-    </ul></div>
-    <div class="footer-col"><h3>Υπηρεσίες</h3><ul>
-      <li><a href="services-gr.html">Κατασκευή Ιστοσελίδας</a></li>
-      <li><a href="services-gr.html">Landing Pages</a></li>
-      <li><a href="services-gr.html">Ψηφιακοί Κατάλογοι</a></li>
-      <li><a href="services-gr.html">Link in Bio</a></li>
-      <li><a href="services-gr.html">Pricing Pages</a></li>
-    </ul></div>
-    <div class="footer-col"><h3>Επικοινωνία</h3><ul>
-      <li><a href="https://wa.me/306940144755" target="_blank">WhatsApp</a></li>
-      <li><a href="https://instagram.com/novowebbuild" target="_blank">Instagram</a></li>
-      <li><a href="mailto:novowebbuild@gmail.com">Email</a></li>
-      <li><a href="index.html#inquiry">Επικοινωνία</a></li>
-    </ul></div>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2026 Novo Web Build</span>
-    <div class="footer-socials">
-      <a href="https://instagram.com/novowebbuild" target="_blank">Instagram</a>
-      <a href="https://wa.me/306940144755" target="_blank">WhatsApp</a>
-      <a href="mailto:novowebbuild@gmail.com">Email</a>
-    </div>
+  <div>© 2026 Novo Web Build · Θεσσαλονίκη, Ελλάδα</div>
+  <div class="f-links">
+    <a href="about.html">About</a>
+    <a href="services-gr.html">Υπηρεσίες</a>
+    <a href="maintenance-gr.html">Συντήρηση</a>
+    <a href="blog-gr.html">Άρθρα</a>
+    <a href="portfolio-gr.html">Portfolio</a>
+    <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener">Δωρεάν Έλεγχος</a>
   </div>
 </footer>
+
 <script>
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>50),{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.07});
-document.querySelectorAll('.r').forEach(el=>io.observe(el));
-// Active nav link
-(function(){function norm(s){s=(s||'').split('/').pop();s=s.replace(/\.html$/,'');if(s===''||s==='index')return 'home';return s;}var cur=norm(location.pathname);var links=document.querySelectorAll('.nav-links a, .mobile-menu a');links.forEach(function(a){a.classList.remove('active');if(norm(a.getAttribute('href'))===cur)a.classList.add('active');});})();
+addEventListener('scroll',()=>{nav.classList.toggle('on',scrollY>40)},{passive:true});
+(function(){function norm(s){s=(s||'').split('/').pop();s=s.replace(/\.html$/,'');if(s===''||s==='index'||s==='index-gr')return 'home';return s;}var cur=norm(location.pathname);var links=document.querySelectorAll('.nl a, .mm a');links.forEach(function(a){var h=a.getAttribute('href')||'';if(h.indexOf('#')===0||h.indexOf('http')===0)return;a.classList.remove('active');if(norm(h)===cur)a.classList.add('active');});})();
 </script>
-<script>
-// Mobile nav
-const burger=document.getElementById('burger');
-const mm=document.getElementById('mobile-menu');
-burger.addEventListener('click',()=>{burger.classList.toggle('open');mm.classList.toggle('open');document.body.style.overflow=mm.classList.contains('open')?'hidden':''});
-function closeMM(){burger.classList.remove('open');mm.classList.remove('open');document.body.style.overflow=''}
-</script>
-
 </body>
 </html>
