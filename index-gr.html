@@ -29,8 +29,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#0C0E11;color:#F2F4F7;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:#0C0E11;color:#F2F4F7;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased}
 :root{
   --bg:#0C0E11;--panel:#111418;--ink:#F2F4F7;--ink2:#B9BEC6;--mut:#787E88;
   --blue:#4F8EF7;--line:rgba(242,244,247,.1);--line2:rgba(242,244,247,.06);
@@ -62,7 +62,7 @@ nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px
 .lang span{background:var(--blue);color:#fff}
 .lang a{color:var(--mut);transition:color .2s}
 .lang a:hover{color:var(--ink)}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:11px}
 .burger span{width:22px;height:1.5px;background:var(--ink);display:block;transition:transform .3s,opacity .3s}
 
 /* MOBILE MENU */
@@ -104,7 +104,8 @@ nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px
 /* SERVICES */
 .svc{padding:110px 0}
 .svc h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.9rem,3.6vw,3rem);letter-spacing:-.03em;margin-bottom:48px;max-width:20ch}
-.srow{position:relative;display:grid;grid-template-columns:1.05fr 1.55fr auto;gap:28px;align-items:baseline;padding:32px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s;cursor:pointer}
+.srow{position:relative;display:grid;grid-template-columns:56px 1.05fr 1.55fr auto;gap:28px;align-items:baseline;padding:32px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s;cursor:pointer}
+.srow .sth{width:56px;height:56px;object-fit:cover;display:block;align-self:center;filter:saturate(.9) brightness(.9)}
 .srow:last-of-type{border-bottom:1px solid var(--line)}
 .srow:hover{background:var(--panel)}
 .srow h3{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.35rem;letter-spacing:-.02em;transition:color .25s,transform .4s cubic-bezier(.19,1,.22,1)}
@@ -142,7 +143,7 @@ nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px
 .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .cf label{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:8px;font-weight:500}
 .cf .fg{margin-bottom:20px}
-.cf input,.cf textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:300;padding:8px 0 12px;outline:none;transition:border-color .3s;border-radius:0;appearance:none}
+.cf input,.cf textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:300;padding:8px 0 12px;outline:none;transition:border-color .3s;border-radius:0;appearance:none}
 .cf input:focus,.cf textarea:focus{border-color:var(--blue)}
 .cf textarea{resize:vertical;min-height:84px}
 .cf input::placeholder,.cf textarea::placeholder{color:var(--mut)}
@@ -281,21 +282,25 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opac
 <section class="svc wrap">
   <h2>Ό,τι χρειάζεται μια επιχείρηση για να είναι online, σωστά.</h2>
   <a class="srow" href="services-gr.html">
+    <img class="sth" src="https://images.pexels.com/photos/19892301/pexels-photo-19892301.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200" onerror="this.onerror=null;this.src='studio-web.jpg'" alt="" loading="lazy">
     <h3>Ιστοσελίδες</h3>
     <p>Custom πολυσέλιδες ιστοσελίδες σχεδιασμένες από μηδέν. Mobile-first, έτοιμες για SEO, παράδοση εντός 14 εργάσιμων.</p>
     <div class="pr">από <b>€600</b> <span class="arr">→</span></div>
   </a>
   <a class="srow" href="services-gr.html">
+    <img class="sth" src="https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?w=200&amp;q=80" onerror="this.onerror=null;this.src='studio-landing.jpg'" alt="" loading="lazy">
     <h3>Landing Pages</h3>
     <p>Μονοσέλιδα φτιαγμένα να μετατρέπουν επισκέπτες σε πελάτες, για καμπάνιες και events.</p>
     <div class="pr">από <b>€250</b> <span class="arr">→</span></div>
   </a>
   <a class="srow" href="services-gr.html">
+    <img class="sth" src="https://images.pexels.com/photos/35293587/pexels-photo-35293587.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200" onerror="this.onerror=null;this.src='studio-menu.jpg'" alt="" loading="lazy">
     <h3>QR Menus</h3>
     <p>Ψηφιακά μενού για εστιατόρια και καφετέριες. Πολυγλωσσικά, εύκολα στην ενημέρωση, χωρίς επανεκτυπώσεις.</p>
     <div class="pr">από <b>€150</b> <span class="arr">→</span></div>
   </a>
   <a class="srow" href="maintenance-gr.html">
+    <img class="sth" src="https://images.pexels.com/photos/7047422/pexels-photo-7047422.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200" onerror="this.onerror=null;this.src='studio-dock.jpg'" alt="" loading="lazy">
     <h3>Συντήρηση</h3>
     <p>Υποστήριξη hosting, ενημερώσεις, έλεγχοι ασφαλείας και SEO monitoring, ώστε η σελίδα σου να δουλεύει για σένα.</p>
     <div class="pr">από <b>€30/μήνα</b> <span class="arr">→</span></div>
