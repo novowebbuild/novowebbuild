@@ -267,6 +267,15 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opac
   .pcta{padding:70px 0 80px}
 }
 </style>
+<style>
+/* mobile safety overrides — must stay the last style block */
+@media(max-width:900px){
+  .wrap{padding-left:20px !important;padding-right:20px !important}
+  .srow,.arow,.trow{margin-left:0 !important;margin-right:0 !important;padding-left:0 !important;padding-right:0 !important}
+  .srow .sth{display:none !important}
+  .sec-intro p,.svc h2,.srow p{max-width:100% !important}
+}
+</style>
 </head>
 <body>
 
