@@ -75,7 +75,7 @@ nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px
 .mm .mm-cta{font-size:1rem;font-weight:500;color:var(--blue);border-bottom:1px solid var(--blue);padding-bottom:2px;margin-top:10px}
 
 /* HERO */
-.hero{padding:190px 0 90px}
+.hero{padding-top:190px;padding-bottom:90px}
 .hero h1{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.7rem,7vw,5.9rem);line-height:1.05;letter-spacing:-.035em;max-width:15ch;text-wrap:balance}
 .hero h1 em{font-style:normal;color:var(--blue)}
 .hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:52px;flex-wrap:wrap}
@@ -84,25 +84,62 @@ nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px
 .rise.d1{animation-delay:.12s}.rise.d2{animation-delay:.24s}
 @keyframes rise{to{opacity:1;transform:none}}
 
-/* WORK */
-.work{padding:40px 0 30px}
+/* WORK — cinematic stage */
+.work{padding-top:40px;padding-bottom:30px}
 .work-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:26px;margin-bottom:38px}
 .work-head h2{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1rem;letter-spacing:-.01em}
 .work-head a{font-size:.82rem;color:var(--mut);transition:color .25s}
 .work-head a:hover{color:var(--blue)}
-.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px 40px}
-.wi{display:block}
-.wi .frame{position:relative;overflow:hidden;aspect-ratio:16/10.4;background:var(--panel)}
-.wi video{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transform:scale(1.015);transition:transform .8s cubic-bezier(.19,1,.22,1),opacity .4s}
-.wi:hover video{transform:scale(1.06);opacity:1}
-.wi .cap{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;gap:14px}
-.wi .cap b{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.95rem;letter-spacing:-.01em}
-.wi .cap span{font-size:.76rem;color:var(--mut);text-align:right}
-.wi.wide{grid-column:1/-1}
-.wi.wide .frame{aspect-ratio:21/9}
+.cine{display:grid;grid-template-columns:minmax(200px,15.5%) 1fr;gap:clamp(20px,3vmin,46px);align-items:start}
+.cidx{list-style:none;border-top:1px solid var(--line)}
+.cidx li{border-bottom:1px solid var(--line)}
+.cidx button{position:relative;width:100%;display:block;font:inherit;font-size:.84rem;font-weight:400;letter-spacing:.01em;line-height:1.35;color:var(--mut);background:none;border:0;cursor:pointer;padding:12px 2px;text-align:left;transition:color .3s,padding .35s cubic-bezier(.19,1,.22,1)}
+.cidx button::before{content:"";position:absolute;left:0;top:50%;width:0;height:1px;background:var(--blue);transform:translateY(-50%);transition:width .35s cubic-bezier(.19,1,.22,1)}
+.cidx button:hover{color:var(--ink);padding-left:16px}
+.cidx button:hover::before{width:8px}
+.cidx button.on{color:var(--ink);padding-left:16px}
+.cidx button.on::before{width:8px}
+.cidx button:focus-visible{outline:1px solid var(--blue);outline-offset:2px}
+.stage{position:relative;width:100%;aspect-ratio:16/11;overflow:hidden;background:#0d0f11;container-type:inline-size;
+  box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px rgba(242,244,247,.06);
+  --tint:232,226,206;--tint-amt:.14;--exposure:.97;--bg-exp:1;--bloom:.2;--rim:.26;--whip:640ms;--bg-blur:0px;
+  --img-rig:url('scenes/rig.webp')}
+.stage .track{position:absolute;top:0;left:0;height:100%;display:flex;will-change:transform;transition:transform var(--whip) cubic-bezier(.72,.02,.16,1)}
+.stage .scene{height:100%;background:top center/100% auto no-repeat #0d0f11}
+.stage .world{position:absolute;inset:0;overflow:hidden;filter:blur(var(--bg-blur)) brightness(var(--bg-exp));transition:filter var(--whip) ease}
+.stage.rolling .world{filter:blur(13px) brightness(calc(var(--bg-exp) + .03)) saturate(1.04)}
+.stage .rig{position:absolute;inset:0;z-index:3;will-change:transform}
+.stage.roll-left .rig{animation:kickL var(--whip) cubic-bezier(.34,.9,.3,1)}
+.stage.roll-right .rig{animation:kickR var(--whip) cubic-bezier(.34,.9,.3,1)}
+@keyframes kickL{0%{transform:none}26%{transform:translate3d(2.4%,0,0) scale(1.012) rotate(.22deg)}100%{transform:none}}
+@keyframes kickR{0%{transform:none}26%{transform:translate3d(-2.4%,0,0) scale(1.012) rotate(-.22deg)}100%{transform:none}}
+.stage .plates{position:absolute;left:0;right:0;bottom:0;height:70.274%;z-index:4;pointer-events:none;background:var(--img-rig) bottom center/100% 100% no-repeat;filter:brightness(var(--exposure)) saturate(.96);transition:filter var(--whip) ease}
+.stage .glow{position:absolute;left:0;right:0;bottom:0;height:70.274%;z-index:2;pointer-events:none;background:#fff;opacity:var(--bloom);filter:blur(1.8cqw);-webkit-mask:var(--img-rig) bottom center/100% 100% no-repeat;mask:var(--img-rig) bottom center/100% 100% no-repeat;transition:opacity var(--whip) ease}
+.stage .cast{position:absolute;left:0;right:0;bottom:0;height:70.274%;z-index:5;pointer-events:none;transition:background var(--whip) ease;
+  background:linear-gradient(180deg,rgba(255,255,255,var(--rim)) 0,rgba(255,255,255,0) 1.2%),linear-gradient(165deg,rgba(var(--tint),var(--tint-amt)),rgba(var(--tint),calc(var(--tint-amt)*.45)));
+  -webkit-mask:var(--img-rig) bottom center/100% 100% no-repeat;mask:var(--img-rig) bottom center/100% 100% no-repeat}
+.stage .screen{position:absolute;left:25.226%;top:36.981%;width:41.211%;height:37.314%;overflow:hidden;background:#0b0e11;z-index:6}
+.stage .screen iframe{width:var(--vw,1440px);height:var(--vh,900px);border:0;display:block;transform:scale(var(--zoom,1));transform-origin:top left;opacity:0;transition:opacity .5s ease}
+.stage .screen.ready iframe{opacity:1}
+.stage .glass{position:absolute;left:25.226%;top:36.981%;width:41.211%;height:37.314%;z-index:7;pointer-events:none;background:linear-gradient(104deg,rgba(255,255,255,.10),rgba(255,255,255,.02) 24%,rgba(255,255,255,0) 44%)}
+.stage .blocked{position:absolute;inset:0;z-index:8;display:none;place-items:center;text-align:center;padding:7%;background:rgba(10,10,12,.95);color:var(--mut);font-size:1.15cqw;line-height:1.9;letter-spacing:.04em}
+.stage .screen.is-blocked .blocked{display:grid}
+.stage::after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(80% 76% at 50% 46%,transparent 58%,rgba(8,8,10,.2) 100%)}
+.ccap{display:flex;align-items:flex-end;gap:clamp(14px,2.4vmin,30px);flex-wrap:wrap;margin-top:clamp(14px,2.2vmin,24px)}
+.ccap b{font-family:'Plus Jakarta Sans';font-weight:700;font-size:clamp(1.15rem,1.9vw,1.5rem);letter-spacing:-.02em;line-height:1.05}
+.ccap .tag{color:var(--mut);font-size:.8rem;margin-bottom:3px}
+.ccap .rule{flex:1;height:1px;background:var(--line);margin-bottom:8px;min-width:30px}
+.ccap .dom{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:5px}
+.ccap a{font-size:.82rem;font-weight:500;border-bottom:1px solid var(--blue);padding-bottom:2px;margin-bottom:3px;transition:color .25s}
+.ccap a:hover{color:var(--blue)}
+@media (prefers-reduced-motion:reduce){
+  .stage{--whip:1ms}
+  .stage.rolling .world{filter:blur(var(--bg-blur)) brightness(var(--bg-exp))}
+  .stage.roll-left .rig,.stage.roll-right .rig{animation:none}
+}
 
 /* SERVICES */
-.svc{padding:110px 0}
+.svc{padding-top:110px;padding-bottom:100px}
 .svc h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(1.9rem,3.6vw,3rem);letter-spacing:-.03em;margin-bottom:48px;max-width:20ch}
 .srow{position:relative;display:grid;grid-template-columns:56px 1.05fr 1.55fr auto;gap:28px;align-items:baseline;padding:32px 20px;margin:0 -20px;border-top:1px solid var(--line);transition:background .35s;cursor:pointer}
 .srow .sth{width:56px;height:56px;object-fit:cover;display:block;align-self:center;filter:saturate(.9) brightness(.9)}
@@ -121,7 +158,7 @@ nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px
 
 /* PROOF */
 .proof{border-top:1px solid var(--line);background:var(--panel)}
-.proof-in{padding:90px 0;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.proof-in{padding-top:96px;padding-bottom:96px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .proof blockquote{font-family:'Plus Jakarta Sans';font-weight:500;font-size:clamp(1.2rem,2.1vw,1.7rem);line-height:1.45;letter-spacing:-.015em;max-width:26ch}
 .proof cite{display:block;margin-top:22px;font-style:normal;font-size:.8rem;color:var(--mut)}
 .proof cite a{color:var(--ink2);border-bottom:1px solid var(--line);transition:color .25s}
@@ -131,7 +168,7 @@ nav.on{background:rgba(12,14,17,.95);border-color:var(--line2);padding:14px 48px
 .pstats b{color:var(--ink);font-weight:500}
 
 /* CONTACT */
-.contact{padding:120px 0 110px}
+.contact{padding-top:120px;padding-bottom:110px}
 .contact h2{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(2.4rem,5.6vw,4.6rem);letter-spacing:-.035em;line-height:1.06;max-width:14ch}
 .contact h2 span{color:var(--blue)}
 .c-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;margin-top:56px;align-items:start}
@@ -164,14 +201,23 @@ footer{border-top:1px solid var(--line);padding:34px 48px;display:flex;justify-c
   .nl{display:none}
   .ncta{display:none}
   .burger{display:flex}
-  .hero{padding:130px 0 60px}
-    .work{padding:20px 0}
-  .wgrid{grid-template-columns:1fr;gap:34px}
-  .wi.wide .frame,.wi .frame{aspect-ratio:16/10.4}
-  .svc{padding:80px 0}
+  .hero{padding-top:130px;padding-bottom:60px}
+  .work{padding-top:20px;padding-bottom:20px}
+  .cine{grid-template-columns:1fr;gap:18px}
+  .cidx{order:2;border-top:0;display:flex;gap:8px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .cidx::-webkit-scrollbar{display:none}
+  .cidx li{border-bottom:0;flex:0 0 auto}
+  .cidx button,.cidx button:hover,.cidx button.on{padding:8px 13px;border:1px solid var(--line);font-size:.78rem;white-space:nowrap}
+  .cidx button::before{display:none}
+  .cidx button.on{border-color:var(--blue);color:var(--ink)}
+  .stage{box-shadow:0 24px 50px rgba(0,0,0,.55),0 0 0 1px rgba(242,244,247,.06)}
+  .stage .blocked{font-size:2.6cqw}
+  .ccap{gap:10px 16px}
+  .ccap .rule{display:none}
+  .svc{padding-top:80px;padding-bottom:80px}
   .srow{grid-template-columns:1fr;gap:10px;padding:24px 0}
-  .proof-in{grid-template-columns:1fr;gap:40px;padding:70px 0}
-  .contact{padding:80px 0}
+  .proof-in{grid-template-columns:1fr;gap:40px;padding-top:70px;padding-bottom:70px}
+  .contact{padding-top:80px;padding-bottom:80px}
   .c-grid{grid-template-columns:1fr;gap:48px}
   .cf-row{grid-template-columns:1fr}
   footer{padding:26px 22px;flex-direction:column;align-items:flex-start}
@@ -188,7 +234,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opac
 .mq span::after{content:"·";padding-left:14px;color:var(--blue)}
 @keyframes mqs{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.mq-track{animation:none}}
-.band{padding:34px 0 10px}
+.band{padding-top:40px;padding-bottom:10px}
 .band .bframe{overflow:hidden}
 .band img{width:100%;height:clamp(260px,36vw,440px);object-fit:cover;display:block;filter:saturate(.92) brightness(.88)}
 .band figcaption{padding-top:12px;font-size:.78rem;color:var(--mut)}
@@ -199,10 +245,59 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opac
 .hbadge svg{position:absolute;inset:0;width:100%;height:100%;animation:spinb 24s linear infinite}
 .hbadge svg text{font-family:'Plus Jakarta Sans';font-size:10.5px;font-weight:700;letter-spacing:.32em;fill:var(--mut);text-transform:uppercase}
 .hbadge img{width:92px;height:92px;border-radius:50%;position:relative;z-index:1}
-.hbadge::after{content:"";position:absolute;width:60%;height:60%;background:radial-gradient(circle,rgba(79,142,247,.16),transparent 70%);pointer-events:none}
+.hbadge::after{content:"";position:absolute;width:60%;height:60%;background:radial-gradient(circle,rgba(79,142,247,.16),transparent 70%)}
 @keyframes spinb{to{transform:rotate(360deg)}}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.hbadge{display:none}}
 @media(prefers-reduced-motion:reduce){.hbadge svg{animation:none}}
+/* POLISH */
+.mq{-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.svc h2,.contact h2,.proof blockquote{text-wrap:balance}
+.hero{align-items:end}
+.hbadge{margin-bottom:.35em}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:1px solid var(--blue);outline-offset:4px}
+.cf input:focus-visible,.cf textarea:focus-visible{outline:none}
+.burger:focus-visible{outline-offset:6px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .95s cubic-bezier(.19,1,.22,1),transform .95s cubic-bezier(.19,1,.22,1)}
+.rv.in{opacity:1;transform:none}
+.srow.rv{transition:background .35s,opacity .95s cubic-bezier(.19,1,.22,1),transform .95s cubic-bezier(.19,1,.22,1)}
+.rv.s1{transition-delay:.08s}.rv.s2{transition-delay:.16s}.rv.s3{transition-delay:.24s}.rv.s4{transition-delay:.32s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.rise{animation:none;opacity:1;transform:none}.hbadge svg,.mq-track{animation:none}}
+/* HERO — statement */
+.hero.hst{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:128px;padding-bottom:44px}
+.hbadge.hb-sm{width:118px;justify-self:center;margin-bottom:26px}
+.hbadge.hb-sm img{width:46px;height:46px}
+.hbadge.hb-sm svg text{font-size:12.5px}
+.hero.hst h1{font-size:clamp(2.6rem,6vw,5.2rem);max-width:15ch;line-height:1.02}
+.hero.hst p{margin-top:22px;font-size:1rem;line-height:1.7;color:var(--ink2);max-width:46ch}
+.hcta{display:flex;align-items:center;gap:30px;margin-top:30px;font-size:.9rem;font-weight:500}
+.hcta .btn{background:var(--blue);color:#fff;padding:15px 28px;font-family:'Plus Jakarta Sans';font-weight:700;font-size:.9rem;letter-spacing:-.01em;transition:background .25s,transform .4s cubic-bezier(.19,1,.22,1)}
+.hcta .btn:hover{background:#3d7cea;transform:translateY(-2px)}
+.hcta .alt{color:var(--ink2);border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .25s,border-color .25s}
+.hcta .alt:hover{color:var(--blue);border-color:var(--blue)}
+.work{padding-top:0;padding-bottom:36px}
+.work-head{display:none}
+.svc{padding-top:90px}
+.ccap .more{font-size:.78rem;color:var(--mut);border-bottom:1px solid transparent;margin-left:6px}
+.ccap .more:hover{color:var(--blue)}
+@media(max-width:900px){
+  .hero.hst{padding-top:112px;padding-bottom:30px}
+  .hbadge.hb-sm{display:flex;width:96px;margin-bottom:20px}
+  .hbadge.hb-sm img{width:38px;height:38px}
+  .hero.hst h1{font-size:clamp(2.35rem,10.5vw,3.2rem);max-width:12ch}
+  .hero.hst p{font-size:.95rem;max-width:34ch}
+  .hcta{flex-direction:column;gap:18px;margin-top:26px;width:100%}
+  .hcta .btn{width:100%;max-width:340px;text-align:center;padding:16px 28px}
+}
+@media(max-width:380px){.hero.hst h1{font-size:2.15rem}}
+.shint{position:absolute;left:25.226%;top:36.981%;width:41.211%;height:37.314%;z-index:8;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5%;transition:opacity .6s ease}
+.shint span{display:inline-flex;align-items:center;gap:.7em;background:rgba(12,14,17,.78);color:var(--ink);font-size:1.25cqw;letter-spacing:.06em;padding:.9em 1.4em;border:1px solid rgba(242,244,247,.16);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:shp 2.6s ease-in-out infinite}
+.shint i{width:.9em;height:1.45em;border:1.5px solid var(--blue);border-radius:1em;position:relative;flex-shrink:0}
+.shint i::after{content:"";position:absolute;left:50%;top:.28em;width:2px;height:.35em;margin-left:-1px;background:var(--blue);border-radius:2px;animation:shw 1.6s ease-in-out infinite}
+.shint.off{opacity:0}
+@keyframes shp{0%,100%{box-shadow:0 0 0 0 rgba(79,142,247,.35)}50%{box-shadow:0 0 0 .55em rgba(79,142,247,0)}}
+@keyframes shw{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(.45em);opacity:.35}}
+@media(max-width:900px){.shint{display:none}}
+@media(prefers-reduced-motion:reduce){.shint span,.shint i::after{animation:none}}
 </style>
 <style>
 /* mobile safety overrides — must stay the last style block */
@@ -243,87 +338,92 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opac
   <a href="#contact" class="mm-cta" onclick="document.getElementById('mm').classList.remove('open')">Ξεκίνα ένα project →</a>
 </div>
 
-<header class="hero wrap">
-  <h1 class="rise">Ιστοσελίδες που κάνουν τις μικρές επιχειρήσεις να δείχνουν <em>κάθε άλλο παρά μικρές.</em></h1>
-  <div class="hbadge rise d1" aria-hidden="true">
+<header class="hero wrap hst">
+  <div class="hbadge hb-sm rise" aria-hidden="true">
     <svg viewBox="0 0 200 200">
       <defs><path id="circ" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/></defs>
       <text><textPath href="#circ">NOVO WEB BUILD · WEB DESIGN STUDIO · NOVO WEB BUILD · WEB DESIGN ·</textPath></text>
     </svg>
     <img src="android-chrome-512x512.png" alt="">
   </div>
-  <div class="hero-foot">
-    <p class="rise d1">Η Novo Web Build είναι στούντιο σχεδιασμού ιστοσελίδων στη Θεσσαλονίκη, για επιχειρήσεις κάθε μεγέθους, σε όλο τον κόσμο. Custom κώδικας, online εντός 15 εργάσιμων.</p>
-  </div>
+  <h1 class="rise d1">Ιστοσελίδες που κάνουν τις μικρές επιχειρήσεις να δείχνουν <em>κάθε άλλο παρά μικρές.</em></h1>
+  <p class="rise d2">Custom κώδικας από το μηδέν, online εντός 15 εργάσιμων. Χωρίς templates, χωρίς page builders, χωρίς άγχος.</p>
+  <div class="hcta rise d2"><a href="#contact" class="btn">Ξεκίνα ένα project</a><a href="#work" class="alt">Δες τα έργα ↓</a></div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="mq-track"><span>Εστιατόρια</span><span>Καφέ &amp; Bars</span><span>Γυμναστήρια</span><span>Real Estate</span><span>Βίλες &amp; Ξενοδοχεία</span><span>Καταδυτικές Σχολές</span><span>Κομμωτήρια</span><span>Startups</span><span>Τοπικές Επιχειρήσεις</span><span>Εστιατόρια</span><span>Καφέ &amp; Bars</span><span>Γυμναστήρια</span><span>Real Estate</span><span>Βίλες &amp; Ξενοδοχεία</span><span>Καταδυτικές Σχολές</span><span>Κομμωτήρια</span><span>Startups</span><span>Τοπικές Επιχειρήσεις</span></div></div>
 
-<section class="work wrap">
-  <div class="work-head">
+<section class="work wrap" id="work">
+  <div class="work-head rv">
     <h2>Επιλεγμένα έργα</h2>
     <a href="portfolio-gr.html">Όλα τα έργα →</a>
   </div>
-  <div class="wgrid">
-    <a class="wi wide" href="portfolio-gr.html">
-      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_1400,f_jpg/v1778166588/Screen_Recording_2026-05-07_220851_jiasdj.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1778166588/Screen_Recording_2026-05-07_220851_jiasdj.mp4" muted playsinline loop preload="none"></video></div>
-      <div class="cap"><b>Airbnb Villas</b><span>Villa Rentals · Thailand</span></div>
-    </a>
-    <a class="wi" href="portfolio-gr.html">
-      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779378386/Surf_school_y3clej.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779378386/Surf_school_y3clej.mp4" muted playsinline loop preload="none"></video></div>
-      <div class="cap"><b>Surf School Fuerteventura</b><span>Surf School · Spain</span></div>
-    </a>
-    <a class="wi" href="portfolio-gr.html">
-      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779701723/Sol_and_mar_Real_estate_spain_ntcp6x.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779701723/Sol_and_mar_Real_estate_spain_ntcp6x.mp4" muted playsinline loop preload="none"></video></div>
-      <div class="cap"><b>Sol & Mar</b><span>Real Estate · Spain</span></div>
-    </a>
-    <a class="wi" href="portfolio-gr.html">
-      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1782293352/opsaras_cgnr7p.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1782293352/opsaras_cgnr7p.mp4" muted playsinline loop preload="none"></video></div>
-      <div class="cap"><b>Restaurant</b><span>Restaurant · Thessaloniki</span></div>
-    </a>
-    <a class="wi" href="portfolio-gr.html">
-      <div class="frame"><video poster="https://res.cloudinary.com/dm5cds0yp/video/upload/so_0.5,w_800,f_jpg/v1779701321/koh_tao_DIving_school_fast_lqxyjh.jpg" src="https://res.cloudinary.com/dm5cds0yp/video/upload/v1779701321/koh_tao_DIving_school_fast_lqxyjh.mp4" muted playsinline loop preload="none"></video></div>
-      <div class="cap"><b>XP Diving School</b><span>Diving School · Thailand</span></div>
-    </a>
+  <div class="cine rv s1">
+    <ul class="cidx" id="cidx" aria-label="Επιλεγμένα έργα"></ul>
+    <div>
+      <div class="stage" id="stage">
+        <div class="world"><div class="track" id="track"></div></div>
+        <div class="rig">
+          <div class="glow"></div>
+          <div class="screen" id="screen">
+            <iframe id="frame" title="Live site" src="about:blank" loading="lazy" tabindex="-1"></iframe>
+            <div class="blocked">Αυτή η σελίδα δεν επιτρέπει την προβολή μέσα σε άλλη σελίδα. Άνοιξέ τη σε νέα καρτέλα.</div>
+          </div>
+          <div class="plates"></div>
+          <div class="glass"></div>
+          <div class="shint" id="shint" aria-hidden="true"><span><i></i>Κάνε scroll για να δεις τη σελίδα</span></div>
+          <div class="cast"></div>
+        </div>
+      </div>
+      <div class="ccap">
+        <b id="pname"></b>
+        <span class="tag" id="ptag"></span>
+        <span class="rule"></span>
+        <span class="dom" id="pdom"></span>
+        <a id="plink" href="#" target="_blank" rel="noopener">Επίσκεψη</a>
+        <a class="more" href="portfolio-gr.html">Όλα τα έργα →</a>
+      </div>
+    </div>
   </div>
 </section>
 
+<div class="mq" aria-hidden="true"><div class="mq-track"><span>Εστιατόρια</span><span>Καφέ &amp; Bars</span><span>Γυμναστήρια</span><span>Real Estate</span><span>Βίλες &amp; Ξενοδοχεία</span><span>Καταδυτικές Σχολές</span><span>Κομμωτήρια</span><span>Startups</span><span>Τοπικές Επιχειρήσεις</span><span>Εστιατόρια</span><span>Καφέ &amp; Bars</span><span>Γυμναστήρια</span><span>Real Estate</span><span>Βίλες &amp; Ξενοδοχεία</span><span>Καταδυτικές Σχολές</span><span>Κομμωτήρια</span><span>Startups</span><span>Τοπικές Επιχειρήσεις</span></div></div>
+
 <section class="svc wrap">
-  <h2>Ό,τι χρειάζεται μια επιχείρηση για να είναι online, σωστά.</h2>
-  <a class="srow" href="services-gr.html">
+  <h2 class="rv">Ό,τι χρειάζεται μια επιχείρηση για να είναι online, σωστά.</h2>
+  <a class="srow rv s1" href="services-gr.html">
     <img class="sth" src="https://images.pexels.com/photos/19892301/pexels-photo-19892301.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200" onerror="this.onerror=null;this.src='studio-web.jpg'" alt="" loading="lazy">
     <h3>Ιστοσελίδες</h3>
-    <p>Custom πολυσέλιδες ιστοσελίδες σχεδιασμένες από μηδέν. Mobile-first, έτοιμες για SEO, παράδοση εντός 14 εργάσιμων.</p>
+    <p>Custom πολυσέλιδες ιστοσελίδες σχεδιασμένες από μηδέν. Mobile-first, έτοιμες για SEO, παράδοση εντός 15 εργάσιμων.</p>
     <div class="pr">από <b>€600</b> <span class="arr">→</span></div>
   </a>
-  <a class="srow" href="services-gr.html">
+  <a class="srow rv s2" href="services-gr.html">
     <img class="sth" src="https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?w=200&amp;q=80" onerror="this.onerror=null;this.src='studio-landing.jpg'" alt="" loading="lazy">
     <h3>Landing Pages</h3>
     <p>Μονοσέλιδα φτιαγμένα να μετατρέπουν επισκέπτες σε πελάτες, για καμπάνιες και events.</p>
     <div class="pr">από <b>€250</b> <span class="arr">→</span></div>
   </a>
-  <a class="srow" href="services-gr.html">
+  <a class="srow rv s3" href="services-gr.html">
     <img class="sth" src="https://images.pexels.com/photos/35293587/pexels-photo-35293587.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200" onerror="this.onerror=null;this.src='studio-menu.jpg'" alt="" loading="lazy">
     <h3>QR Menus</h3>
     <p>Ψηφιακά μενού για εστιατόρια και καφετέριες. Πολυγλωσσικά, εύκολα στην ενημέρωση, χωρίς επανεκτυπώσεις.</p>
     <div class="pr">από <b>€150</b> <span class="arr">→</span></div>
   </a>
-  <a class="srow" href="maintenance-gr.html">
+  <a class="srow rv s4" href="maintenance-gr.html">
     <img class="sth" src="https://images.pexels.com/photos/7047422/pexels-photo-7047422.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200" onerror="this.onerror=null;this.src='studio-dock.jpg'" alt="" loading="lazy">
     <h3>Συντήρηση</h3>
     <p>Υποστήριξη hosting, ενημερώσεις, έλεγχοι ασφαλείας και SEO monitoring, ώστε η σελίδα σου να δουλεύει για σένα.</p>
     <div class="pr">από <b>€30/μήνα</b> <span class="arr">→</span></div>
   </a>
-  <div class="svc-note">Δεν ξέρεις πού βρίσκεται η σελίδα σου; <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener">Κάνε δωρεάν έλεγχο →</a></div>
+  <p class="svc-note rv s4">Δεν ξέρεις πού βρίσκεται η σελίδα σου; <a href="https://audit.novowebbuild.com" target="_blank" rel="noopener">Κάνε δωρεάν έλεγχο →</a></div>
 </section>
 
 <section class="proof">
   <div class="proof-in wrap">
-    <blockquote>
+    <blockquote class="rv">
       "Ανέλαβαν τα πάντα. Στείλαμε λογότυπο και μερικές φωτογραφίες, σε δύο εβδομάδες η ιστοσελίδα μας ήταν online."
       <cite>Ιδιοκτήτης εστιατορίου, Θεσσαλονίκη · <a href="https://www.trustpilot.com/review/novowebbuild.com" target="_blank" rel="noopener">Trustpilot</a></cite>
     </blockquote>
-    <div class="pstats">
+    <div class="pstats rv s1">
       <div><b>Μηδέν τεχνικές γνώσεις.</b> Στέλνεις το υλικό, αναλαμβάνουμε design, hosting, domain και launch.</div>
       <div><b>Ποτέ templates.</b> Κάθε ιστοσελίδα σχεδιάζεται και γράφεται από μηδέν για την επιχείρησή σου.</div>
       <div><b>Παγκοσμίως, εξ ολοκλήρου online.</b> Πελάτες σε Ελλάδα, Ισπανία, Ιταλία και Ταϊλάνδη.</div>
@@ -331,14 +431,14 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opac
   </div>
 </section>
 
-<figure class="band wrap">
+<figure class="band wrap rv">
   <div class="bframe"><img src="https://images.pexels.com/photos/5992553/pexels-photo-5992553.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800" onerror="this.onerror=null;this.src='studio-sea.jpg'" alt="Απομακρυσμένη εργασία δίπλα στη θάλασσα" loading="lazy"></div>
   <figcaption>Με έδρα τη Θεσσαλονίκη. Δουλεύουμε από παντού, με πελάτες παντού.</figcaption>
 </figure>
 
 <section class="contact wrap" id="contact">
-  <h2>Έχεις ένα project;<br><span>Ας μιλήσουμε.</span></h2>
-  <div class="c-grid">
+  <h2 class="rv">Έχεις ένα project;<br><span>Ας μιλήσουμε.</span></h2>
+  <div class="c-grid rv s1">
     <div class="c-links">
       <a href="https://wa.me/306940144755" target="_blank" rel="noopener">WhatsApp +30 694 014 4755</a>
       <a href="mailto:novowebbuild@gmail.com">novowebbuild@gmail.com</a>
@@ -376,13 +476,96 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opac
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>{nav.classList.toggle('on',scrollY>40)},{passive:true});
 
-document.querySelectorAll('.wi').forEach(w=>{
-  const v=w.querySelector('video');
-  w.addEventListener('mouseenter',()=>{v.play().catch(()=>{})});
-  w.addEventListener('mouseleave',()=>{v.pause()});
-});
+const SCENES=[
+ {id:'palms',    tint:'232,226,206',tintAmt:.14,exposure:.97,bgExp:1,   bloom:.2, rim:.26},
+ {id:'cove',     tint:'236,230,208',tintAmt:.13,exposure:.97,bgExp:1,   bloom:.2, rim:.26},
+ {id:'aegean',   tint:'206,222,230',tintAmt:.12,exposure:.95,bgExp:1,   bloom:.2, rim:.28},
+ {id:'boardwalk',tint:'235,228,205',tintAmt:.13,exposure:.97,bgExp:1,   bloom:.2, rim:.26},
+ {id:'taverna',  tint:'212,172,124',tintAmt:.16,exposure:.88,bgExp:1,   bloom:.18,rim:.24},
+ {id:'taormina', tint:'222,196,168',tintAmt:.14,exposure:.93,bgExp:1,   bloom:.2, rim:.28},
+ {id:'madrid',   tint:'232,205,180',tintAmt:.13,exposure:.95,bgExp:1,   bloom:.2, rim:.28},
+ {id:'london',   tint:'198,204,212',tintAmt:.1, exposure:.92,bgExp:1.02,bloom:.24,rim:.3},
+ {id:'mountain', tint:'205,218,220',tintAmt:.11,exposure:.93,bgExp:1.01,bloom:.22,rim:.3}
+];
+const PROJECTS=[
+ {name:'Iris Suites',domain:'irissuites.gr',url:'https://irissuites.gr/',tag:'Πολυτελείς σουίτες, Νικήτη Χαλκιδικής',scene:'palms'},
+ {name:'Olia Apartments',domain:'olianaxos.gr',url:'https://olianaxos.gr/',tag:'Διαμερίσματα με θέα θάλασσα, Χώρα Νάξου',scene:'aegean'},
+ {name:'Sea & City Apartments',domain:'seaandcityappartementskos.gr',url:'https://seaandcityappartementskos.gr/',tag:'Διαμερίσματα, Κως',scene:'boardwalk'},
+ {name:'Mar & Sol Marbella',domain:'solandmar.netlify.app',url:'https://solandmar.netlify.app/',tag:'Πολυτελή ακίνητα, Costa del Sol',scene:'madrid'},
+ {name:'Liaras Construction',domain:'liarasconstruction.gr',url:'https://liarasconstruction.gr/',tag:'Κατασκευαστική εταιρεία',scene:'taormina'},
+ {name:'Ο Ψαράς της Οικογένειας',domain:'opsarastisoikogeneias.gr',url:'https://opsarastisoikogeneias.gr/',tag:'Ψαροταβέρνα, Θεσσαλονίκη',scene:'taverna'},
+ {name:'Μεσόγειος 1995',domain:'mesogeios1995.gr',url:'https://mesogeios1995.gr/',tag:'Ψησταριά από το 1995, Νέα Ραιδεστός',scene:'taverna'},
+ {name:'Τζανόπουλος Diving Club',domain:'tzanopoulosdivingclub.gr',url:'https://tzanopoulosdivingclub.gr/',tag:'Καταδυτική ομάδα Πανεπιστημίου Αιγαίου',scene:'cove'},
+ {name:'Kos Boat Rentals',domain:'kosboatrentals.gr',url:'https://kosboatrentals.gr/',tag:'Ενοικιάσεις σκαφών, Κως',scene:'cove'},
+ {name:'Twins Box',domain:'twinsboxthermi.gr',url:'https://twinsboxthermi.gr/',tag:'Crossfit gym, Θέρμη',scene:'mountain'},
+ {name:'Element PR',domain:'elementpr.mk',url:'https://elementpr.mk/',tag:'Γραφείο PR, Σκόπια',scene:'london'}
+];
+(function(){
+  const sec=document.getElementById('work'),stage=document.getElementById('stage'),track=document.getElementById('track'),
+        list=document.getElementById('cidx'),frame=document.getElementById('frame'),scr=document.getElementById('screen'),
+        BASE_W=1440,AUTO=7000;
+  let at=0,timer,busy,auto,armed=false,visible=false,userTouched=false,current=null;
+  const loaded=new Set();
+  const cells=SCENES.map(s=>{const d=document.createElement('div');d.className='scene';d.style.flex='0 0 '+(100/SCENES.length)+'%';track.appendChild(d);return d;});
+  track.style.width=(SCENES.length*100)+'%';
+  function loadScene(i){if(loaded.has(i))return;loaded.add(i);cells[i].style.backgroundImage="url('scenes/"+SCENES[i].id+".jpg')";}
+  function fit(){const z=scr.clientWidth/BASE_W;scr.style.setProperty('--vw',BASE_W+'px');scr.style.setProperty('--vh',Math.round(scr.clientHeight/z)+'px');scr.style.setProperty('--zoom',z);}
+  new ResizeObserver(fit).observe(scr);fit();
+  function light(s){const st=stage.style;st.setProperty('--tint',s.tint);st.setProperty('--tint-amt',s.tintAmt);st.setProperty('--exposure',s.exposure);st.setProperty('--bg-exp',s.bgExp);st.setProperty('--bloom',s.bloom);st.setProperty('--rim',s.rim);}
+  function roll(to){
+    loadScene(to);
+    if(to===at)return;
+    const dir=to>at?'roll-left':'roll-right';
+    stage.classList.remove('roll-left','roll-right');void stage.offsetWidth;
+    stage.classList.add('rolling',dir);
+    track.style.transform='translate3d('+(-to*100/SCENES.length)+'%,0,0)';
+    light(SCENES[to]);at=to;
+    clearTimeout(busy);busy=setTimeout(()=>stage.classList.remove('rolling','roll-left','roll-right'),680);
+  }
+  function show(p,btn){
+    current=p;
+    list.querySelectorAll('button').forEach(b=>{b.classList.remove('on');b.removeAttribute('aria-current');});
+    btn.classList.add('on');btn.setAttribute('aria-current','true');
+    if(window.matchMedia('(max-width:900px)').matches)btn.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});
+    document.getElementById('pname').textContent=p.name;
+    document.getElementById('ptag').textContent=p.tag||'';
+    document.getElementById('pdom').textContent=p.domain||'';
+    const a=document.getElementById('plink');a.href=p.url;
+    roll(Math.max(0,SCENES.findIndex(s=>s.id===p.scene)));
+    if(!armed)return;
+    scr.classList.remove('is-blocked','ready');clearTimeout(timer);
+    setTimeout(()=>{if(current===p)frame.src=p.url;},180);
+    timer=setTimeout(()=>{try{if(!frame.contentWindow.length&&frame.contentDocument===null)return;}catch(e){return;}scr.classList.add('is-blocked');},5000);
+  }
+  frame.addEventListener('load',()=>{clearTimeout(timer);if(frame.src!=='about:blank')scr.classList.add('ready');});
+  const btns=[];
+  PROJECTS.forEach((p,i)=>{
+    const li=document.createElement('li'),b=document.createElement('button');
+    b.type='button';b.textContent=p.name;
+    b.onclick=()=>{userTouched=true;stopAuto();show(p,b);};
+    li.appendChild(b);list.appendChild(li);btns.push(b);
+  });
+  light(SCENES[0]);show(PROJECTS[0],btns[0]);
+  function stopAuto(){clearInterval(auto);auto=null;}
+  function startAuto(){if(auto||userTouched||!visible)return;auto=setInterval(()=>{const i=(PROJECTS.findIndex(p=>p===current)+1)%PROJECTS.length;show(PROJECTS[i],btns[i]);},AUTO);}
+  /* nothing heavy until the section is close to the viewport */
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{
+    if(e.isIntersecting&&!armed){armed=true;loadScene(at);show(current,btns[PROJECTS.indexOf(current)]);SCENES.forEach((s,i)=>setTimeout(()=>loadScene(i),400+i*150));}
+  });},{rootMargin:'500px 0px'});
+  io.observe(sec);
+  const io2=new IntersectionObserver(es=>{es.forEach(e=>{visible=e.isIntersecting;if(visible)startAuto();else stopAuto();});},{threshold:.35});
+  io2.observe(stage);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAuto();else startAuto();});
+})();
 
 (function(){function norm(s){s=(s||'').split('/').pop();s=s.replace(/\.html$/,'');if(s===''||s==='index'||s==='index-gr')return 'home';return s;}var cur=norm(location.pathname);var links=document.querySelectorAll('.nl a, .mm a');links.forEach(function(a){var h=a.getAttribute('href')||'';if(h.startsWith('#')||h.startsWith('http'))return;a.classList.remove('active');if(norm(h)===cur)a.classList.add('active');});})();
+
+(function(){const els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return;}
+const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+els.forEach(e=>o.observe(e));})();
+
+
+(function(){const h=document.getElementById('shint'),s=document.getElementById('screen');if(!h||!s)return;s.addEventListener('mouseenter',()=>h.classList.add('off'),{once:true});})();
 
 function sendForm(e){
   e.preventDefault();
