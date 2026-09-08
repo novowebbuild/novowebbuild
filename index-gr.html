@@ -298,6 +298,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @keyframes shw{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(.45em);opacity:.35}}
 @media(max-width:900px){.shint{display:none}}
 @media(prefers-reduced-motion:reduce){.shint span,.shint i::after{animation:none}}
+/* iOS: laptop screen is display-only on touch devices — pinch/scroll gestures go to the page, not the iframe */
+.stage .screen{contain:strict;isolation:isolate;-webkit-transform:translateZ(0);transform:translateZ(0)}
+.stage .screen iframe{contain:layout size style;touch-action:none}
+@media (hover:none) and (pointer:coarse){
+  .stage .screen iframe{pointer-events:none}
+  .stage .screen{overflow:hidden!important}
+}
 </style>
 <style>
 /* mobile safety overrides — must stay the last style block */
@@ -496,7 +503,6 @@ const PROJECTS=[
  {name:'Ο Ψαράς της Οικογένειας',domain:'opsarastisoikogeneias.gr',url:'https://opsarastisoikogeneias.gr/',tag:'Ψαροταβέρνα, Θεσσαλονίκη',scene:'taverna'},
  {name:'Μεσόγειος 1995',domain:'mesogeios1995.gr',url:'https://mesogeios1995.gr/',tag:'Ψησταριά από το 1995, Νέα Ραιδεστός',scene:'taverna'},
  {name:'Τζανόπουλος Diving Club',domain:'tzanopoulosdivingclub.gr',url:'https://tzanopoulosdivingclub.gr/',tag:'Καταδυτική ομάδα Πανεπιστημίου Αιγαίου',scene:'cove'},
- {name:'Kos Boat Rentals',domain:'kosboatrentals.gr',url:'https://kosboatrentals.gr/',tag:'Ενοικιάσεις σκαφών, Κως',scene:'cove'},
  {name:'Twins Box',domain:'twinsboxthermi.gr',url:'https://twinsboxthermi.gr/',tag:'Crossfit gym, Θέρμη',scene:'mountain'},
  {name:'Element PR',domain:'elementpr.mk',url:'https://elementpr.mk/',tag:'Γραφείο PR, Σκόπια',scene:'london'}
 ];
@@ -537,6 +543,7 @@ const PROJECTS=[
     setTimeout(()=>{if(current===p)frame.src=p.url;},180);
     timer=setTimeout(()=>{try{if(!frame.contentWindow.length&&frame.contentDocument===null)return;}catch(e){return;}scr.classList.add('is-blocked');},5000);
   }
+  document.querySelectorAll('.blocked').forEach(el=>{el.style.pointerEvents='auto';el.style.cursor='pointer';el.addEventListener('click',()=>{if(current&&current.url)window.open(current.url,'_blank','noopener');});});
   frame.addEventListener('load',()=>{clearTimeout(timer);if(frame.src!=='about:blank')scr.classList.add('ready');});
   const btns=[];
   PROJECTS.forEach((p,i)=>{
