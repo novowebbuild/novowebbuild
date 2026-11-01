@@ -8,8 +8,18 @@
 <meta property="og:title" content="Άρθρα | Novo Web Build">
 <meta property="og:description" content="Άρθρα για web design, ψηφιακό marketing και ό,τι χρειάζεσαι για να αναπτύξεις την επιχείρησή σου online.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://novowebbuild.com/android-chrome-512x512.png">
+<meta property="og:image" content="https://novowebbuild.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="canonical" href="https://novowebbuild.com/blog-gr">
+<link rel="alternate" hreflang="en" href="https://novowebbuild.com/blog">
+<link rel="alternate" hreflang="el" href="https://novowebbuild.com/blog-gr">
+<link rel="alternate" hreflang="x-default" href="https://novowebbuild.com/blog">
+<meta property="og:url" content="https://novowebbuild.com/blog-gr">
+<meta property="og:locale" content="el_GR">
+<meta property="og:site_name" content="Novo Web Build">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://novowebbuild.com/og.jpg">
 <meta name="theme-color" content="#0C0E11">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -43,10 +53,13 @@
 @keyframes spinb{to{transform:rotate(360deg)}}
 @media(max-width:900px){.phero{grid-template-columns:1fr}.hbadge{display:none}}
 @media(prefers-reduced-motion:reduce){.hbadge svg{animation:none}}
+/* gutters: section padding shorthands must never remove the horizontal gutter */
+@media (min-width:901px){.wrap{padding-left:48px!important;padding-right:48px!important}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
