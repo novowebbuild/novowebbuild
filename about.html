@@ -118,8 +118,8 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 .about small{display:block;font-size:.9rem;font-weight:500;color:var(--ink);margin-bottom:2px}
 .about h1{font-family:var(--txt);font-weight:400;font-size:.94rem;line-height:1.4;letter-spacing:0;word-spacing:0;color:var(--ink2);text-wrap:pretty}
 .cidx-w{position:relative;flex:1 1 0;min-height:240px}
-.cidx{position:absolute;inset:0;list-style:none;display:flex;flex-direction:column;gap:8px;overflow-y:scroll;overscroll-behavior:contain;padding-right:8px;scrollbar-width:thin;scrollbar-color:#B9BBBF transparent}
-.cidx::-webkit-scrollbar{width:8px}.cidx::-webkit-scrollbar-track{background:var(--panel);border-radius:8px}.cidx::-webkit-scrollbar-thumb{background:#B9BBBF;border-radius:8px}.cidx::-webkit-scrollbar-thumb:hover{background:#8A8F98}
+.cidx{position:absolute;inset:0;list-style:none;display:flex;flex-direction:column;gap:8px;overflow-y:scroll;padding-right:8px;scrollbar-width:thin;scrollbar-color:#B9BBBF transparent}
+.cidx::-webkit-scrollbar{width:8px;height:6px}.cidx::-webkit-scrollbar-track{background:var(--panel);border-radius:8px}.cidx::-webkit-scrollbar-thumb{background:#B9BBBF;border-radius:8px}.cidx::-webkit-scrollbar-thumb:hover{background:#8A8F98}
 .cidx button{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;border-radius:12px;background:var(--panel);padding:12px 34px 12px 14px;transition:background .25s,transform .3s var(--ease)}
 .cidx button .mono{display:grid;place-items:center;width:52px;height:52px;border-radius:12px;background:var(--c);color:#0E1116;transition:background .3s,border-radius .5s var(--ease)}
 .cidx button .mono svg{width:34px;height:34px;transition:transform .7s var(--ease)}
@@ -147,8 +147,8 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 .hero{position:relative}
 .stk{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:30;opacity:0}
 .stk path{fill:none;stroke-linecap:round;stroke-linejoin:round}
-.stk .k{stroke:#0E1116;stroke-width:2.85}.stk circle.k{fill:#0E1116;stroke:none}
-.stk .u{stroke:rgba(255,255,255,.92);stroke-width:5.9}.stk circle.u{fill:rgba(255,255,255,.92);stroke:rgba(255,255,255,.92);stroke-width:2.6}
+.stk .k{stroke:#0E1116;stroke-width:calc(2.85px*var(--k,1))}.stk circle.k{fill:#0E1116;stroke:none}
+.stk .u{stroke:rgba(255,255,255,.92);stroke-width:calc(5.9px*var(--k,1))}.stk circle.u{fill:rgba(255,255,255,.92);stroke:rgba(255,255,255,.92);stroke-width:2.6}
 .hero .stage{border-radius:14px;box-shadow:none;--ink:#F4F5F7;--ink2:#B4BBC6;--mut:#7C8593;color:#F4F5F7}
 .stage{position:relative;width:100%;aspect-ratio:16/11;overflow:hidden;background:#0d0f11;border-radius:var(--r);container-type:inline-size;
   box-shadow:0 50px 110px rgba(0,0,0,.6),0 0 0 1px var(--line);
@@ -173,6 +173,12 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 .stage .glass{position:absolute;left:25.226%;top:36.981%;width:41.211%;height:37.314%;z-index:7;pointer-events:none;background:linear-gradient(104deg,rgba(255,255,255,.1),rgba(255,255,255,.02) 24%,rgba(255,255,255,0) 44%)}
 .stage .blocked{position:absolute;inset:0;z-index:8;display:none;place-items:center;text-align:center;padding:7%;background:rgba(10,10,12,.95);color:var(--ink2);font-size:1.25cqw;line-height:1.8;cursor:pointer}
 .stage .screen.is-blocked .blocked{display:grid}
+.stage .screen.is-blocked~.shint{display:none}
+.stage .blocked.has-shot{background-size:cover;background-position:top center;place-items:end center;padding:0 0 5%}
+.stage .blocked.has-shot span{background:rgba(11,13,17,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-size:1.2cqw}
+.stage .blocked b{display:block;font-family:var(--dis);font-weight:700;font-size:3.2cqw;letter-spacing:-.03em;line-height:1.1;color:#F4F5F7;margin-bottom:.5em}
+.stage .blocked span{display:inline-block;padding:.7em 1.3em;border-radius:10em;border:1px solid rgba(255,255,255,.22);color:#F4F5F7}
+.stage .blocked:hover span{background:#fff;color:#0E1116}
 .stage::after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(80% 76% at 50% 46%,transparent 58%,rgba(8,8,10,.22) 100%)}
 .shint{position:absolute;left:25.226%;top:36.981%;width:41.211%;height:37.314%;z-index:8;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5%;transition:opacity .6s ease}
 .shint span{display:inline-flex;align-items:center;gap:.7em;background:rgba(12,14,17,.8);color:var(--ink);font-size:1.2cqw;letter-spacing:.05em;padding:.85em 1.4em;border-radius:10em;border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:shp 2.6s ease-in-out infinite}
@@ -210,6 +216,7 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 .bw-ph b{font-family:var(--dis);font-weight:700;font-size:clamp(1.15rem,1.7vw,1.6rem);letter-spacing:-.03em;line-height:1.1}
 .bw-v iframe{position:absolute;left:0;top:0;width:1280px;height:800px;border:0;transform:scale(var(--z,.3));transform-origin:0 0;opacity:0;transition:opacity .6s ease;pointer-events:none;background:#fff}
 .bw-v.ready iframe{opacity:1}
+.bw-v .shot{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:top}
 .wm{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;align-items:start;margin-top:18px}
 .wm h3{font-size:1.22rem;font-weight:700;letter-spacing:-.025em}
 .wm p{grid-column:1;color:var(--ink2);font-size:.9rem}
@@ -240,21 +247,30 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 
 /* SERVICES as a feed of cards */
 .feed{--bg:#FFFFFF;--panel:#F2F2F0;--panel2:#E9E9E6;--ink:#0E1116;--ink2:#6B7079;--mut:#8A8F98;--line:rgba(14,17,22,.1);background:var(--bg);color:var(--ink);padding:0 12px clamp(40px,6vw,84px)}
-.fwall{display:flex;gap:10px;align-items:flex-start}
-.fcol{flex:1 1 0;min-width:0}
+.fwall{display:flex;gap:10px;align-items:stretch}
+.fcol{flex:1 1 0;min-width:0;display:flex;flex-direction:column}
+.fcol>.fcard:last-child{flex:1 0 auto;display:flex;flex-direction:column;margin-bottom:0}
+.fcol>.fcard:last-child .fimg{flex:1 1 auto;min-height:220px}
+.fcta{background:var(--blue);color:#fff}a.fcta:hover{background:#3d7cec}
+.fcard.fcta h3{color:#fff}.fcard.fcta p{color:rgba(255,255,255,.88)}
+.fcta .pill{align-self:flex-start;margin-top:auto;background:#fff;color:#0E1116}
+.fcta p{margin-bottom:22px}
 .fcard{display:block;break-inside:avoid;margin:0 0 10px;padding:20px 20px 20px;transition:background .25s}
 a.fcard:hover{background:var(--panel2)}
 .fcard .pr{display:block;font-size:1rem;color:var(--ink2);margin-bottom:8px}
 .fcard .pr b{font-weight:400;margin-left:5px}
 .fcard h3,.fcard h2{font-family:var(--txt);font-weight:400;font-size:clamp(1.5rem,2.1vw,1.95rem);line-height:1.15;letter-spacing:-.025em;word-spacing:0;color:var(--ink)}
 .fcard p{margin-top:10px;font-size:1.05rem;line-height:1.35;color:var(--ink2)}
+.fcard.tex{position:relative;isolation:isolate;background:#EDECE8}
+.fcard.tex::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cfilter id='p' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.19 .028' numOctaves='3' seed='11' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%23fff' surfaceScale='1.5' diffuseConstant='1.08'%3E%3CfeDistantLight azimuth='10' elevation='64'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='420' height='420' filter='url(%23p)'/%3E%3C/svg%3E") 0 0/420px 420px;mix-blend-mode:multiply;opacity:.5;transition:opacity .4s}
+a.fcard.tex:hover{background:#E6E5E0}a.fcard.tex:hover::before{opacity:.7}
 .fimg{display:block;margin-top:20px;border-radius:10px;overflow:hidden;background:var(--panel2)}
 .fimg img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 a.fcard:hover .fimg img{transform:scale(1.04)}
 .fintro h2{font-size:clamp(2rem,3.4vw,3rem)}
 .fintro .pill{margin-top:20px;background:var(--bg)}
 .fintro .pill:hover{background:var(--ink);color:#fff}
-@media(max-width:1000px){.fwall{display:block;column-count:2;column-gap:10px}.fcol{display:contents}}
+@media(max-width:1000px){.fwall{display:block;column-count:2;column-gap:10px}.fcol{display:contents}.fcol>.fcard:last-child{display:block;margin-bottom:10px}.fcol>.fcard:last-child .fimg{min-height:0}.fcta .pill{margin-top:0}}
 @media(max-width:600px){.fwall{column-count:1}.feed{padding-inline:10px}}
 /* PROCESS */
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;border-top:1px solid var(--line)}
@@ -338,8 +354,10 @@ footer{border-top:1px solid var(--line);padding-top:clamp(50px,6vw,80px)}
   .fq p{padding-right:0}
 }
 @media(max-width:900px){.stage-w{width:100%}
-  .hero{grid-template-columns:1fr;padding:76px 10px 10px}
-  .side{display:contents}.hpills{order:1}.hclock{order:2;padding:22px 0}.about{order:3}.stage-w{order:4}.hrev{order:6}.cidx-w{order:5;flex:none;height:372px}}
+  .hero{grid-template-columns:minmax(0,1fr);padding:76px 10px 10px}
+  .side{display:contents}.hpills{order:1}.hclock{order:2;padding:22px 0}.about{order:3}.stage-w{order:4}.hrev{order:6}.cidx-w{order:5;flex:none;min-height:0;min-width:0}
+  .cidx{position:static;flex-direction:row;overflow-x:auto;overflow-y:hidden;padding:0 0 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .cidx li{flex:0 0 min(78%,300px);scroll-snap-align:start}.cidx button{height:100%}}
     @media(max-width:600px){
   .hrev{grid-template-columns:1fr}.nav.lt .nav-in{padding-inline:var(--gut)}
     .wgrid,.cf-row{grid-template-columns:1fr}
@@ -465,7 +483,7 @@ footer{border-top:1px solid var(--line);padding-top:clamp(50px,6vw,80px)}
 <header class="phero wrap"><h1><span class="ln"><span>Great products deserve</span></span><span class="ln"><span>to be found online.</span></span></h1><p class="lead fade">Novo Web Build exists because too many good businesses stay invisible, put off by the cost or complexity of getting a proper website. We fixed that.</p></header>
 <section class="sec first wrap"><div class="two">
   <div class="rv"><h2>The studio</h2></div>
-  <div class="prose rv"><p>We're a web design studio based in Thessaloniki, working fully online with clients across Greece, Spain, Italy and beyond. Every website we build is designed and coded from scratch, specifically for that client. No templates, no shortcuts.</p>
+  <div class="prose rv"><p>We're a web design studio based in Thessaloniki, working fully online with clients in 7 countries: Greece, Spain, France, the Netherlands, Thailand, Italy and the UK. Every website we build is designed and coded from scratch, specifically for that client. No templates, no shortcuts.</p>
   <p>You don't need any technical knowledge. You send us your logo, photos and text, and we handle everything else: design, build, hosting, domain and launch. Fast, clean, and without the agency price tag.</p></div>
 </div></section>
 <section class="sec first wrap"><div class="facts"><div class="fact rv"><h3>Thessaloniki, worldwide</h3><p>Based in Greece, working with businesses anywhere, fully online.</p></div><div class="fact rv"><h3>15 working days</h3><p>Most websites are live within 15 working days, revisions included.</p></div><div class="fact rv"><h3>Custom code only</h3><p>No WordPress bloat, no page builders. Fast, secure, hand-coded sites.</p></div><div class="fact rv"><h3>Here after launch</h3><p>Maintenance plans keep your site updated, secure and growing.</p></div></div></section>

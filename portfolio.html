@@ -118,8 +118,8 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 .about small{display:block;font-size:.9rem;font-weight:500;color:var(--ink);margin-bottom:2px}
 .about h1{font-family:var(--txt);font-weight:400;font-size:.94rem;line-height:1.4;letter-spacing:0;word-spacing:0;color:var(--ink2);text-wrap:pretty}
 .cidx-w{position:relative;flex:1 1 0;min-height:240px}
-.cidx{position:absolute;inset:0;list-style:none;display:flex;flex-direction:column;gap:8px;overflow-y:scroll;overscroll-behavior:contain;padding-right:8px;scrollbar-width:thin;scrollbar-color:#B9BBBF transparent}
-.cidx::-webkit-scrollbar{width:8px}.cidx::-webkit-scrollbar-track{background:var(--panel);border-radius:8px}.cidx::-webkit-scrollbar-thumb{background:#B9BBBF;border-radius:8px}.cidx::-webkit-scrollbar-thumb:hover{background:#8A8F98}
+.cidx{position:absolute;inset:0;list-style:none;display:flex;flex-direction:column;gap:8px;overflow-y:scroll;padding-right:8px;scrollbar-width:thin;scrollbar-color:#B9BBBF transparent}
+.cidx::-webkit-scrollbar{width:8px;height:6px}.cidx::-webkit-scrollbar-track{background:var(--panel);border-radius:8px}.cidx::-webkit-scrollbar-thumb{background:#B9BBBF;border-radius:8px}.cidx::-webkit-scrollbar-thumb:hover{background:#8A8F98}
 .cidx button{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;border-radius:12px;background:var(--panel);padding:12px 34px 12px 14px;transition:background .25s,transform .3s var(--ease)}
 .cidx button .mono{display:grid;place-items:center;width:52px;height:52px;border-radius:12px;background:var(--c);color:#0E1116;transition:background .3s,border-radius .5s var(--ease)}
 .cidx button .mono svg{width:34px;height:34px;transition:transform .7s var(--ease)}
@@ -147,8 +147,8 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 .hero{position:relative}
 .stk{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:30;opacity:0}
 .stk path{fill:none;stroke-linecap:round;stroke-linejoin:round}
-.stk .k{stroke:#0E1116;stroke-width:2.85}.stk circle.k{fill:#0E1116;stroke:none}
-.stk .u{stroke:rgba(255,255,255,.92);stroke-width:5.9}.stk circle.u{fill:rgba(255,255,255,.92);stroke:rgba(255,255,255,.92);stroke-width:2.6}
+.stk .k{stroke:#0E1116;stroke-width:calc(2.85px*var(--k,1))}.stk circle.k{fill:#0E1116;stroke:none}
+.stk .u{stroke:rgba(255,255,255,.92);stroke-width:calc(5.9px*var(--k,1))}.stk circle.u{fill:rgba(255,255,255,.92);stroke:rgba(255,255,255,.92);stroke-width:2.6}
 .hero .stage{border-radius:14px;box-shadow:none;--ink:#F4F5F7;--ink2:#B4BBC6;--mut:#7C8593;color:#F4F5F7}
 .stage{position:relative;width:100%;aspect-ratio:16/11;overflow:hidden;background:#0d0f11;border-radius:var(--r);container-type:inline-size;
   box-shadow:0 50px 110px rgba(0,0,0,.6),0 0 0 1px var(--line);
@@ -173,6 +173,12 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 .stage .glass{position:absolute;left:25.226%;top:36.981%;width:41.211%;height:37.314%;z-index:7;pointer-events:none;background:linear-gradient(104deg,rgba(255,255,255,.1),rgba(255,255,255,.02) 24%,rgba(255,255,255,0) 44%)}
 .stage .blocked{position:absolute;inset:0;z-index:8;display:none;place-items:center;text-align:center;padding:7%;background:rgba(10,10,12,.95);color:var(--ink2);font-size:1.25cqw;line-height:1.8;cursor:pointer}
 .stage .screen.is-blocked .blocked{display:grid}
+.stage .screen.is-blocked~.shint{display:none}
+.stage .blocked.has-shot{background-size:cover;background-position:top center;place-items:end center;padding:0 0 5%}
+.stage .blocked.has-shot span{background:rgba(11,13,17,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-size:1.2cqw}
+.stage .blocked b{display:block;font-family:var(--dis);font-weight:700;font-size:3.2cqw;letter-spacing:-.03em;line-height:1.1;color:#F4F5F7;margin-bottom:.5em}
+.stage .blocked span{display:inline-block;padding:.7em 1.3em;border-radius:10em;border:1px solid rgba(255,255,255,.22);color:#F4F5F7}
+.stage .blocked:hover span{background:#fff;color:#0E1116}
 .stage::after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(80% 76% at 50% 46%,transparent 58%,rgba(8,8,10,.22) 100%)}
 .shint{position:absolute;left:25.226%;top:36.981%;width:41.211%;height:37.314%;z-index:8;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5%;transition:opacity .6s ease}
 .shint span{display:inline-flex;align-items:center;gap:.7em;background:rgba(12,14,17,.8);color:var(--ink);font-size:1.2cqw;letter-spacing:.05em;padding:.85em 1.4em;border-radius:10em;border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:shp 2.6s ease-in-out infinite}
@@ -210,6 +216,7 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 .bw-ph b{font-family:var(--dis);font-weight:700;font-size:clamp(1.15rem,1.7vw,1.6rem);letter-spacing:-.03em;line-height:1.1}
 .bw-v iframe{position:absolute;left:0;top:0;width:1280px;height:800px;border:0;transform:scale(var(--z,.3));transform-origin:0 0;opacity:0;transition:opacity .6s ease;pointer-events:none;background:#fff}
 .bw-v.ready iframe{opacity:1}
+.bw-v .shot{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:top}
 .wm{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;align-items:start;margin-top:18px}
 .wm h3{font-size:1.22rem;font-weight:700;letter-spacing:-.025em}
 .wm p{grid-column:1;color:var(--ink2);font-size:.9rem}
@@ -240,21 +247,30 @@ h2{font-size:clamp(2rem,3.6vw,3.2rem)}
 
 /* SERVICES as a feed of cards */
 .feed{--bg:#FFFFFF;--panel:#F2F2F0;--panel2:#E9E9E6;--ink:#0E1116;--ink2:#6B7079;--mut:#8A8F98;--line:rgba(14,17,22,.1);background:var(--bg);color:var(--ink);padding:0 12px clamp(40px,6vw,84px)}
-.fwall{display:flex;gap:10px;align-items:flex-start}
-.fcol{flex:1 1 0;min-width:0}
+.fwall{display:flex;gap:10px;align-items:stretch}
+.fcol{flex:1 1 0;min-width:0;display:flex;flex-direction:column}
+.fcol>.fcard:last-child{flex:1 0 auto;display:flex;flex-direction:column;margin-bottom:0}
+.fcol>.fcard:last-child .fimg{flex:1 1 auto;min-height:220px}
+.fcta{background:var(--blue);color:#fff}a.fcta:hover{background:#3d7cec}
+.fcard.fcta h3{color:#fff}.fcard.fcta p{color:rgba(255,255,255,.88)}
+.fcta .pill{align-self:flex-start;margin-top:auto;background:#fff;color:#0E1116}
+.fcta p{margin-bottom:22px}
 .fcard{display:block;break-inside:avoid;margin:0 0 10px;padding:20px 20px 20px;transition:background .25s}
 a.fcard:hover{background:var(--panel2)}
 .fcard .pr{display:block;font-size:1rem;color:var(--ink2);margin-bottom:8px}
 .fcard .pr b{font-weight:400;margin-left:5px}
 .fcard h3,.fcard h2{font-family:var(--txt);font-weight:400;font-size:clamp(1.5rem,2.1vw,1.95rem);line-height:1.15;letter-spacing:-.025em;word-spacing:0;color:var(--ink)}
 .fcard p{margin-top:10px;font-size:1.05rem;line-height:1.35;color:var(--ink2)}
+.fcard.tex{position:relative;isolation:isolate;background:#EDECE8}
+.fcard.tex::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cfilter id='p' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.19 .028' numOctaves='3' seed='11' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%23fff' surfaceScale='1.5' diffuseConstant='1.08'%3E%3CfeDistantLight azimuth='10' elevation='64'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='420' height='420' filter='url(%23p)'/%3E%3C/svg%3E") 0 0/420px 420px;mix-blend-mode:multiply;opacity:.5;transition:opacity .4s}
+a.fcard.tex:hover{background:#E6E5E0}a.fcard.tex:hover::before{opacity:.7}
 .fimg{display:block;margin-top:20px;border-radius:10px;overflow:hidden;background:var(--panel2)}
 .fimg img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 a.fcard:hover .fimg img{transform:scale(1.04)}
 .fintro h2{font-size:clamp(2rem,3.4vw,3rem)}
 .fintro .pill{margin-top:20px;background:var(--bg)}
 .fintro .pill:hover{background:var(--ink);color:#fff}
-@media(max-width:1000px){.fwall{display:block;column-count:2;column-gap:10px}.fcol{display:contents}}
+@media(max-width:1000px){.fwall{display:block;column-count:2;column-gap:10px}.fcol{display:contents}.fcol>.fcard:last-child{display:block;margin-bottom:10px}.fcol>.fcard:last-child .fimg{min-height:0}.fcta .pill{margin-top:0}}
 @media(max-width:600px){.fwall{column-count:1}.feed{padding-inline:10px}}
 /* PROCESS */
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;border-top:1px solid var(--line)}
@@ -338,8 +354,10 @@ footer{border-top:1px solid var(--line);padding-top:clamp(50px,6vw,80px)}
   .fq p{padding-right:0}
 }
 @media(max-width:900px){.stage-w{width:100%}
-  .hero{grid-template-columns:1fr;padding:76px 10px 10px}
-  .side{display:contents}.hpills{order:1}.hclock{order:2;padding:22px 0}.about{order:3}.stage-w{order:4}.hrev{order:6}.cidx-w{order:5;flex:none;height:372px}}
+  .hero{grid-template-columns:minmax(0,1fr);padding:76px 10px 10px}
+  .side{display:contents}.hpills{order:1}.hclock{order:2;padding:22px 0}.about{order:3}.stage-w{order:4}.hrev{order:6}.cidx-w{order:5;flex:none;min-height:0;min-width:0}
+  .cidx{position:static;flex-direction:row;overflow-x:auto;overflow-y:hidden;padding:0 0 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .cidx li{flex:0 0 min(78%,300px);scroll-snap-align:start}.cidx button{height:100%}}
     @media(max-width:600px){
   .hrev{grid-template-columns:1fr}.nav.lt .nav-in{padding-inline:var(--gut)}
     .wgrid,.cf-row{grid-template-columns:1fr}
@@ -463,7 +481,7 @@ footer{border-top:1px solid var(--line);padding-top:clamp(50px,6vw,80px)}
 
 <main>
 <header class="phero wrap big"><h1><span class="ln"><span>Work</span></span></h1><p class="lead fade">Every project here is a live client website, designed and coded from scratch.</p></header>
-<section class="sec light" id="work"><div class="wrap"><div class="sh rv"><h2 class="sr">All projects</h2><div class="tabs" role="group" aria-label="Filter work by type" id="tabs"><button type="button" data-cat="all" aria-pressed="true">All<sup>17</sup></button><button type="button" data-cat="stays" aria-pressed="false">Stays<sup>4</sup></button><button type="button" data-cat="food" aria-pressed="false">Food<sup>4</sup></button><button type="button" data-cat="business" aria-pressed="false">Business<sup>9</sup></button></div></div>
+<section class="sec light" id="work"><div class="wrap"><div class="sh rv"><h2 class="sr">All projects</h2><div class="tabs" role="group" aria-label="Filter work by type" id="tabs"><button type="button" data-cat="all" aria-pressed="true">All<sup>18</sup></button><button type="button" data-cat="stays" aria-pressed="false">Stays<sup>5</sup></button><button type="button" data-cat="food" aria-pressed="false">Food<sup>4</sup></button><button type="button" data-cat="business" aria-pressed="false">Business<sup>9</sup></button></div></div>
 <div class="wgrid ed" id="wgrid"><article class="wk rv" data-cat="stays">
   <a href="https://irissuites.gr/" target="_blank" rel="noopener" aria-label="Iris Suites, Luxury suites, Nikiti Halkidiki. Opens the live site.">
     <div class="bw"><div class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span>irissuites.gr</span></div>
@@ -493,6 +511,12 @@ footer{border-top:1px solid var(--line);padding-top:clamp(50px,6vw,80px)}
     <div class="bw"><div class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span>solandmar.netlify.app</span></div>
       <div class="bw-v" data-src="https://solandmar.netlify.app/"><div class="bw-ph" style="--w:214,138,92"><b>Mar &amp; Sol Marbella</b></div></div></div>
     <div class="wm"><h3>Mar &amp; Sol Marbella</h3><p>Luxury real estate, Costa del Sol</p><span class="arr" aria-hidden="true">↗</span></div>
+  </a>
+</article><article class="wk rv" data-cat="stays">
+  <a href="https://soleravillas.netlify.app/" target="_blank" rel="noopener" aria-label="Solera Villas, Luxury villas, Spain. Opens the live site.">
+    <div class="bw"><div class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span>soleravillas.netlify.app</span></div>
+      <div class="bw-v" data-src="https://soleravillas.netlify.app/"><div class="bw-ph" style="--w:44,164,170"><b>Solera Villas</b></div></div></div>
+    <div class="wm"><h3>Solera Villas</h3><p>Luxury villas, Spain</p><span class="arr" aria-hidden="true">↗</span></div>
   </a>
 </article><article class="wk rv" data-cat="business">
   <a href="https://liarasconstruction.gr/" target="_blank" rel="noopener" aria-label="Liaras Construction, Construction company, Greece. Opens the live site.">
@@ -539,7 +563,7 @@ footer{border-top:1px solid var(--line);padding-top:clamp(50px,6vw,80px)}
 </article><article class="wk rv" data-cat="business">
   <a href="https://mybarbible.com/" target="_blank" rel="noopener" aria-label="Bar Bible, Cocktail recipe database for bartenders. Opens the live site.">
     <div class="bw"><div class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span>mybarbible.com</span></div>
-      <div class="bw-v" data-src="https://mybarbible.com/"><div class="bw-ph" style="--w:128,142,170"><b>Bar Bible</b></div></div></div>
+      <div class="bw-v" data-src="https://mybarbible.com/" data-noframe="1"><img class="shot" src="scenes/shot-barbible.jpg" alt="" loading="lazy"><div class="bw-ph" style="--w:128,142,170"><b>Bar Bible</b></div></div></div>
     <div class="wm"><h3>Bar Bible</h3><p>Cocktail recipe database for bartenders</p><span class="arr" aria-hidden="true">↗</span></div>
   </a>
 </article><article class="wk rv" data-cat="business">
@@ -584,7 +608,7 @@ footer{border-top:1px solid var(--line);padding-top:clamp(50px,6vw,80px)}
 </footer>
 
 <script>
-const PROJECTS=[{"name": "Iris Suites", "domain": "irissuites.gr", "url": "https://irissuites.gr/", "tag": "Luxury suites, Nikiti Halkidiki", "scene": "palms"}, {"name": "Olia Apartments", "domain": "olianaxos.gr", "url": "https://olianaxos.gr/", "tag": "Sea view apartments, Naxos Town", "scene": "aegean"}, {"name": "Sea & City Apartments", "domain": "seaandcityappartementskos.gr", "url": "https://seaandcityappartementskos.gr/", "tag": "Apartments, Kos Town", "scene": "boardwalk"}, {"name": "Kastellos Sikinos", "domain": "kastellos-sikinos.gr", "url": "https://kastellos-sikinos.gr/", "tag": "Apartments, Sikinos", "scene": "aegean"}, {"name": "Mar & Sol Marbella", "domain": "solandmar.netlify.app", "url": "https://solandmar.netlify.app/", "tag": "Luxury real estate, Costa del Sol", "scene": "madrid"}, {"name": "Liaras Construction", "domain": "liarasconstruction.gr", "url": "https://liarasconstruction.gr/", "tag": "Construction company, Greece", "scene": "taormina"}, {"name": "Ο Ψαράς της Οικογένειας", "domain": "opsarastisoikogeneias.gr", "url": "https://opsarastisoikogeneias.gr/", "tag": "Fish taverna, Thessaloniki", "scene": "taverna"}, {"name": "Μεσόγειος 1995", "domain": "mesogeios1995.gr", "url": "https://mesogeios1995.gr/", "tag": "Grill house since 1995, Nea Raidestos", "scene": "taverna"}, {"name": "Rustico", "domain": "rusticokos.gr", "url": "https://rusticokos.gr/", "tag": "Italian beach restaurant, Kos Town", "scene": "boardwalk"}, {"name": "La Lonja", "domain": "lalonjaten.netlify.app", "url": "https://lalonjaten.netlify.app/", "tag": "Fish restaurant, Playa San Juan, Tenerife", "scene": "cove"}, {"name": "Τζανόπουλος Diving Club", "domain": "tzanopoulosdivingclub.gr", "url": "https://tzanopoulosdivingclub.gr/", "tag": "University of the Aegean diving team", "scene": "cove"}, {"name": "Kos Boat Rentals", "domain": "kosboatrentals.gr", "url": "https://kosboatrentals.gr/", "tag": "Boat rentals, Kos", "scene": "cove"}, {"name": "Bar Bible", "domain": "mybarbible.com", "url": "https://mybarbible.com/", "tag": "Cocktail recipe database for bartenders", "scene": "london"}, {"name": "Twins Box", "domain": "twinsboxthermi.gr", "url": "https://twinsboxthermi.gr/", "tag": "Crossfit gym, Thermi", "scene": "mountain"}, {"name": "Δρ. Μιχαήλ Λυτός", "domain": "michaillytos.gr", "url": "https://michaillytos.gr/", "tag": "Orthopaedic surgeon, Elliniko Athens", "scene": "madrid"}, {"name": "Element PR", "domain": "elementpr.mk", "url": "https://elementpr.mk/", "tag": "PR agency, Skopje", "scene": "london"}, {"name": "L/S Clothing", "domain": "lsclothing.gr", "url": "https://lsclothing.gr/", "tag": "Streetwear brand, Thessaloniki", "scene": "mountain"}];
+const PROJECTS=[{"name": "Iris Suites", "domain": "irissuites.gr", "url": "https://irissuites.gr/", "tag": "Luxury suites, Nikiti Halkidiki", "scene": "palms"}, {"name": "Olia Apartments", "domain": "olianaxos.gr", "url": "https://olianaxos.gr/", "tag": "Sea view apartments, Naxos Town", "scene": "aegean"}, {"name": "Sea & City Apartments", "domain": "seaandcityappartementskos.gr", "url": "https://seaandcityappartementskos.gr/", "tag": "Apartments, Kos Town", "scene": "boardwalk"}, {"name": "Kastellos Sikinos", "domain": "kastellos-sikinos.gr", "url": "https://kastellos-sikinos.gr/", "tag": "Apartments, Sikinos", "scene": "aegean"}, {"name": "Mar & Sol Marbella", "domain": "solandmar.netlify.app", "url": "https://solandmar.netlify.app/", "tag": "Luxury real estate, Costa del Sol", "scene": "madrid"}, {"name": "Solera Villas", "domain": "soleravillas.netlify.app", "url": "https://soleravillas.netlify.app/", "tag": "Luxury villas, Spain", "scene": "cove"}, {"name": "Liaras Construction", "domain": "liarasconstruction.gr", "url": "https://liarasconstruction.gr/", "tag": "Construction company, Greece", "scene": "taormina"}, {"name": "Ο Ψαράς της Οικογένειας", "domain": "opsarastisoikogeneias.gr", "url": "https://opsarastisoikogeneias.gr/", "tag": "Fish taverna, Thessaloniki", "scene": "taverna"}, {"name": "Μεσόγειος 1995", "domain": "mesogeios1995.gr", "url": "https://mesogeios1995.gr/", "tag": "Grill house since 1995, Nea Raidestos", "scene": "taverna"}, {"name": "Rustico", "domain": "rusticokos.gr", "url": "https://rusticokos.gr/", "tag": "Italian beach restaurant, Kos Town", "scene": "boardwalk"}, {"name": "La Lonja", "domain": "lalonjaten.netlify.app", "url": "https://lalonjaten.netlify.app/", "tag": "Fish restaurant, Playa San Juan, Tenerife", "scene": "cove"}, {"name": "Τζανόπουλος Diving Club", "domain": "tzanopoulosdivingclub.gr", "url": "https://tzanopoulosdivingclub.gr/", "tag": "University of the Aegean diving team", "scene": "cove"}, {"name": "Kos Boat Rentals", "domain": "kosboatrentals.gr", "url": "https://kosboatrentals.gr/", "tag": "Boat rentals, Kos", "scene": "cove"}, {"name": "Bar Bible", "domain": "mybarbible.com", "url": "https://mybarbible.com/", "tag": "Cocktail recipe database for bartenders", "scene": "london", "noframe": 1, "shot": "scenes/shot-barbible.jpg"}, {"name": "Twins Box", "domain": "twinsboxthermi.gr", "url": "https://twinsboxthermi.gr/", "tag": "Crossfit gym, Thermi", "scene": "mountain"}, {"name": "Δρ. Μιχαήλ Λυτός", "domain": "michaillytos.gr", "url": "https://michaillytos.gr/", "tag": "Orthopaedic surgeon, Elliniko Athens", "scene": "madrid"}, {"name": "Element PR", "domain": "elementpr.mk", "url": "https://elementpr.mk/", "tag": "PR agency, Skopje", "scene": "london"}, {"name": "L/S Clothing", "domain": "lsclothing.gr", "url": "https://lsclothing.gr/", "tag": "Streetwear brand, Thessaloniki", "scene": "mountain"}];
 const SCENES=[{"id": "palms", "tint": "232,226,206", "tintAmt": 0.14, "exposure": 0.97, "bgExp": 1, "bloom": 0.2, "rim": 0.26}, {"id": "cove", "tint": "236,230,208", "tintAmt": 0.13, "exposure": 0.97, "bgExp": 1, "bloom": 0.2, "rim": 0.26}, {"id": "aegean", "tint": "206,222,230", "tintAmt": 0.12, "exposure": 0.95, "bgExp": 1, "bloom": 0.2, "rim": 0.28}, {"id": "boardwalk", "tint": "235,228,205", "tintAmt": 0.13, "exposure": 0.97, "bgExp": 1, "bloom": 0.2, "rim": 0.26}, {"id": "taverna", "tint": "212,172,124", "tintAmt": 0.16, "exposure": 0.88, "bgExp": 1, "bloom": 0.18, "rim": 0.24}, {"id": "taormina", "tint": "222,196,168", "tintAmt": 0.14, "exposure": 0.93, "bgExp": 1, "bloom": 0.2, "rim": 0.28}, {"id": "madrid", "tint": "232,205,180", "tintAmt": 0.13, "exposure": 0.95, "bgExp": 1, "bloom": 0.2, "rim": 0.28}, {"id": "london", "tint": "198,204,212", "tintAmt": 0.1, "exposure": 0.92, "bgExp": 1.02, "bloom": 0.24, "rim": 0.3}, {"id": "mountain", "tint": "205,218,220", "tintAmt": 0.11, "exposure": 0.93, "bgExp": 1.01, "bloom": 0.22, "rim": 0.3}];
 const SCENE_SRC=null;
 
@@ -629,7 +653,7 @@ const SCENE_SRC=null;
   views.forEach(size);
   function pump(){
     while(active<2&&q.length){
-      const v=q.shift();if(v.dataset.on||!v.dataset.near)continue;v.dataset.on='1';active++;
+      const v=q.shift();if(v.dataset.on||!v.dataset.near||v.dataset.noframe)continue;v.dataset.on='1';active++;
       const f=document.createElement('iframe');f.setAttribute('tabindex','-1');f.setAttribute('aria-hidden','true');f.setAttribute('scrolling','no');
       f.setAttribute('sandbox','allow-scripts allow-same-origin');f.title='';
       let freed=false;const free=()=>{if(freed)return;freed=true;active--;pump();};
